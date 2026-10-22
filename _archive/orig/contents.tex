@@ -1,0 +1,62 @@
+\AddToHookNext{shipout/background}{%
+	\begin{tikzpicture}[remember picture, overlay]
+		\node[anchor=north west, inner sep=0pt, outer sep=0pt] at (current page.north west) {
+			\resizebox{\paperwidth}{\paperheight}{\input{tikz_assets/contents_bg.tex}}
+		};
+	\end{tikzpicture}%
+}
+
+\pagenumbering{gobble}
+\pagestyle{empty}
+
+\renewcommand{\sectionmark}[1]{\markboth{#1}{}}
+\renewcommand{\subsectionmark}[1]{\markright{#1}}
+\renewcommand{\contentsname}{}
+\setlength{\cftbeforetoctitleskip}{0pt}
+\setlength{\cftaftertoctitleskip}{0pt}
+\setcounter{secnumdepth}{0}
+\renewcommand{\cftdot}{}
+
+\makeatletter
+\renewcommand{\l@section}[2]{%
+	\vspace{18pt}
+	\par\noindent
+	{\cftsecfont\ignorespaces#1}
+	\hfill
+	{\cftsecpagefont\ignorespaces#2}
+	\par
+	\vspace{-5pt}
+	\noindent
+	\raggedright
+	\resizebox{200.5pt}{4pt}{\input{tikz_assets/separator_1.tex}}
+	\par
+}
+
+\renewcommand{\l@subsection}[2]{%
+	\par\noindent
+	{\cftsubsecfont\ignorespaces#1}
+	\hfill
+	{\cftsubsecpagefont\ignorespaces#2}
+	\par
+	\vspace{2pt}
+}
+\makeatother
+
+\renewcommand{\cftsecfont}{\SiYuan\fontsize{16pt}{20pt}\selectfont\bfseries\XeTeXinterchartokenstate=0}
+\renewcommand{\cftsecpagefont}{\SiYuan\fontsize{16pt}{20pt}\selectfont\bfseries\XeTeXinterchartokenstate=0}
+\renewcommand{\cftsubsecfont}{\SiYuan\fontsize{12pt}{20pt}\selectfont\bfseries\XeTeXinterchartokenstate=0}
+\renewcommand{\cftsubsecpagefont}{\SiYuan\fontsize{12pt}{20pt}\selectfont\bfseries\XeTeXinterchartokenstate=0}
+
+\newcommand{\invisibletext}{\phantom{占位本}}
+\newcommand{\makecustomtoc}{%
+	\BgThispage 
+	\begin{adjustwidth}{100pt}{0pt}
+		\begin{multicols}{2}
+			\tableofcontents
+			{\invisibletext}\\ {\invisibletext}\\ {\invisibletext}\\ {\invisibletext}\\ {\invisibletext}\\ {\invisibletext}\\ {\invisibletext}\\ {\invisibletext}\\ {\invisibletext}\\ {\invisibletext}\\ {\invisibletext}\\ {\invisibletext}\\ {\invisibletext}\\ {\invisibletext}\\ {\invisibletext}\\ {\invisibletext}\\ {\invisibletext}\\ {\invisibletext}\\ {\invisibletext}\\ {\invisibletext}\\ {\invisibletext}\\ {\invisibletext}\\ {\invisibletext}\\ {\invisibletext}\\ {\invisibletext}\\ {\invisibletext}\\ {\invisibletext}\\ {\invisibletext}\\ {\invisibletext}\\ {\invisibletext}\\ {\invisibletext}\\ {\invisibletext}\\ {\invisibletext}\\ {\invisibletext}\\ {\invisibletext}\\ {\invisibletext}\\ {\invisibletext}\\ {\invisibletext}\\ {\invisibletext}\\ {\invisibletext}\\
+		\end{multicols}
+	\end{adjustwidth}
+	\AtBeginShipoutNext{\AtBeginShipoutDiscard}%
+}
+
+\hypersetup{linktoc=all}

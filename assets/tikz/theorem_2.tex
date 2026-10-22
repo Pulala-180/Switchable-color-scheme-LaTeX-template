@@ -1,0 +1,31 @@
+%=============================================================================
+% Arknights Lone Trail LaTeX Template - Pure Vector TikZ Asset
+% Asset: theorem_2.tex (Replacing 素材库/正文/theorem_2.png)
+% Original Dimensions: 171 x 273 bp
+% Visual Structure:
+%   - Solid black (heise) vertical rectangular background
+%   - 6 solid red (theorem) circular dots arranged in top-right descending stairs:
+%     * Row 1 (top): 3 dots
+%     * Row 2 (middle): 2 dots
+%     * Row 3 (bottom): 1 dot
+% Dynamic Color Support: heise, theorem
+% Aspect Ratio: 171 : 273 (Infinite zoom, perfectly sharp)
+%=============================================================================
+\providecolor{heise}{RGB}{0, 0, 0}%
+\providecolor{theorem}{RGB}{222, 4, 20}%
+\begin{tikzpicture}[x=1bp, y=1bp, inner sep=0pt, outer sep=0pt]%
+  % Strict bounding box matching 171x273 original PNG
+  \useasboundingbox (0, 0) rectangle (171, 273);%
+  % Background black rectangle
+  \fill[heise] (0, 0) rectangle (171, 273);%
+  % 6 solid red circular dots (radius = 10.38bp, grid step = 29.30bp)
+  % Row 1: 3 dots (y = 244.65bp)
+  \fill[theorem] (82.61, 244.65) circle [radius=10.38];%
+  \fill[theorem] (111.91, 244.65) circle [radius=10.38];%
+  \fill[theorem] (141.21, 244.65) circle [radius=10.38];%
+  % Row 2: 2 dots (y = 215.35bp)
+  \fill[theorem] (111.91, 215.35) circle [radius=10.38];%
+  \fill[theorem] (141.21, 215.35) circle [radius=10.38];%
+  % Row 3: 1 dot (y = 186.05bp)
+  \fill[theorem] (141.21, 186.05) circle [radius=10.38];%
+\end{tikzpicture}%

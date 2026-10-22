@@ -1,0 +1,62 @@
+%=============================================================================
+% Arknights Lone Trail LaTeX Template - Pure Vector TikZ Asset
+% Asset: exercise_1.tex (Replacing 素材库/正文/exercise_1.png & question_1.png)
+% Original Dimensions: 259 x 161 bp (Proportional with question_1: 457 x 285 bp)
+% Visual Features:
+%   - Left: Orange (qiancheng) square with 6-pointed Lone Trail crystal snowflake (mibai)
+%   - Right: Rice-white (mibai) block with orange (qiancheng) right-angle corner hook
+% Dynamic Color Support: Uses qiancheng, mibai with fallback \providecolor
+% Compatibility: Standalone compilation via xelatex & direct \input{} in documents
+%=============================================================================
+\ifcsname pgfpoint\endcsname
+\else
+  \documentclass[border=0pt]{standalone}
+  \usepackage{tikz}
+  \usepackage{xcolor}
+  \providecolor{qiancheng}{RGB}{227, 101, 53}
+  \providecolor{mibai}{RGB}{244, 237, 218}
+  \def\imstandalone{1}
+  \begin{document}%
+\fi
+\providecolor{qiancheng}{RGB}{227, 101, 53}%
+\providecolor{mibai}{RGB}{244, 237, 218}%
+\begin{tikzpicture}[x=1bp, y=1bp, inner sep=0pt, outer sep=0pt]
+  % Exact bounding box matching 259 x 161 bp
+  \useasboundingbox (0, 0) rectangle (259, 161);
+
+  % Left orange square (161 x 161)
+  \fill[qiancheng] (0, 0) rectangle (161, 161);
+
+  % 6-Pointed Lone Trail Crystal Snowflake Badge (mibai, centered in 161x161 square)
+  % Arm 1
+  \fill[mibai] (140.89, 40.03) -- (94.18, 66.72) -- (94.18, 67.03) -- (84.36, 67.03) -- (84.36, 13.46) -- (94.18, 18.36) -- (94.18, 55.39) -- (129.63, 34.95) -- (140.92, 39.99) -- cycle;
+  % Satellite 1
+  \fill[mibai] (105.51, 37.67) -- (99.40, 37.67) -- (99.40, 28.66) -- (110.70, 28.66) -- (110.70, 28.79) -- (110.77, 28.75) -- (116.42, 38.52) -- (108.61, 43.02) -- cycle;
+  % Arm 2
+  \fill[mibai] (145.00, 111.46) -- (98.51, 84.41) -- (98.24, 84.57) -- (93.33, 76.07) -- (139.78, 49.29) -- (140.44, 60.24) -- (108.33, 78.75) -- (143.78, 99.19) -- (145.05, 111.47) -- cycle;
+  % Satellite 2
+  \fill[mibai] (129.36, 79.69) -- (126.31, 74.41) -- (134.13, 69.90) -- (139.78, 79.67) -- (139.66, 79.73) -- (139.73, 79.77) -- (134.08, 89.55) -- (126.26, 85.04) -- cycle;
+  % Arm 3
+  \fill[mibai] (84.30, 150.05) -- (84.51, 96.32) -- (84.24, 96.16) -- (89.16, 87.67) -- (135.61, 114.45) -- (126.45, 120.49) -- (94.33, 101.98) -- (94.33, 142.85) -- (84.32, 150.10) -- cycle;
+  % Satellite 3
+  \fill[mibai] (104.03, 120.63) -- (107.09, 115.35) -- (114.91, 119.86) -- (109.25, 129.63) -- (109.15, 129.57) -- (109.15, 129.64) -- (97.85, 129.64) -- (97.85, 120.63) -- cycle;
+  % Arm 4
+  \fill[mibai] (20.12, 116.72) -- (66.83, 90.04) -- (66.83, 89.73) -- (76.65, 89.73) -- (76.65, 143.30) -- (66.83, 138.40) -- (66.83, 101.37) -- (31.38, 121.80) -- (20.09, 116.76) -- cycle;
+  % Satellite 4
+  \fill[mibai] (55.50, 119.08) -- (61.61, 119.08) -- (61.61, 128.10) -- (50.31, 128.10) -- (50.31, 127.97) -- (50.24, 128.01) -- (44.58, 118.23) -- (52.40, 113.73) -- cycle;
+  % Arm 5
+  \fill[mibai] (16.00, 45.30) -- (62.50, 72.35) -- (62.77, 72.18) -- (67.68, 80.68) -- (21.21, 107.47) -- (20.56, 96.52) -- (52.68, 78.00) -- (17.23, 57.56) -- (15.95, 45.28) -- cycle;
+  % Satellite 5
+  \fill[mibai] (31.64, 77.07) -- (34.70, 82.35) -- (26.88, 86.85) -- (21.24, 77.09) -- (21.34, 77.01) -- (21.28, 76.98) -- (26.92, 67.21) -- (34.75, 71.71) -- cycle;
+  % Arm 6
+  \fill[mibai] (76.70, 6.71) -- (76.49, 60.44) -- (76.76, 60.60) -- (71.85, 69.09) -- (25.40, 42.30) -- (34.56, 36.26) -- (66.67, 54.77) -- (66.67, 13.90) -- (76.69, 6.66) -- cycle;
+  % Satellite 6
+  \fill[mibai] (56.97, 36.12) -- (53.91, 41.41) -- (46.10, 36.89) -- (51.75, 27.12) -- (51.86, 27.18) -- (51.86, 27.10) -- (63.16, 27.10) -- (63.16, 36.12) -- cycle;
+
+  % Right Rice-White Block (98 x 161)
+  \fill[mibai] (161, 0) rectangle (259, 161);
+
+  % Orange Right-Angle Corner Hook
+  \fill[qiancheng] (234, 148) -- (198, 148) -- (198, 88) -- (212, 88) -- (212, 134) -- (234, 134) -- cycle;
+\end{tikzpicture}%
+\ifdefined\imstandalone\def\finishdoc{\end{document}}\else\let\finishdoc\relax\fi\finishdoc%

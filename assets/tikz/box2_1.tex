@@ -1,0 +1,18 @@
+% TikZ vector asset: box2_1.tex
+% Vector replacement for 素材库/正文/box2_1.png (Original size: 284x285)
+% Aspect ratio: 284 : 285
+\providecolor{qiancheng}{RGB}{227, 101, 53}%
+\providecolor{mibai}{RGB}{244, 237, 218}%
+\begin{tikzpicture}[x=1bp, y=1bp, inner sep=0pt, outer sep=0pt]%
+  % Bounding box strictly aligned with original 284x285 PNG
+  \useasboundingbox (0, 0) rectangle (284, 285);%
+  % Background orange square
+  \fill[qiancheng] (0, 0) rectangle (284, 285);%
+  % Center concentric circles & rings (mibai)
+  % Outer ring: r_in = 85.49bp, r_out = 96.58bp (thickness = 11.09bp)
+  \fill[mibai, even odd rule] (142, 142.5) circle [radius=96.58] (142, 142.5) circle [radius=85.49];%
+  % Inner ring: r_in = 62.72bp, r_out = 73.83bp (thickness = 11.11bp)
+  \fill[mibai, even odd rule] (142, 142.5) circle [radius=73.83] (142, 142.5) circle [radius=62.72];%
+  % Center solid disk: radius = 42.68bp (diameter = 85.36bp)
+  \fill[mibai] (142, 142.5) circle [radius=42.68];%
+\end{tikzpicture}%

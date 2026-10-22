@@ -1,0 +1,26 @@
+%=============================================================================
+% Arknights Lone Trail LaTeX Template - Pure Vector TikZ Asset
+% Asset: cover_sep.tex (Replacing 素材库/封面分割线.png)
+% Original Dimensions: 821 x 25 bp
+% Visual Features: Horizontal divider with left block (25x25) and line (821x9)
+% Dynamic Color Support: Uses qiancheng with fallback \providecolor
+% Compatibility: Standalone compilation via xelatex & direct \input{} in docs
+%=============================================================================
+\ifcsname pgfpoint\endcsname
+\else
+  \documentclass[border=0pt]{standalone}
+  \usepackage{tikz}
+  \usepackage{xcolor}
+  \providecolor{qiancheng}{RGB}{227, 101, 53}
+  \def\imstandalone{1}
+  \begin{document}%
+\fi
+\providecolor{qiancheng}{RGB}{227, 101, 53}%
+\begin{tikzpicture}[x=1bp, y=1bp, inner sep=0pt, outer sep=0pt]
+  \useasboundingbox (0, 0) rectangle (821, 25);
+  % 左侧实心端块 (宽 25, 高 25)
+  \fill[qiancheng] (0, 0) rectangle (25, 25);
+  % 右侧水平细长线 (高 9, 上下对称居中)
+  \fill[qiancheng] (25, 8) rectangle (821, 17);
+\end{tikzpicture}%
+\ifdefined\imstandalone\def\finishdoc{\end{document}}\else\let\finishdoc\relax\fi\finishdoc%

@@ -1,0 +1,95 @@
+%=============================================================================
+% Arknights Lone Trail LaTeX Template - Pure Vector TikZ Asset
+% Asset: box_corner_mark.tex (Replacing 素材库/正文/definition_3.png, theorem_3.png, etc.)
+% Original Dimensions: 69 x 69 bp
+% Structure:
+%   - Top-left & Bottom-right: hollow concentric rings (outer R=16.03, inner R=10.15)
+%   - Bottom-left & Top-right: solid disks connected by smooth diagonal neck
+% Dynamic Color Support:
+%   - #1 defaults to 'definition'
+%   - Accepts theorem, proposition, corollary, lemma, example, or custom colors
+% Compatibility:
+%   - Standalone compilation via xelatex (produces preview sheet)
+%   - Direct \input{box_corner_mark.tex} in documents (uses \boxcornercolor or definition)
+%   - Direct macro call via \BoxCornerMark[<color>]
+%=============================================================================
+\ifcsname pgfpoint\endcsname
+\else
+  \documentclass[border=10pt]{standalone}
+  \usepackage{tikz}
+  \usepackage{xcolor}
+  \def\imstandalone{1}
+\fi
+
+\providecolor{definition}{RGB}{245, 164, 0}
+\providecolor{theorem}{RGB}{222, 4, 20}
+\providecolor{proposition}{RGB}{177, 0, 129}
+\providecolor{corollary}{RGB}{133, 194, 72}
+\providecolor{lemma}{RGB}{233, 93, 157}
+\providecolor{example}{RGB}{0, 153, 216}
+
+\ifdefined\imstandalone
+  \begin{document}
+\fi
+
+\providecommand{\BoxCornerMark}[1][definition]{%
+  \begin{tikzpicture}[x=1bp, y=1bp, inner sep=0pt, outer sep=0pt]
+    \useasboundingbox (0, 0) rectangle (69, 69);
+    % Top-Left Ring: Center (16.03, 52.97), Outer R=16.03, Inner R=10.15
+    \fill[#1, even odd rule] (16.03, 52.97) circle [radius=16.03] (16.03, 52.97) circle [radius=10.15];
+    % Bottom-Right Ring: Center (52.97, 16.03), Outer R=16.03, Inner R=10.15
+    \fill[#1, even odd rule] (52.97, 16.03) circle [radius=16.03] (52.97, 16.03) circle [radius=10.15];
+    % Diagonal Dumbbell (BL to TR):
+    \fill[#1] (16.03, 0.01)
+      .. controls (7.19, 0.01) and (0.00, 7.19) .. (0.00, 16.03)
+      .. controls (0.00, 24.87) and (7.19, 32.05) .. (16.03, 32.05)
+      .. controls (16.92, 32.05) and (17.80, 31.98) .. (18.65, 31.84)
+      .. controls (19.52, 31.70) and (20.40, 31.63) .. (21.27, 31.63)
+      .. controls (25.50, 31.63) and (29.61, 33.30) .. (32.66, 36.35)
+      .. controls (36.32, 40.01) and (38.00, 45.23) .. (37.16, 50.35)
+      .. controls (37.01, 51.21) and (36.94, 52.09) .. (36.94, 52.97)
+      .. controls (36.94, 61.81) and (44.13, 68.99) .. (52.97, 68.99)
+      .. controls (61.81, 68.99) and (69.00, 61.81) .. (69.00, 52.97)
+      .. controls (69.00, 44.13) and (61.81, 36.94) .. (52.97, 36.94)
+      .. controls (52.08, 36.94) and (51.20, 37.02) .. (50.35, 37.16)
+      .. controls (49.47, 37.30) and (48.59, 37.37) .. (47.72, 37.37)
+      .. controls (43.49, 37.37) and (39.39, 35.70) .. (36.34, 32.65)
+      .. controls (32.67, 28.99) and (30.99, 23.77) .. (31.84, 18.65)
+      .. controls (31.98, 17.79) and (32.05, 16.91) .. (32.05, 16.03)
+      .. controls (32.05, 7.19) and (24.87, 0.01) .. (16.03, 0.01) -- cycle;
+  \end{tikzpicture}%
+}
+
+\ifcsname boxcornercolor\endcsname
+\else
+  \def\boxcornercolor{definition}
+\fi
+
+\makeatletter
+\ifdefined\imstandalone
+  \begin{tabular}{cccccc}
+    \textbf{definition} & \textbf{theorem} & \textbf{proposition} & \textbf{corollary} & \textbf{lemma} & \textbf{example} \\
+    \BoxCornerMark[definition] &
+    \BoxCornerMark[theorem] &
+    \BoxCornerMark[proposition] &
+    \BoxCornerMark[corollary] &
+    \BoxCornerMark[lemma] &
+    \BoxCornerMark[example] \\[8pt]
+    \resizebox{!}{8pt}{\BoxCornerMark[definition]} &
+    \resizebox{!}{8pt}{\BoxCornerMark[theorem]} &
+    \resizebox{!}{8pt}{\BoxCornerMark[proposition]} &
+    \resizebox{!}{8pt}{\BoxCornerMark[corollary]} &
+    \resizebox{!}{8pt}{\BoxCornerMark[lemma]} &
+    \resizebox{!}{8pt}{\BoxCornerMark[example]} \\
+    \small (8pt size) & \small (8pt size) & \small (8pt size) & \small (8pt size) & \small (8pt size) & \small (8pt size) \\
+  \end{tabular}%
+  \def\finishdoc{\end{document}}%
+\else
+  \ifx\@nodocument\relax
+    \BoxCornerMark[\boxcornercolor]%
+  \fi
+  \let\finishdoc\relax%
+\fi
+\finishdoc
+\makeatother
+

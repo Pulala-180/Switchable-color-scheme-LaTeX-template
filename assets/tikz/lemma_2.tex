@@ -1,0 +1,35 @@
+%=============================================================================
+% Arknights Lone Trail LaTeX Template - Pure Vector TikZ Asset
+% Asset: lemma_2.tex (Replacing 素材库/正文/lemma_2.png)
+% Original Dimensions: 171 x 273 bp
+% Visual Features: Black rectangular background (heise) with 6 stepped dots (lemma) in top right
+% Dynamic Color Support: Uses heise, lemma with fallback \providecolor
+% Compatibility: Standalone compilation via xelatex & direct \input{} in docs
+%=============================================================================
+\ifcsname pgfpoint\endcsname
+\else
+  \documentclass[border=0pt]{standalone}
+  \usepackage{tikz}
+  \usepackage{xcolor}
+  \providecolor{heise}{RGB}{0, 0, 0}
+  \providecolor{lemma}{RGB}{233, 93, 157}
+  \def\imstandalone{1}
+  \begin{document}%
+\fi
+\providecolor{heise}{RGB}{0, 0, 0}%
+\providecolor{lemma}{RGB}{233, 93, 157}%
+\begin{tikzpicture}[x=1bp, y=1bp, inner sep=0pt, outer sep=0pt]
+  \useasboundingbox (0, 0) rectangle (171, 273);
+  \fill[heise] (0, 0) rectangle (171, 273);
+  % 6 stepped pink dots at top right (radius = 10.65 bp)
+  % Row 1 (top, y = 243.5 bp, 3 dots: x = 83.0, 112.35, 141.65)
+  \fill[lemma] (83.0, 243.5) circle [radius=10.65];
+  \fill[lemma] (112.35, 243.5) circle [radius=10.65];
+  \fill[lemma] (141.65, 243.5) circle [radius=10.65];
+  % Row 2 (middle, y = 214.2 bp, 2 dots: x = 112.35, 141.65)
+  \fill[lemma] (112.35, 214.2) circle [radius=10.65];
+  \fill[lemma] (141.65, 214.2) circle [radius=10.65];
+  % Row 3 (bottom, y = 184.9 bp, 1 dot: x = 141.65)
+  \fill[lemma] (141.65, 184.9) circle [radius=10.65];
+\end{tikzpicture}%
+\ifdefined\imstandalone\def\finishdoc{\end{document}}\else\let\finishdoc\relax\fi\finishdoc%

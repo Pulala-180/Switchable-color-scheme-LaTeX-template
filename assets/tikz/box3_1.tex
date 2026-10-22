@@ -1,0 +1,29 @@
+%=============================================================================
+% Arknights Lone Trail LaTeX Template - Pure Vector TikZ Asset
+% Asset: box3_1.tex (Replacing 素材库/正文/box3_1.png)
+% Original Dimensions: 137 x 285 bp
+% Visual Features: Vertical three-stripe bar (lv, huang, hong)
+% Dynamic Color Support: Uses lv, huang, hong with fallback \providecolor
+% Compatibility: Standalone compilation via xelatex & direct \input{} in docs
+%=============================================================================
+\ifcsname pgfpoint\endcsname
+\else
+  \documentclass[border=0pt]{standalone}
+  \usepackage{tikz}
+  \usepackage{xcolor}
+  \providecolor{lv}{RGB}{131, 187, 170}
+  \providecolor{huang}{RGB}{227, 164, 60}
+  \providecolor{hong}{RGB}{149, 44, 38}
+  \def\imstandalone{1}
+  \begin{document}%
+\fi
+\providecolor{lv}{RGB}{131, 187, 170}%
+\providecolor{huang}{RGB}{227, 164, 60}%
+\providecolor{hong}{RGB}{149, 44, 38}%
+\begin{tikzpicture}[x=1bp, y=1bp, inner sep=0pt, outer sep=0pt]
+  \useasboundingbox (0, 0) rectangle (137, 285);
+  \fill[lv] (0, 0) rectangle ({137/3 + 0.05}, 285);
+  \fill[huang] ({137/3}, 0) rectangle ({2*137/3 + 0.05}, 285);
+  \fill[hong] ({2*137/3}, 0) rectangle (137, 285);
+\end{tikzpicture}%
+\ifdefined\imstandalone\def\finishdoc{\end{document}}\else\let\finishdoc\relax\fi\finishdoc%

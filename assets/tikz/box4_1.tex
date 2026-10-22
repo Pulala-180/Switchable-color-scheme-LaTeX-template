@@ -1,0 +1,74 @@
+%=============================================================================
+% Arknights Lone Trail LaTeX Template - Pure Vector TikZ Asset
+% Asset: box4_1.tex (Replacing 素材库/正文/box4_1.png)
+% Original Dimensions: 538 x 284 bp
+% Visual Features:
+%   - Left: Orange (qiancheng) square with 6-pointed Lone Trail crystal snowflake (mibai)
+%   - Middle: 3 vertical color stripes (lv, huang, hong)
+%   - Right: Rice-white (mibai) block with orange (qiancheng) right-angle corner hook
+% Dynamic Color Support: Uses qiancheng, mibai, lv, huang, hong with fallback \providecolor
+% Compatibility: Standalone compilation via xelatex & direct \input{} in documents
+%=============================================================================
+\ifcsname pgfpoint\endcsname
+\else
+  \documentclass[border=0pt]{standalone}
+  \usepackage{tikz}
+  \usepackage{xcolor}
+  \providecolor{lv}{RGB}{131, 187, 170}
+  \providecolor{huang}{RGB}{227, 164, 60}
+  \providecolor{hong}{RGB}{149, 44, 38}
+  \providecolor{qiancheng}{RGB}{227, 101, 53}
+  \providecolor{mibai}{RGB}{244, 237, 218}
+  \def\imstandalone{1}
+  \begin{document}%
+\fi
+\providecolor{lv}{RGB}{131, 187, 170}%
+\providecolor{huang}{RGB}{227, 164, 60}%
+\providecolor{hong}{RGB}{149, 44, 38}%
+\providecolor{qiancheng}{RGB}{227, 101, 53}%
+\providecolor{mibai}{RGB}{244, 237, 218}%
+\begin{tikzpicture}[x=1bp, y=1bp, inner sep=0pt, outer sep=0pt]
+  % Exact bounding box matching 538 x 284 bp
+  \useasboundingbox (0, 0) rectangle (538, 284);
+
+  % Left orange square
+  \fill[qiancheng] (0, 0) rectangle (284, 284);
+
+  % 6-Pointed Lone Trail Crystal Snowflake Badge (mibai)
+  % Arm 1
+  \fill[mibai] (248.71, 70.61) -- (166.32, 117.69) -- (166.32, 118.24) -- (149.00, 118.24) -- (149.00, 23.74) -- (166.32, 32.39) -- (166.32, 97.70) -- (228.85, 61.65) -- (248.77, 70.55) -- cycle;
+  % Satellite 1
+  \fill[mibai] (186.30, 66.45) -- (175.53, 66.45) -- (175.53, 50.55) -- (195.46, 50.55) -- (195.46, 50.79) -- (195.59, 50.71) -- (205.55, 67.95) -- (191.77, 75.89) -- cycle;
+  % Arm 2
+  \fill[mibai] (255.97, 196.62) -- (173.96, 148.90) -- (173.48, 149.18) -- (164.82, 134.19) -- (246.76, 86.95) -- (247.92, 106.26) -- (191.28, 138.91) -- (253.81, 174.96) -- (256.05, 196.63) -- cycle;
+  % Satellite 2
+  \fill[mibai] (228.38, 140.57) -- (222.99, 131.25) -- (236.79, 123.31) -- (246.75, 140.54) -- (246.54, 140.65) -- (246.67, 140.72) -- (236.71, 157.97) -- (222.91, 150.01) -- cycle;
+  % Arm 3
+  \fill[mibai] (148.89, 264.68) -- (149.27, 169.90) -- (148.78, 169.62) -- (157.46, 154.65) -- (239.40, 201.89) -- (223.24, 212.54) -- (166.59, 179.89) -- (166.59, 251.99) -- (148.92, 264.77) -- cycle;
+  % Satellite 3
+  \fill[mibai] (183.70, 212.79) -- (189.09, 203.47) -- (202.89, 211.43) -- (192.91, 228.67) -- (192.72, 228.55) -- (192.72, 228.69) -- (172.79, 228.69) -- (172.79, 212.79) -- cycle;
+  % Arm 4
+  \fill[mibai] (35.69, 205.89) -- (118.07, 158.83) -- (118.07, 158.28) -- (135.39, 158.28) -- (135.39, 252.77) -- (118.07, 244.13) -- (118.07, 178.81) -- (55.54, 214.86) -- (35.63, 205.96) -- cycle;
+  % Satellite 4
+  \fill[mibai] (98.09, 210.05) -- (108.87, 210.05) -- (108.87, 225.96) -- (88.93, 225.96) -- (88.93, 225.73) -- (88.81, 225.81) -- (78.83, 208.56) -- (92.63, 200.61) -- cycle;
+  % Arm 5
+  \fill[mibai] (28.42, 79.90) -- (110.43, 127.62) -- (110.92, 127.33) -- (119.58, 142.32) -- (37.61, 189.57) -- (36.46, 170.26) -- (93.11, 137.59) -- (30.58, 101.54) -- (28.33, 79.87) -- cycle;
+  % Satellite 5
+  \fill[mibai] (56.01, 135.95) -- (61.40, 145.27) -- (47.61, 153.20) -- (37.65, 135.98) -- (37.83, 135.85) -- (37.72, 135.79) -- (47.68, 118.55) -- (61.48, 126.50) -- cycle;
+  % Arm 6
+  \fill[mibai] (135.49, 11.84) -- (135.11, 106.62) -- (135.60, 106.90) -- (126.94, 121.87) -- (44.99, 74.62) -- (61.15, 63.96) -- (117.79, 96.62) -- (117.79, 24.52) -- (135.47, 11.75) -- cycle;
+  % Satellite 6
+  \fill[mibai] (100.68, 63.72) -- (95.29, 73.04) -- (81.51, 65.08) -- (91.47, 47.84) -- (91.67, 47.95) -- (91.67, 47.81) -- (111.61, 47.81) -- (111.61, 63.72) -- cycle;
+
+  % Middle 3 Vertical Color Stripes
+  \fill[lv] (284, 0) rectangle (318, 284);
+  \fill[huang] (318, 0) rectangle (352, 284);
+  \fill[hong] (352, 0) rectangle (386, 284);
+
+  % Right Rice-White Block
+  \fill[mibai] (386, 0) rectangle (538, 284);
+
+  % Orange Right-Angle Corner Hook
+  \fill[qiancheng] (495.41, 262.70) -- (430.90, 262.70) -- (430.90, 154.80) -- (456.24, 154.80) -- (456.24, 236.36) -- (495.41, 236.36) -- cycle;
+\end{tikzpicture}%
+\ifdefined\imstandalone\def\finishdoc{\end{document}}\else\let\finishdoc\relax\fi\finishdoc%

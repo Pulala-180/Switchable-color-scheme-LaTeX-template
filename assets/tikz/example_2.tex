@@ -1,0 +1,44 @@
+%=============================================================================
+% Arknights Lone Trail LaTeX Template - Pure Vector TikZ Asset
+% Asset: example_2.tex (Replacing 素材库/正文/example_2.png)
+% Original Dimensions: 171 x 273 bp (Aspect ratio: 171 : 273)
+% Visual Features:
+%   - Vertical rectangular background (heise)
+%   - Upper-right stepped grid of 6 solid blue circles (example)
+%     Row 1 (top): 3 dots, Row 2: 2 dots, Row 3: 1 dot
+% Dynamic Color Support: example, heise with fallback \providecolor
+% Compatibility: Standalone compilation via xelatex & direct \input{} in docs
+%=============================================================================
+\ifcsname pgfpoint\endcsname%
+\else%
+  \documentclass[border=0pt]{standalone}%
+  \usepackage{tikz}%
+  \usepackage{xcolor}%
+  \def\imstandalone{1}%
+  \begin{document}%
+\fi%
+\providecolor{example}{RGB}{0, 153, 216}%
+\providecolor{heise}{RGB}{0, 0, 0}%
+\begin{tikzpicture}[x=1bp, y=1bp, inner sep=0pt, outer sep=0pt]%
+  % Bounding box strictly aligned with original 171x273 PNG%
+  \useasboundingbox (0, 0) rectangle (171, 273);%
+  % Background black rectangle%
+  \fill[heise] (0, 0) rectangle (171, 273);%
+  % 6 stepped solid blue circles (color example)%
+  % Radius = 10.38bp (diameter ~20.76bp)%
+  % Row 1 (top, 3 dots): y = 244.58bp%
+  \fill[example] (82.76, 244.58) circle [radius=10.38];%
+  \fill[example] (112.07, 244.58) circle [radius=10.38];%
+  \fill[example] (141.37, 244.58) circle [radius=10.38];%
+  % Row 2 (middle, 2 dots): y = 215.35bp%
+  \fill[example] (112.07, 215.35) circle [radius=10.38];%
+  \fill[example] (141.37, 215.35) circle [radius=10.38];%
+  % Row 3 (bottom, 1 dot): y = 186.11bp%
+  \fill[example] (141.37, 186.11) circle [radius=10.38];%
+\end{tikzpicture}%
+\ifdefined\imstandalone%
+  \def\finishdoc{\end{document}}%
+\else%
+  \let\finishdoc\relax%
+\fi%
+\finishdoc%

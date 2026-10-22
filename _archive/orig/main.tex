@@ -1,0 +1,43 @@
+\input{setting.tex}
+% ========== 🎨 主题配色极速切换接口 (一键换肤) ==========
+% 独家集成 150 套高定机能配色总控单文件 palettes/themes.tex
+% 只需修改下方 \SelectTheme{} 内部的编号即可秒级切换！支持 001~150 或 1~150
+% 预览图请直达 palettes/ 文件夹下查看对应的三合一画册 (例如 palettes/theme_001.png)
+\input{palettes/themes.tex}
+\SelectTheme{145}
+\input{setting2.tex}  
+
+
+\begin{document}
+	
+	% ---------------- 1. 封面 ----------------
+	\pagestyle{empty} % 封面无页码
+	\input{cover.tex}
+	\thispagestyle{empty}	
+	\clearpage
+	
+	% ---------------- 2. 目录 ----------------
+	\newgeometry{left=2.1cm,right=0.95cm,top=5.8cm,bottom=2cm}
+	\input{contents.tex}  % 加载所有目录设置
+	\makecustomtoc       % 执行自定义目录（自动应用背景、样式、布局）
+	\clearpage           % 目录后分页
+	\restoregeometry
+
+	% ---------------- 3. 正文 ----------------
+	\pagenumbering{arabic}  % 恢复阿拉伯数字页码
+	\setcounter{page}{1}    % 正文从 1 开始
+	\pagestyle{empty}       % 禁用默认页码样式，使用TikZ自定义
+	
+	% ========== 正文背景设置（全幅科技满铺，彻底消除原版左侧白条） ==========
+	\AddToHook{shipout/background}{%
+		\begin{tikzpicture}[remember picture, overlay]
+			\node[anchor=north west, inner sep=0pt, outer sep=0pt] at (current page.north west) {
+				\resizebox{\paperwidth}{\paperheight}{\input{tikz_assets/main_bg.tex}}
+			};
+		\end{tikzpicture}%
+	}
+	% =======================正文内容(下面)=========================
+
+	\input{正文/测试.tex}
+
+\end{document}

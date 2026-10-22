@@ -1,0 +1,3247 @@
+% ==============================================================================
+%         明日方舟·孤星 (Arknights Lone Trail) 精选高定主题配色总控单文件
+%                        palettes/themes.tex
+%              总计收录 144 套主题（自动同步自 palettes/tex/）
+% ==============================================================================
+%
+% 【使用方法】在主文档 main.tex 中引入并选用主题：
+%    \input{styles/settings.tex}
+%    \input{palettes/themes.tex}
+%    \SelectTheme{001}         % 直接输入主题编号
+%    \input{styles/boxes.tex}
+%
+% ==============================================================================
+
+\makeatletter
+% ------------------------------------------------------------------------------
+% 主题调度选择器
+% ------------------------------------------------------------------------------
+\newcommand{\SelectTheme}[1]{%
+  \@ifundefined{LoneTrailTheme@#1}{%
+    \PackageWarning{LoneTrailThemes}{Theme '#1' not recognized! Falling back to 001.}%
+    \csname LoneTrailTheme@001\endcsname
+  }{%
+    \csname LoneTrailTheme@#1\endcsname
+  }%
+}
+
+% ------------------------------------------------------------------------------
+% Theme: theme_000 | Arknights Lone Trail Classic Orange
+% ------------------------------------------------------------------------------
+\newcommand{\LoneTrailThemeDef@themezerozerozero}{%
+  \definecolor{qiancheng}{RGB}{227, 101, 53}%
+  \definecolor{lv}{RGB}{131, 187, 170}%
+  \definecolor{huang}{RGB}{227, 164, 60}%
+  \definecolor{hong}{RGB}{149, 44, 38}%
+  \definecolor{qianbai}{RGB}{248, 243, 231}%
+  \definecolor{mibai}{RGB}{244, 237, 218}%
+  \definecolor{heise}{RGB}{0, 0, 0}%
+  \definecolor{definition}{RGB}{245, 164, 0}%
+  \definecolor{theorem}{RGB}{222, 4, 20}%
+  \definecolor{proposition}{RGB}{177, 0, 129}%
+  \definecolor{corollary}{RGB}{133, 194, 72}%
+  \definecolor{lemma}{RGB}{233, 93, 157}%
+  \definecolor{example}{RGB}{0, 153, 216}%
+}
+\@namedef{LoneTrailTheme@000}{\LoneTrailThemeDef@themezerozerozero}
+\@namedef{LoneTrailTheme@theme_000}{\LoneTrailThemeDef@themezerozerozero}
+\@namedef{LoneTrailTheme@0}{\LoneTrailThemeDef@themezerozerozero}
+\@namedef{LoneTrailTheme@orange}{\LoneTrailThemeDef@themezerozerozero}
+\@namedef{LoneTrailTheme@baseline_orange}{\LoneTrailThemeDef@themezerozerozero}
+\@namedef{LoneTrailTheme@theme_000_baseline_orange}{\LoneTrailThemeDef@themezerozerozero}
+
+% ------------------------------------------------------------------------------
+% Theme: theme_001 | 赛博矩阵·绿光 (Cyber Matrix Neon)
+% ------------------------------------------------------------------------------
+\newcommand{\LoneTrailThemeDef@themezerozeroone}{%
+  \definecolor{qiancheng}{RGB}{0, 158, 96}%
+  \definecolor{lv}{RGB}{116, 231, 220}%
+  \definecolor{huang}{RGB}{0, 224, 136}%
+  \definecolor{hong}{RGB}{8, 94, 39}%
+  \definecolor{qianbai}{RGB}{244, 249, 246}%
+  \definecolor{mibai}{RGB}{233, 243, 237}%
+  \definecolor{heise}{RGB}{16, 26, 20}%
+  \definecolor{definition}{RGB}{0, 150, 100}%
+  \definecolor{theorem}{RGB}{205, 30, 60}%
+  \definecolor{proposition}{RGB}{140, 50, 180}%
+  \definecolor{corollary}{RGB}{55, 168, 50}%
+  \definecolor{lemma}{RGB}{215, 50, 125}%
+  \definecolor{example}{RGB}{0, 145, 175}%
+}
+\@namedef{LoneTrailTheme@001}{\LoneTrailThemeDef@themezerozeroone}
+\@namedef{LoneTrailTheme@theme_001}{\LoneTrailThemeDef@themezerozeroone}
+\@namedef{LoneTrailTheme@1}{\LoneTrailThemeDef@themezerozeroone}
+\@namedef{LoneTrailTheme@theme_002}{\LoneTrailThemeDef@themezerozeroone}
+
+% ------------------------------------------------------------------------------
+% Theme: theme_002 | 仿生机械·梅耶机械臂 (Bionic Android Mint)
+% ------------------------------------------------------------------------------
+\newcommand{\LoneTrailThemeDef@themezerozerotwo}{%
+  \definecolor{qiancheng}{RGB}{52, 198, 142}%
+  \definecolor{lv}{RGB}{162, 216, 211}%
+  \definecolor{huang}{RGB}{56, 220, 157}%
+  \definecolor{hong}{RGB}{37, 111, 64}%
+  \definecolor{qianbai}{RGB}{246, 251, 250}%
+  \definecolor{mibai}{RGB}{236, 244, 243}%
+  \definecolor{heise}{RGB}{18, 28, 30}%
+  \definecolor{definition}{RGB}{216, 150, 32}%
+  \definecolor{theorem}{RGB}{202, 50, 60}%
+  \definecolor{proposition}{RGB}{112, 76, 176}%
+  \definecolor{corollary}{RGB}{36, 170, 108}%
+  \definecolor{lemma}{RGB}{220, 88, 118}%
+  \definecolor{example}{RGB}{38, 136, 204}%
+}
+\@namedef{LoneTrailTheme@002}{\LoneTrailThemeDef@themezerozerotwo}
+\@namedef{LoneTrailTheme@theme_002}{\LoneTrailThemeDef@themezerozerotwo}
+\@namedef{LoneTrailTheme@2}{\LoneTrailThemeDef@themezerozerotwo}
+\@namedef{LoneTrailTheme@theme_012}{\LoneTrailThemeDef@themezerozerotwo}
+
+% ------------------------------------------------------------------------------
+% Theme: theme_003 | 森林源泉·谢拉格圣雪 (Kjerag Holy Boreal)
+% ------------------------------------------------------------------------------
+\newcommand{\LoneTrailThemeDef@themezerozerothree}{%
+  \definecolor{qiancheng}{RGB}{18, 140, 126}%
+  \definecolor{lv}{RGB}{126, 221, 189}%
+  \definecolor{huang}{RGB}{27, 208, 187}%
+  \definecolor{hong}{RGB}{18, 72, 84}%
+  \definecolor{qianbai}{RGB}{246, 250, 250}%
+  \definecolor{mibai}{RGB}{236, 243, 243}%
+  \definecolor{heise}{RGB}{16, 28, 30}%
+  \definecolor{definition}{RGB}{195, 135, 20}%
+  \definecolor{theorem}{RGB}{15, 120, 110}%
+  \definecolor{proposition}{RGB}{45, 95, 150}%
+  \definecolor{corollary}{RGB}{38, 166, 154}%
+  \definecolor{lemma}{RGB}{128, 70, 130}%
+  \definecolor{example}{RGB}{40, 130, 190}%
+}
+\@namedef{LoneTrailTheme@003}{\LoneTrailThemeDef@themezerozerothree}
+\@namedef{LoneTrailTheme@theme_003}{\LoneTrailThemeDef@themezerozerothree}
+\@namedef{LoneTrailTheme@3}{\LoneTrailThemeDef@themezerozerothree}
+\@namedef{LoneTrailTheme@theme_013}{\LoneTrailThemeDef@themezerozerothree}
+
+% ------------------------------------------------------------------------------
+% Theme: theme_004 | 毒液荧光·罗德岛医疗 (Bio-Hazard Fluorescent Lime)
+% ------------------------------------------------------------------------------
+\newcommand{\LoneTrailThemeDef@themezerozerofour}{%
+  \definecolor{qiancheng}{RGB}{138, 208, 16}%
+  \definecolor{lv}{RGB}{162, 222, 124}%
+  \definecolor{huang}{RGB}{145, 218, 17}%
+  \definecolor{hong}{RGB}{94, 97, 15}%
+  \definecolor{qianbai}{RGB}{248, 252, 246}%
+  \definecolor{mibai}{RGB}{238, 244, 238}%
+  \definecolor{heise}{RGB}{25, 30, 28}%
+  \definecolor{definition}{RGB}{195, 140, 0}%
+  \definecolor{theorem}{RGB}{190, 35, 45}%
+  \definecolor{proposition}{RGB}{30, 145, 75}%
+  \definecolor{corollary}{RGB}{15, 140, 135}%
+  \definecolor{lemma}{RGB}{110, 50, 150}%
+  \definecolor{example}{RGB}{0, 135, 190}%
+}
+\@namedef{LoneTrailTheme@004}{\LoneTrailThemeDef@themezerozerofour}
+\@namedef{LoneTrailTheme@theme_004}{\LoneTrailThemeDef@themezerozerofour}
+\@namedef{LoneTrailTheme@4}{\LoneTrailThemeDef@themezerozerofour}
+\@namedef{LoneTrailTheme@theme_015}{\LoneTrailThemeDef@themezerozerofour}
+
+% ------------------------------------------------------------------------------
+% Theme: theme_005 | 彗星尘埃·群星回响 (Stardust Cosmic Azure)
+% ------------------------------------------------------------------------------
+\newcommand{\LoneTrailThemeDef@themezerozerofive}{%
+  \definecolor{qiancheng}{RGB}{15, 118, 186}%
+  \definecolor{lv}{RGB}{121, 210, 225}%
+  \definecolor{huang}{RGB}{18, 138, 217}%
+  \definecolor{hong}{RGB}{14, 36, 88}%
+  \definecolor{qianbai}{RGB}{246, 248, 252}%
+  \definecolor{mibai}{RGB}{236, 242, 248}%
+  \definecolor{heise}{RGB}{14, 20, 30}%
+  \definecolor{definition}{RGB}{230, 150, 30}%
+  \definecolor{theorem}{RGB}{210, 45, 60}%
+  \definecolor{proposition}{RGB}{138, 75, 175}%
+  \definecolor{corollary}{RGB}{40, 165, 110}%
+  \definecolor{lemma}{RGB}{205, 70, 145}%
+  \definecolor{example}{RGB}{24, 140, 208}%
+}
+\@namedef{LoneTrailTheme@005}{\LoneTrailThemeDef@themezerozerofive}
+\@namedef{LoneTrailTheme@theme_005}{\LoneTrailThemeDef@themezerozerofive}
+\@namedef{LoneTrailTheme@5}{\LoneTrailThemeDef@themezerozerofive}
+\@namedef{LoneTrailTheme@theme_016}{\LoneTrailThemeDef@themezerozerofive}
+
+% ------------------------------------------------------------------------------
+% Theme: theme_006 | 哥特暗影·叙拉古黑手党 (Siracusa Noir Carmine)
+% ------------------------------------------------------------------------------
+\newcommand{\LoneTrailThemeDef@themezerozerosix}{%
+  \definecolor{qiancheng}{RGB}{136, 14, 44}%
+  \definecolor{lv}{RGB}{230, 127, 117}%
+  \definecolor{huang}{RGB}{222, 23, 72}%
+  \definecolor{hong}{RGB}{88, 14, 51}%
+  \definecolor{qianbai}{RGB}{248, 246, 244}%
+  \definecolor{mibai}{RGB}{238, 235, 230}%
+  \definecolor{heise}{RGB}{18, 16, 18}%
+  \definecolor{definition}{RGB}{188, 128, 28}%
+  \definecolor{theorem}{RGB}{168, 16, 28}%
+  \definecolor{proposition}{RGB}{105, 42, 112}%
+  \definecolor{corollary}{RGB}{78, 138, 92}%
+  \definecolor{lemma}{RGB}{165, 40, 92}%
+  \definecolor{example}{RGB}{42, 98, 148}%
+}
+\@namedef{LoneTrailTheme@006}{\LoneTrailThemeDef@themezerozerosix}
+\@namedef{LoneTrailTheme@theme_006}{\LoneTrailThemeDef@themezerozerosix}
+\@namedef{LoneTrailTheme@6}{\LoneTrailThemeDef@themezerozerosix}
+\@namedef{LoneTrailTheme@theme_018}{\LoneTrailThemeDef@themezerozerosix}
+
+% ------------------------------------------------------------------------------
+% Theme: theme_007 | 宇宙红移·红巨星 (Redshift Cosmic Vermilion)
+% ------------------------------------------------------------------------------
+\newcommand{\LoneTrailThemeDef@themezerozeroseven}{%
+  \definecolor{qiancheng}{RGB}{196, 66, 16}%
+  \definecolor{lv}{RGB}{233, 190, 121}%
+  \definecolor{huang}{RGB}{226, 76, 18}%
+  \definecolor{hong}{RGB}{90, 14, 12}%
+  \definecolor{qianbai}{RGB}{250, 246, 244}%
+  \definecolor{mibai}{RGB}{242, 236, 232}%
+  \definecolor{heise}{RGB}{20, 16, 22}%
+  \definecolor{definition}{RGB}{228, 142, 24}%
+  \definecolor{theorem}{RGB}{184, 32, 36}%
+  \definecolor{proposition}{RGB}{124, 52, 168}%
+  \definecolor{corollary}{RGB}{42, 156, 108}%
+  \definecolor{lemma}{RGB}{198, 62, 122}%
+  \definecolor{example}{RGB}{28, 136, 196}%
+}
+\@namedef{LoneTrailTheme@007}{\LoneTrailThemeDef@themezerozeroseven}
+\@namedef{LoneTrailTheme@theme_007}{\LoneTrailThemeDef@themezerozeroseven}
+\@namedef{LoneTrailTheme@7}{\LoneTrailThemeDef@themezerozeroseven}
+\@namedef{LoneTrailTheme@theme_019}{\LoneTrailThemeDef@themezerozeroseven}
+
+% ------------------------------------------------------------------------------
+% Theme: theme_008 | 钛灰工程·哥伦比亚先驱 (Columbia Frontier Titanium)
+% ------------------------------------------------------------------------------
+\newcommand{\LoneTrailThemeDef@themezerozeroeight}{%
+  \definecolor{qiancheng}{RGB}{84, 98, 115}%
+  \definecolor{lv}{RGB}{182, 198, 214}%
+  \definecolor{huang}{RGB}{104, 126, 152}%
+  \definecolor{hong}{RGB}{42, 54, 72}%
+  \definecolor{qianbai}{RGB}{246, 248, 250}%
+  \definecolor{mibai}{RGB}{236, 240, 244}%
+  \definecolor{heise}{RGB}{24, 28, 34}%
+  \definecolor{definition}{RGB}{224, 118, 18}%
+  \definecolor{theorem}{RGB}{192, 40, 48}%
+  \definecolor{proposition}{RGB}{52, 94, 186}%
+  \definecolor{corollary}{RGB}{48, 152, 98}%
+  \definecolor{lemma}{RGB}{142, 68, 172}%
+  \definecolor{example}{RGB}{44, 132, 184}%
+}
+\@namedef{LoneTrailTheme@008}{\LoneTrailThemeDef@themezerozeroeight}
+\@namedef{LoneTrailTheme@theme_008}{\LoneTrailThemeDef@themezerozeroeight}
+\@namedef{LoneTrailTheme@8}{\LoneTrailThemeDef@themezerozeroeight}
+\@namedef{LoneTrailTheme@theme_020}{\LoneTrailThemeDef@themezerozeroeight}
+
+% ------------------------------------------------------------------------------
+% Theme: theme_009 | 玫瑰星云·深空粉晶 (Rosette Nebula Rose)
+% ------------------------------------------------------------------------------
+\newcommand{\LoneTrailThemeDef@themezerozeronine}{%
+  \definecolor{qiancheng}{RGB}{218, 80, 138}%
+  \definecolor{lv}{RGB}{235, 196, 201}%
+  \definecolor{huang}{RGB}{231, 85, 147}%
+  \definecolor{hong}{RGB}{152, 44, 122}%
+  \definecolor{qianbai}{RGB}{252, 248, 250}%
+  \definecolor{mibai}{RGB}{244, 238, 242}%
+  \definecolor{heise}{RGB}{26, 18, 30}%
+  \definecolor{definition}{RGB}{228, 156, 36}%
+  \definecolor{theorem}{RGB}{204, 42, 104}%
+  \definecolor{proposition}{RGB}{136, 56, 176}%
+  \definecolor{corollary}{RGB}{38, 168, 134}%
+  \definecolor{lemma}{RGB}{224, 92, 156}%
+  \definecolor{example}{RGB}{44, 138, 212}%
+}
+\@namedef{LoneTrailTheme@009}{\LoneTrailThemeDef@themezerozeronine}
+\@namedef{LoneTrailTheme@theme_009}{\LoneTrailThemeDef@themezerozeronine}
+\@namedef{LoneTrailTheme@9}{\LoneTrailThemeDef@themezerozeronine}
+\@namedef{LoneTrailTheme@theme_021}{\LoneTrailThemeDef@themezerozeronine}
+
+% ------------------------------------------------------------------------------
+% Theme: theme_010 | 虚空幽灵·死魂灵
+% ------------------------------------------------------------------------------
+\newcommand{\LoneTrailThemeDef@themezeroonezero}{%
+  \definecolor{qiancheng}{RGB}{24, 208, 196}%
+  \definecolor{lv}{RGB}{139, 226, 198}%
+  \definecolor{huang}{RGB}{29, 229, 216}%
+  \definecolor{hong}{RGB}{21, 88, 109}%
+  \definecolor{qianbai}{RGB}{245, 250, 250}%
+  \definecolor{mibai}{RGB}{235, 246, 246}%
+  \definecolor{heise}{RGB}{12, 22, 28}%
+  \definecolor{definition}{RGB}{18, 176, 188}%
+  \definecolor{theorem}{RGB}{82, 68, 158}%
+  \definecolor{proposition}{RGB}{120, 54, 165}%
+  \definecolor{corollary}{RGB}{32, 172, 142}%
+  \definecolor{lemma}{RGB}{168, 72, 138}%
+  \definecolor{example}{RGB}{38, 142, 202}%
+}
+\@namedef{LoneTrailTheme@010}{\LoneTrailThemeDef@themezeroonezero}
+\@namedef{LoneTrailTheme@theme_010}{\LoneTrailThemeDef@themezeroonezero}
+\@namedef{LoneTrailTheme@10}{\LoneTrailThemeDef@themezeroonezero}
+\@namedef{LoneTrailTheme@theme_022}{\LoneTrailThemeDef@themezeroonezero}
+
+% ------------------------------------------------------------------------------
+% Theme: theme_011 | 沙皇铜锈·乌萨斯先锋
+% ------------------------------------------------------------------------------
+\newcommand{\LoneTrailThemeDef@themezerooneone}{%
+  \definecolor{qiancheng}{RGB}{88, 168, 142}%
+  \definecolor{lv}{RGB}{178, 206, 203}%
+  \definecolor{huang}{RGB}{61, 221, 169}%
+  \definecolor{hong}{RGB}{56, 98, 74}%
+  \definecolor{qianbai}{RGB}{249, 247, 241}%
+  \definecolor{mibai}{RGB}{241, 239, 231}%
+  \definecolor{heise}{RGB}{22, 24, 23}%
+  \definecolor{definition}{RGB}{58, 148, 126}%
+  \definecolor{theorem}{RGB}{165, 50, 42}%
+  \definecolor{proposition}{RGB}{135, 58, 112}%
+  \definecolor{corollary}{RGB}{72, 152, 108}%
+  \definecolor{lemma}{RGB}{175, 82, 88}%
+  \definecolor{example}{RGB}{62, 122, 158}%
+}
+\@namedef{LoneTrailTheme@011}{\LoneTrailThemeDef@themezerooneone}
+\@namedef{LoneTrailTheme@theme_011}{\LoneTrailThemeDef@themezerooneone}
+\@namedef{LoneTrailTheme@11}{\LoneTrailThemeDef@themezerooneone}
+
+% ------------------------------------------------------------------------------
+% Theme: theme_012 | 冰川裂隙·绝对零度 (Absolute Zero Cyan)
+% ------------------------------------------------------------------------------
+\newcommand{\LoneTrailThemeDef@themezeroonetwo}{%
+  \definecolor{qiancheng}{RGB}{0, 168, 198}%
+  \definecolor{lv}{RGB}{112, 235, 223}%
+  \definecolor{huang}{RGB}{0, 199, 235}%
+  \definecolor{hong}{RGB}{8, 55, 94}%
+  \definecolor{qianbai}{RGB}{242, 248, 252}%
+  \definecolor{mibai}{RGB}{230, 241, 248}%
+  \definecolor{heise}{RGB}{10, 24, 38}%
+  \definecolor{definition}{RGB}{0, 145, 190}%
+  \definecolor{theorem}{RGB}{20, 80, 130}%
+  \definecolor{proposition}{RGB}{95, 75, 160}%
+  \definecolor{corollary}{RGB}{18, 155, 135}%
+  \definecolor{lemma}{RGB}{220, 105, 40}%
+  \definecolor{example}{RGB}{25, 165, 230}%
+}
+\@namedef{LoneTrailTheme@012}{\LoneTrailThemeDef@themezeroonetwo}
+\@namedef{LoneTrailTheme@theme_012}{\LoneTrailThemeDef@themezeroonetwo}
+\@namedef{LoneTrailTheme@12}{\LoneTrailThemeDef@themezeroonetwo}
+\@namedef{LoneTrailTheme@theme_025}{\LoneTrailThemeDef@themezeroonetwo}
+
+% ------------------------------------------------------------------------------
+% Theme: theme_013 | 碳纤夜行·黑夜隐形 (Carbon Stealth Graphite)
+% ------------------------------------------------------------------------------
+\newcommand{\LoneTrailThemeDef@themezeroonethree}{%
+  \definecolor{qiancheng}{RGB}{45, 52, 60}%
+  \definecolor{lv}{RGB}{162, 168, 175}%
+  \definecolor{huang}{RGB}{78, 86, 96}%
+  \definecolor{hong}{RGB}{26, 30, 36}%
+  \definecolor{qianbai}{RGB}{246, 247, 248}%
+  \definecolor{mibai}{RGB}{235, 237, 240}%
+  \definecolor{heise}{RGB}{16, 18, 22}%
+  \definecolor{definition}{RGB}{50, 92, 125}%
+  \definecolor{theorem}{RGB}{165, 36, 46}%
+  \definecolor{proposition}{RGB}{42, 98, 108}%
+  \definecolor{corollary}{RGB}{40, 138, 98}%
+  \definecolor{lemma}{RGB}{192, 112, 28}%
+  \definecolor{example}{RGB}{68, 82, 100}%
+}
+\@namedef{LoneTrailTheme@013}{\LoneTrailThemeDef@themezeroonethree}
+\@namedef{LoneTrailTheme@theme_013}{\LoneTrailThemeDef@themezeroonethree}
+\@namedef{LoneTrailTheme@13}{\LoneTrailThemeDef@themezeroonethree}
+\@namedef{LoneTrailTheme@theme_026}{\LoneTrailThemeDef@themezeroonethree}
+
+% ------------------------------------------------------------------------------
+% Theme: theme_014 | 灰烬重生·不死鸟 (Ashen Phoenix Flame)
+% ------------------------------------------------------------------------------
+\newcommand{\LoneTrailThemeDef@themezeroonefour}{%
+  \definecolor{qiancheng}{RGB}{236, 26, 14}%
+  \definecolor{lv}{RGB}{241, 186, 152}%
+  \definecolor{huang}{RGB}{242, 45, 34}%
+  \definecolor{hong}{RGB}{124, 14, 35}%
+  \definecolor{qianbai}{RGB}{250, 246, 244}%
+  \definecolor{mibai}{RGB}{242, 236, 232}%
+  \definecolor{heise}{RGB}{28, 18, 20}%
+  \definecolor{definition}{RGB}{220, 130, 20}%
+  \definecolor{theorem}{RGB}{200, 30, 30}%
+  \definecolor{proposition}{RGB}{150, 40, 110}%
+  \definecolor{corollary}{RGB}{104, 159, 56}%
+  \definecolor{lemma}{RGB}{230, 85, 75}%
+  \definecolor{example}{RGB}{38, 115, 176}%
+}
+\@namedef{LoneTrailTheme@014}{\LoneTrailThemeDef@themezeroonefour}
+\@namedef{LoneTrailTheme@theme_014}{\LoneTrailThemeDef@themezeroonefour}
+\@namedef{LoneTrailTheme@14}{\LoneTrailThemeDef@themezeroonefour}
+\@namedef{LoneTrailTheme@theme_029}{\LoneTrailThemeDef@themezeroonefour}
+
+% ------------------------------------------------------------------------------
+% Theme: theme_015 | 苍蓝誓约·深蓝之树 (We Many Deep Cerulean)
+% ------------------------------------------------------------------------------
+\newcommand{\LoneTrailThemeDef@themezeroonefive}{%
+  \definecolor{qiancheng}{RGB}{0, 106, 150}%
+  \definecolor{lv}{RGB}{112, 229, 235}%
+  \definecolor{huang}{RGB}{0, 166, 235}%
+  \definecolor{hong}{RGB}{8, 43, 94}%
+  \definecolor{qianbai}{RGB}{244, 248, 250}%
+  \definecolor{mibai}{RGB}{234, 242, 245}%
+  \definecolor{heise}{RGB}{10, 22, 28}%
+  \definecolor{definition}{RGB}{8, 130, 160}%
+  \definecolor{theorem}{RGB}{25, 95, 175}%
+  \definecolor{proposition}{RGB}{95, 75, 165}%
+  \definecolor{corollary}{RGB}{35, 150, 120}%
+  \definecolor{lemma}{RGB}{200, 105, 135}%
+  \definecolor{example}{RGB}{30, 165, 195}%
+}
+\@namedef{LoneTrailTheme@015}{\LoneTrailThemeDef@themezeroonefive}
+\@namedef{LoneTrailTheme@theme_015}{\LoneTrailThemeDef@themezeroonefive}
+\@namedef{LoneTrailTheme@15}{\LoneTrailThemeDef@themezeroonefive}
+\@namedef{LoneTrailTheme@theme_030}{\LoneTrailThemeDef@themezeroonefive}
+
+% ------------------------------------------------------------------------------
+% Theme: theme_016 | 碳纤夜行·黑夜隐形 (Carbon Fiber Stealth)
+% ------------------------------------------------------------------------------
+\newcommand{\LoneTrailThemeDef@themezeroonesix}{%
+  \definecolor{qiancheng}{RGB}{64, 75, 92}%
+  \definecolor{lv}{RGB}{174, 185, 202}%
+  \definecolor{huang}{RGB}{92, 108, 132}%
+  \definecolor{hong}{RGB}{34, 42, 56}%
+  \definecolor{qianbai}{RGB}{246, 248, 250}%
+  \definecolor{mibai}{RGB}{234, 238, 242}%
+  \definecolor{heise}{RGB}{18, 20, 24}%
+  \definecolor{definition}{RGB}{55, 88, 120}%
+  \definecolor{theorem}{RGB}{172, 38, 48}%
+  \definecolor{proposition}{RGB}{48, 92, 106}%
+  \definecolor{corollary}{RGB}{42, 148, 102}%
+  \definecolor{lemma}{RGB}{202, 124, 30}%
+  \definecolor{example}{RGB}{75, 85, 102}%
+}
+\@namedef{LoneTrailTheme@016}{\LoneTrailThemeDef@themezeroonesix}
+\@namedef{LoneTrailTheme@theme_016}{\LoneTrailThemeDef@themezeroonesix}
+\@namedef{LoneTrailTheme@16}{\LoneTrailThemeDef@themezeroonesix}
+\@namedef{LoneTrailTheme@theme_031}{\LoneTrailThemeDef@themezeroonesix}
+
+% ------------------------------------------------------------------------------
+% Theme: theme_017 | 极夜极光·北欧磁暴 (Nordic Aurora Storm)
+% ------------------------------------------------------------------------------
+\newcommand{\LoneTrailThemeDef@themezerooneseven}{%
+  \definecolor{qiancheng}{RGB}{76, 44, 156}%
+  \definecolor{lv}{RGB}{184, 139, 208}%
+  \definecolor{huang}{RGB}{83, 31, 214}%
+  \definecolor{hong}{RGB}{28, 27, 75}%
+  \definecolor{qianbai}{RGB}{245, 247, 252}%
+  \definecolor{mibai}{RGB}{236, 238, 246}%
+  \definecolor{heise}{RGB}{16, 15, 25}%
+  \definecolor{definition}{RGB}{88, 56, 168}%
+  \definecolor{theorem}{RGB}{188, 36, 80}%
+  \definecolor{proposition}{RGB}{28, 108, 148}%
+  \definecolor{corollary}{RGB}{24, 168, 118}%
+  \definecolor{lemma}{RGB}{216, 142, 28}%
+  \definecolor{example}{RGB}{65, 78, 115}%
+}
+\@namedef{LoneTrailTheme@017}{\LoneTrailThemeDef@themezerooneseven}
+\@namedef{LoneTrailTheme@theme_017}{\LoneTrailThemeDef@themezerooneseven}
+\@namedef{LoneTrailTheme@17}{\LoneTrailThemeDef@themezerooneseven}
+\@namedef{LoneTrailTheme@theme_032}{\LoneTrailThemeDef@themezerooneseven}
+
+% ------------------------------------------------------------------------------
+% Theme: theme_018 | 蒸汽机械·伦蒂尼姆黄铜 (Steampunk Londinium Brass)
+% ------------------------------------------------------------------------------
+\newcommand{\LoneTrailThemeDef@themezerooneeight}{%
+  \definecolor{qiancheng}{RGB}{178, 116, 56}%
+  \definecolor{lv}{RGB}{208, 193, 149}%
+  \definecolor{huang}{RGB}{230, 128, 30}%
+  \definecolor{hong}{RGB}{88, 47, 34}%
+  \definecolor{qianbai}{RGB}{250, 247, 240}%
+  \definecolor{mibai}{RGB}{242, 236, 222}%
+  \definecolor{heise}{RGB}{28, 22, 18}%
+  \definecolor{definition}{RGB}{178, 122, 32}%
+  \definecolor{theorem}{RGB}{168, 42, 40}%
+  \definecolor{proposition}{RGB}{128, 54, 138}%
+  \definecolor{corollary}{RGB}{42, 132, 98}%
+  \definecolor{lemma}{RGB}{162, 82, 38}%
+  \definecolor{example}{RGB}{36, 116, 162}%
+}
+\@namedef{LoneTrailTheme@018}{\LoneTrailThemeDef@themezerooneeight}
+\@namedef{LoneTrailTheme@theme_018}{\LoneTrailThemeDef@themezerooneeight}
+\@namedef{LoneTrailTheme@18}{\LoneTrailThemeDef@themezerooneeight}
+\@namedef{LoneTrailTheme@theme_034}{\LoneTrailThemeDef@themezerooneeight}
+
+% ------------------------------------------------------------------------------
+% Theme: theme_019 | 军工橄榄·特种侦察 (Tactical Recon Olive)
+% ------------------------------------------------------------------------------
+\newcommand{\LoneTrailThemeDef@themezeroonenine}{%
+  \definecolor{qiancheng}{RGB}{92, 114, 46}%
+  \definecolor{lv}{RGB}{170, 198, 149}%
+  \definecolor{huang}{RGB}{135, 167, 67}%
+  \definecolor{hong}{RGB}{69, 69, 33}%
+  \definecolor{qianbai}{RGB}{247, 248, 243}%
+  \definecolor{mibai}{RGB}{238, 240, 232}%
+  \definecolor{heise}{RGB}{22, 26, 20}%
+  \definecolor{definition}{RGB}{172, 120, 36}%
+  \definecolor{theorem}{RGB}{182, 38, 44}%
+  \definecolor{proposition}{RGB}{72, 68, 148}%
+  \definecolor{corollary}{RGB}{68, 128, 52}%
+  \definecolor{lemma}{RGB}{156, 78, 40}%
+  \definecolor{example}{RGB}{42, 118, 158}%
+}
+\@namedef{LoneTrailTheme@019}{\LoneTrailThemeDef@themezeroonenine}
+\@namedef{LoneTrailTheme@theme_019}{\LoneTrailThemeDef@themezeroonenine}
+\@namedef{LoneTrailTheme@19}{\LoneTrailThemeDef@themezeroonenine}
+\@namedef{LoneTrailTheme@theme_036}{\LoneTrailThemeDef@themezeroonenine}
+
+% ------------------------------------------------------------------------------
+% Theme: theme_020 | 钛金重装·防爆战术 (Titanium Tactical Heavy)
+% ------------------------------------------------------------------------------
+\newcommand{\LoneTrailThemeDef@themezerotwozero}{%
+  \definecolor{qiancheng}{RGB}{125, 135, 145}%
+  \definecolor{lv}{RGB}{178, 184, 190}%
+  \definecolor{huang}{RGB}{107, 122, 138}%
+  \definecolor{hong}{RGB}{42, 46, 50}%
+  \definecolor{qianbai}{RGB}{248, 250, 252}%
+  \definecolor{mibai}{RGB}{235, 238, 242}%
+  \definecolor{heise}{RGB}{20, 24, 30}%
+  \definecolor{definition}{RGB}{238, 196, 16}%
+  \definecolor{theorem}{RGB}{216, 38, 38}%
+  \definecolor{proposition}{RGB}{92, 108, 132}%
+  \definecolor{corollary}{RGB}{32, 172, 126}%
+  \definecolor{lemma}{RGB}{182, 78, 132}%
+  \definecolor{example}{RGB}{72, 126, 168}%
+}
+\@namedef{LoneTrailTheme@020}{\LoneTrailThemeDef@themezerotwozero}
+\@namedef{LoneTrailTheme@theme_020}{\LoneTrailThemeDef@themezerotwozero}
+\@namedef{LoneTrailTheme@20}{\LoneTrailThemeDef@themezerotwozero}
+\@namedef{LoneTrailTheme@theme_058}{\LoneTrailThemeDef@themezerotwozero}
+
+% ------------------------------------------------------------------------------
+% Theme: theme_021 | 星际信标·深空深红 (Deep Space Beacon Crimson)
+% ------------------------------------------------------------------------------
+\newcommand{\LoneTrailThemeDef@themezerotwoone}{%
+  \definecolor{qiancheng}{RGB}{250, 6, 78}%
+  \definecolor{lv}{RGB}{245, 157, 154}%
+  \definecolor{huang}{RGB}{251, 31, 96}%
+  \definecolor{hong}{RGB}{134, 10, 78}%
+  \definecolor{qianbai}{RGB}{250, 250, 253}%
+  \definecolor{mibai}{RGB}{242, 240, 246}%
+  \definecolor{heise}{RGB}{12, 10, 18}%
+  \definecolor{definition}{RGB}{236, 152, 24}%
+  \definecolor{theorem}{RGB}{220, 16, 56}%
+  \definecolor{proposition}{RGB}{148, 42, 165}%
+  \definecolor{corollary}{RGB}{20, 158, 118}%
+  \definecolor{lemma}{RGB}{198, 38, 112}%
+  \definecolor{example}{RGB}{28, 132, 202}%
+}
+\@namedef{LoneTrailTheme@021}{\LoneTrailThemeDef@themezerotwoone}
+\@namedef{LoneTrailTheme@theme_021}{\LoneTrailThemeDef@themezerotwoone}
+\@namedef{LoneTrailTheme@21}{\LoneTrailThemeDef@themezerotwoone}
+\@namedef{LoneTrailTheme@theme_067}{\LoneTrailThemeDef@themezerotwoone}
+
+% ------------------------------------------------------------------------------
+% Theme: theme_022 | 极光重影·极昼双子 (Polar Twin Mirage)
+% ------------------------------------------------------------------------------
+\newcommand{\LoneTrailThemeDef@themezerotwotwo}{%
+  \definecolor{qiancheng}{RGB}{0, 226, 146}%
+  \definecolor{lv}{RGB}{122, 232, 222}%
+  \definecolor{huang}{RGB}{0, 251, 162}%
+  \definecolor{hong}{RGB}{9, 115, 51}%
+  \definecolor{qianbai}{RGB}{248, 252, 254}%
+  \definecolor{mibai}{RGB}{238, 244, 248}%
+  \definecolor{heise}{RGB}{10, 22, 28}%
+  \definecolor{definition}{RGB}{228, 172, 38}%
+  \definecolor{theorem}{RGB}{208, 45, 88}%
+  \definecolor{proposition}{RGB}{18, 142, 168}%
+  \definecolor{corollary}{RGB}{32, 176, 126}%
+  \definecolor{lemma}{RGB}{136, 76, 185}%
+  \definecolor{example}{RGB}{26, 152, 212}%
+}
+\@namedef{LoneTrailTheme@022}{\LoneTrailThemeDef@themezerotwotwo}
+\@namedef{LoneTrailTheme@theme_022}{\LoneTrailThemeDef@themezerotwotwo}
+\@namedef{LoneTrailTheme@22}{\LoneTrailThemeDef@themezerotwotwo}
+
+% ------------------------------------------------------------------------------
+% Theme: theme_023 | 泰拉矿脉·黑金源石 (Terra Originium Vein)
+% ------------------------------------------------------------------------------
+\newcommand{\LoneTrailThemeDef@themezerotwothree}{%
+  \definecolor{qiancheng}{RGB}{135, 98, 48}%
+  \definecolor{lv}{RGB}{206, 196, 151}%
+  \definecolor{huang}{RGB}{230, 143, 25}%
+  \definecolor{hong}{RGB}{79, 48, 33}%
+  \definecolor{qianbai}{RGB}{252, 250, 245}%
+  \definecolor{mibai}{RGB}{245, 241, 233}%
+  \definecolor{heise}{RGB}{16, 14, 12}%
+  \definecolor{definition}{RGB}{222, 164, 26}%
+  \definecolor{theorem}{RGB}{198, 44, 36}%
+  \definecolor{proposition}{RGB}{168, 112, 38}%
+  \definecolor{corollary}{RGB}{28, 148, 96}%
+  \definecolor{lemma}{RGB}{162, 68, 86}%
+  \definecolor{example}{RGB}{36, 138, 180}%
+}
+\@namedef{LoneTrailTheme@023}{\LoneTrailThemeDef@themezerotwothree}
+\@namedef{LoneTrailTheme@theme_023}{\LoneTrailThemeDef@themezerotwothree}
+\@namedef{LoneTrailTheme@23}{\LoneTrailThemeDef@themezerotwothree}
+\@namedef{LoneTrailTheme@theme_069}{\LoneTrailThemeDef@themezerotwothree}
+
+% ------------------------------------------------------------------------------
+% Theme: theme_024 | 冰原裂谷·寒武暴雪 (Cambrian Blizzard Rifts)
+% ------------------------------------------------------------------------------
+\newcommand{\LoneTrailThemeDef@themezerotwofour}{%
+  \definecolor{qiancheng}{RGB}{32, 92, 142}%
+  \definecolor{lv}{RGB}{135, 199, 212}%
+  \definecolor{huang}{RGB}{24, 131, 220}%
+  \definecolor{hong}{RGB}{24, 40, 78}%
+  \definecolor{qianbai}{RGB}{245, 249, 253}%
+  \definecolor{mibai}{RGB}{230, 238, 246}%
+  \definecolor{heise}{RGB}{12, 22, 36}%
+  \definecolor{definition}{RGB}{28, 126, 186}%
+  \definecolor{theorem}{RGB}{196, 44, 68}%
+  \definecolor{proposition}{RGB}{66, 88, 174}%
+  \definecolor{corollary}{RGB}{36, 164, 148}%
+  \definecolor{lemma}{RGB}{158, 64, 152}%
+  \definecolor{example}{RGB}{42, 148, 198}%
+}
+\@namedef{LoneTrailTheme@024}{\LoneTrailThemeDef@themezerotwofour}
+\@namedef{LoneTrailTheme@theme_024}{\LoneTrailThemeDef@themezerotwofour}
+\@namedef{LoneTrailTheme@24}{\LoneTrailThemeDef@themezerotwofour}
+\@namedef{LoneTrailTheme@theme_070}{\LoneTrailThemeDef@themezerotwofour}
+
+% ------------------------------------------------------------------------------
+% Theme: theme_025 | 矩阵解码·高能数据流 (Matrix Decode Dataflow)
+% ------------------------------------------------------------------------------
+\newcommand{\LoneTrailThemeDef@themezerotwofive}{%
+  \definecolor{qiancheng}{RGB}{16, 228, 48}%
+  \definecolor{lv}{RGB}{144, 228, 182}%
+  \definecolor{huang}{RGB}{30, 239, 62}%
+  \definecolor{hong}{RGB}{29, 123, 19}%
+  \definecolor{qianbai}{RGB}{248, 253, 249}%
+  \definecolor{mibai}{RGB}{238, 247, 240}%
+  \definecolor{heise}{RGB}{12, 22, 16}%
+  \definecolor{definition}{RGB}{0, 168, 78}%
+  \definecolor{theorem}{RGB}{208, 36, 52}%
+  \definecolor{proposition}{RGB}{0, 146, 168}%
+  \definecolor{corollary}{RGB}{116, 186, 32}%
+  \definecolor{lemma}{RGB}{172, 48, 180}%
+  \definecolor{example}{RGB}{22, 138, 210}%
+}
+\@namedef{LoneTrailTheme@025}{\LoneTrailThemeDef@themezerotwofive}
+\@namedef{LoneTrailTheme@theme_025}{\LoneTrailThemeDef@themezerotwofive}
+\@namedef{LoneTrailTheme@25}{\LoneTrailThemeDef@themezerotwofive}
+\@namedef{LoneTrailTheme@theme_073}{\LoneTrailThemeDef@themezerotwofive}
+
+% ------------------------------------------------------------------------------
+% Theme: theme_026 | 聚变裂变·核能脉冲 (Nuclear Fusion Pulse)
+% ------------------------------------------------------------------------------
+\newcommand{\LoneTrailThemeDef@themezerotwosix}{%
+  \definecolor{qiancheng}{RGB}{168, 28, 184}%
+  \definecolor{lv}{RGB}{42, 212, 228}%
+  \definecolor{huang}{RGB}{252, 216, 52}%
+  \definecolor{hong}{RGB}{232, 44, 126}%
+  \definecolor{qianbai}{RGB}{250, 248, 255}%
+  \definecolor{mibai}{RGB}{242, 238, 248}%
+  \definecolor{heise}{RGB}{18, 14, 28}%
+  \definecolor{definition}{RGB}{238, 172, 24}%
+  \definecolor{theorem}{RGB}{224, 36, 68}%
+  \definecolor{proposition}{RGB}{142, 54, 196}%
+  \definecolor{corollary}{RGB}{26, 182, 208}%
+  \definecolor{lemma}{RGB}{198, 44, 152}%
+  \definecolor{example}{RGB}{42, 122, 226}%
+}
+\@namedef{LoneTrailTheme@026}{\LoneTrailThemeDef@themezerotwosix}
+\@namedef{LoneTrailTheme@theme_026}{\LoneTrailThemeDef@themezerotwosix}
+\@namedef{LoneTrailTheme@26}{\LoneTrailThemeDef@themezerotwosix}
+\@namedef{LoneTrailTheme@theme_076}{\LoneTrailThemeDef@themezerotwosix}
+
+% ------------------------------------------------------------------------------
+% Theme: theme_027 | 钛钢装甲·防空矩阵 (Anti-Air Flak Matrix)
+% ------------------------------------------------------------------------------
+\newcommand{\LoneTrailThemeDef@themezerotwoseven}{%
+  \definecolor{qiancheng}{RGB}{90, 116, 152}%
+  \definecolor{lv}{RGB}{78, 138, 185}%
+  \definecolor{huang}{RGB}{236, 178, 48}%
+  \definecolor{hong}{RGB}{238, 86, 28}%
+  \definecolor{qianbai}{RGB}{249, 250, 252}%
+  \definecolor{mibai}{RGB}{238, 242, 246}%
+  \definecolor{heise}{RGB}{16, 20, 28}%
+  \definecolor{definition}{RGB}{218, 156, 32}%
+  \definecolor{theorem}{RGB}{216, 42, 38}%
+  \definecolor{proposition}{RGB}{68, 92, 154}%
+  \definecolor{corollary}{RGB}{38, 164, 118}%
+  \definecolor{lemma}{RGB}{176, 52, 92}%
+  \definecolor{example}{RGB}{46, 134, 186}%
+}
+\@namedef{LoneTrailTheme@027}{\LoneTrailThemeDef@themezerotwoseven}
+\@namedef{LoneTrailTheme@theme_027}{\LoneTrailThemeDef@themezerotwoseven}
+\@namedef{LoneTrailTheme@27}{\LoneTrailThemeDef@themezerotwoseven}
+\@namedef{LoneTrailTheme@theme_077}{\LoneTrailThemeDef@themezerotwoseven}
+
+% ------------------------------------------------------------------------------
+% Theme: theme_028 | 灵能幻视·群星梦境 (Astral Illusion Dream)
+% ------------------------------------------------------------------------------
+\newcommand{\LoneTrailThemeDef@themezerotwoeight}{%
+  \definecolor{qiancheng}{RGB}{48, 148, 208}%
+  \definecolor{lv}{RGB}{42, 196, 224}%
+  \definecolor{huang}{RGB}{250, 206, 54}%
+  \definecolor{hong}{RGB}{206, 42, 138}%
+  \definecolor{qianbai}{RGB}{248, 252, 254}%
+  \definecolor{mibai}{RGB}{238, 246, 248}%
+  \definecolor{heise}{RGB}{12, 18, 26}%
+  \definecolor{definition}{RGB}{236, 182, 36}%
+  \definecolor{theorem}{RGB}{212, 42, 82}%
+  \definecolor{proposition}{RGB}{98, 64, 182}%
+  \definecolor{corollary}{RGB}{32, 186, 148}%
+  \definecolor{lemma}{RGB}{188, 54, 142}%
+  \definecolor{example}{RGB}{24, 146, 212}%
+}
+\@namedef{LoneTrailTheme@028}{\LoneTrailThemeDef@themezerotwoeight}
+\@namedef{LoneTrailTheme@theme_028}{\LoneTrailThemeDef@themezerotwoeight}
+\@namedef{LoneTrailTheme@28}{\LoneTrailThemeDef@themezerotwoeight}
+\@namedef{LoneTrailTheme@theme_078}{\LoneTrailThemeDef@themezerotwoeight}
+
+% ------------------------------------------------------------------------------
+% Theme: theme_029 | 彗星裂变·尘埃光晕 (Comet Fission Halo)
+% ------------------------------------------------------------------------------
+\newcommand{\LoneTrailThemeDef@themezerotwonine}{%
+  \definecolor{qiancheng}{RGB}{30, 180, 230}%
+  \definecolor{lv}{RGB}{16, 128, 205}%
+  \definecolor{huang}{RGB}{36, 200, 235}%
+  \definecolor{hong}{RGB}{248, 195, 36}%
+  \definecolor{qianbai}{RGB}{249, 252, 255}%
+  \definecolor{mibai}{RGB}{239, 244, 249}%
+  \definecolor{heise}{RGB}{14, 18, 28}%
+  \definecolor{definition}{RGB}{236, 168, 26}%
+  \definecolor{theorem}{RGB}{218, 36, 56}%
+  \definecolor{proposition}{RGB}{136, 54, 182}%
+  \definecolor{corollary}{RGB}{24, 178, 142}%
+  \definecolor{lemma}{RGB}{198, 44, 128}%
+  \definecolor{example}{RGB}{22, 142, 218}%
+}
+\@namedef{LoneTrailTheme@029}{\LoneTrailThemeDef@themezerotwonine}
+\@namedef{LoneTrailTheme@theme_029}{\LoneTrailThemeDef@themezerotwonine}
+\@namedef{LoneTrailTheme@29}{\LoneTrailThemeDef@themezerotwonine}
+\@namedef{LoneTrailTheme@theme_079}{\LoneTrailThemeDef@themezerotwonine}
+
+% ------------------------------------------------------------------------------
+% Theme: theme_030 | 泰拉古道·先民遗迹 (Terra Ancient Trail)
+% ------------------------------------------------------------------------------
+\newcommand{\LoneTrailThemeDef@themezerothreezero}{%
+  \definecolor{qiancheng}{RGB}{155, 110, 85}%
+  \definecolor{lv}{RGB}{92, 126, 138}%
+  \definecolor{huang}{RGB}{168, 120, 85}%
+  \definecolor{hong}{RGB}{228, 176, 48}%
+  \definecolor{qianbai}{RGB}{250, 249, 246}%
+  \definecolor{mibai}{RGB}{243, 240, 234}%
+  \definecolor{heise}{RGB}{24, 22, 22}%
+  \definecolor{definition}{RGB}{214, 152, 32}%
+  \definecolor{theorem}{RGB}{182, 40, 36}%
+  \definecolor{proposition}{RGB}{80, 102, 148}%
+  \definecolor{corollary}{RGB}{56, 142, 100}%
+  \definecolor{lemma}{RGB}{144, 66, 86}%
+  \definecolor{example}{RGB}{56, 124, 160}%
+}
+\@namedef{LoneTrailTheme@030}{\LoneTrailThemeDef@themezerothreezero}
+\@namedef{LoneTrailTheme@theme_030}{\LoneTrailThemeDef@themezerothreezero}
+\@namedef{LoneTrailTheme@30}{\LoneTrailThemeDef@themezerothreezero}
+\@namedef{LoneTrailTheme@theme_080}{\LoneTrailThemeDef@themezerothreezero}
+
+% ------------------------------------------------------------------------------
+% Theme: theme_031 | 苍白誓言·神圣赎罪 (Pale Oath Redemption)
+% ------------------------------------------------------------------------------
+\newcommand{\LoneTrailThemeDef@themezerothreeone}{%
+  \definecolor{qiancheng}{RGB}{155, 48, 62}%
+  \definecolor{lv}{RGB}{178, 194, 210}%
+  \definecolor{huang}{RGB}{216, 176, 96}%
+  \definecolor{hong}{RGB}{155, 48, 62}%
+  \definecolor{qianbai}{RGB}{248, 250, 253}%
+  \definecolor{mibai}{RGB}{238, 242, 246}%
+  \definecolor{heise}{RGB}{18, 16, 22}%
+  \definecolor{definition}{RGB}{206, 152, 48}%
+  \definecolor{theorem}{RGB}{155, 48, 62}%
+  \definecolor{proposition}{RGB}{128, 56, 154}%
+  \definecolor{corollary}{RGB}{96, 142, 178}%
+  \definecolor{lemma}{RGB}{176, 44, 96}%
+  \definecolor{example}{RGB}{48, 134, 186}%
+}
+\@namedef{LoneTrailTheme@031}{\LoneTrailThemeDef@themezerothreeone}
+\@namedef{LoneTrailTheme@theme_031}{\LoneTrailThemeDef@themezerothreeone}
+\@namedef{LoneTrailTheme@31}{\LoneTrailThemeDef@themezerothreeone}
+\@namedef{LoneTrailTheme@theme_088}{\LoneTrailThemeDef@themezerothreeone}
+
+% ------------------------------------------------------------------------------
+% Theme: theme_032 | 磁流体动力·星环引擎 (MHD Stellar Engine)
+% ------------------------------------------------------------------------------
+\newcommand{\LoneTrailThemeDef@themezerothreetwo}{%
+  \definecolor{qiancheng}{RGB}{0, 192, 250}%
+  \definecolor{lv}{RGB}{0, 196, 248}%
+  \definecolor{huang}{RGB}{248, 172, 28}%
+  \definecolor{hong}{RGB}{228, 42, 48}%
+  \definecolor{qianbai}{RGB}{246, 252, 254}%
+  \definecolor{mibai}{RGB}{234, 245, 248}%
+  \definecolor{heise}{RGB}{12, 18, 24}%
+  \definecolor{definition}{RGB}{238, 156, 24}%
+  \definecolor{theorem}{RGB}{224, 40, 48}%
+  \definecolor{proposition}{RGB}{24, 102, 196}%
+  \definecolor{corollary}{RGB}{0, 192, 250}%
+  \definecolor{lemma}{RGB}{162, 54, 198}%
+  \definecolor{example}{RGB}{0, 168, 214}%
+}
+\@namedef{LoneTrailTheme@032}{\LoneTrailThemeDef@themezerothreetwo}
+\@namedef{LoneTrailTheme@theme_032}{\LoneTrailThemeDef@themezerothreetwo}
+\@namedef{LoneTrailTheme@32}{\LoneTrailThemeDef@themezerothreetwo}
+\@namedef{LoneTrailTheme@theme_089}{\LoneTrailThemeDef@themezerothreetwo}
+
+% ------------------------------------------------------------------------------
+% Theme: theme_033 | 荒原猎手·战术潜伏 (Wasteland Hunter Camo)
+% ------------------------------------------------------------------------------
+\newcommand{\LoneTrailThemeDef@themezerothreethree}{%
+  \definecolor{qiancheng}{RGB}{106, 136, 102}%
+  \definecolor{lv}{RGB}{116, 136, 110}%
+  \definecolor{huang}{RGB}{202, 146, 96}%
+  \definecolor{hong}{RGB}{168, 64, 52}%
+  \definecolor{qianbai}{RGB}{250, 251, 248}%
+  \definecolor{mibai}{RGB}{242, 242, 236}%
+  \definecolor{heise}{RGB}{20, 22, 20}%
+  \definecolor{definition}{RGB}{194, 138, 48}%
+  \definecolor{theorem}{RGB}{174, 52, 46}%
+  \definecolor{proposition}{RGB}{68, 98, 128}%
+  \definecolor{corollary}{RGB}{116, 136, 110}%
+  \definecolor{lemma}{RGB}{142, 74, 112}%
+  \definecolor{example}{RGB}{54, 128, 136}%
+}
+\@namedef{LoneTrailTheme@033}{\LoneTrailThemeDef@themezerothreethree}
+\@namedef{LoneTrailTheme@theme_033}{\LoneTrailThemeDef@themezerothreethree}
+\@namedef{LoneTrailTheme@33}{\LoneTrailThemeDef@themezerothreethree}
+\@namedef{LoneTrailTheme@theme_090}{\LoneTrailThemeDef@themezerothreethree}
+
+% ------------------------------------------------------------------------------
+% Theme: theme_034 | 龙门金阁·夜色天街 (Lungmen Golden Pavilion)
+% ------------------------------------------------------------------------------
+\newcommand{\LoneTrailThemeDef@themezerothreefour}{%
+  \definecolor{qiancheng}{RGB}{255, 116, 36}%
+  \definecolor{lv}{RGB}{248, 196, 52}%
+  \definecolor{huang}{RGB}{228, 92, 32}%
+  \definecolor{hong}{RGB}{36, 68, 148}%
+  \definecolor{qianbai}{RGB}{254, 252, 246}%
+  \definecolor{mibai}{RGB}{248, 243, 232}%
+  \definecolor{heise}{RGB}{12, 16, 26}%
+  \definecolor{definition}{RGB}{232, 154, 22}%
+  \definecolor{theorem}{RGB}{218, 42, 48}%
+  \definecolor{proposition}{RGB}{36, 98, 172}%
+  \definecolor{corollary}{RGB}{42, 174, 122}%
+  \definecolor{lemma}{RGB}{168, 56, 114}%
+  \definecolor{example}{RGB}{26, 152, 214}%
+}
+\@namedef{LoneTrailTheme@034}{\LoneTrailThemeDef@themezerothreefour}
+\@namedef{LoneTrailTheme@theme_034}{\LoneTrailThemeDef@themezerothreefour}
+\@namedef{LoneTrailTheme@34}{\LoneTrailThemeDef@themezerothreefour}
+\@namedef{LoneTrailTheme@en}{\LoneTrailThemeDef@themezerothreefour}
+\@namedef{LoneTrailTheme@theme_093}{\LoneTrailThemeDef@themezerothreefour}
+
+% ------------------------------------------------------------------------------
+% Theme: theme_035 | 绯红新星·恒星塌缩 (Scarlet Nova Collapse)
+% ------------------------------------------------------------------------------
+\newcommand{\LoneTrailThemeDef@themezerothreefive}{%
+  \definecolor{qiancheng}{RGB}{193, 49, 74}%
+  \definecolor{lv}{RGB}{250, 196, 36}%
+  \definecolor{huang}{RGB}{226, 96, 26}%
+  \definecolor{hong}{RGB}{162, 16, 42}%
+  \definecolor{qianbai}{RGB}{254, 250, 246}%
+  \definecolor{mibai}{RGB}{248, 241, 234}%
+  \definecolor{heise}{RGB}{22, 14, 18}%
+  \definecolor{definition}{RGB}{242, 172, 28}%
+  \definecolor{theorem}{RGB}{188, 22, 46}%
+  \definecolor{proposition}{RGB}{146, 32, 92}%
+  \definecolor{corollary}{RGB}{218, 86, 34}%
+  \definecolor{lemma}{RGB}{128, 28, 112}%
+  \definecolor{example}{RGB}{206, 52, 60}%
+}
+\@namedef{LoneTrailTheme@035}{\LoneTrailThemeDef@themezerothreefive}
+\@namedef{LoneTrailTheme@theme_035}{\LoneTrailThemeDef@themezerothreefive}
+\@namedef{LoneTrailTheme@35}{\LoneTrailThemeDef@themezerothreefive}
+\@namedef{LoneTrailTheme@theme_094}{\LoneTrailThemeDef@themezerothreefive}
+
+% ------------------------------------------------------------------------------
+% Theme: theme_036 | 钛合金羽·高空滑翔 (Titanium Feather Glider)
+% ------------------------------------------------------------------------------
+\newcommand{\LoneTrailThemeDef@themezerothreesix}{%
+  \definecolor{qiancheng}{RGB}{84, 204, 214}%
+  \definecolor{lv}{RGB}{128, 232, 240}%
+  \definecolor{huang}{RGB}{142, 172, 194}%
+  \definecolor{hong}{RGB}{28, 76, 122}%
+  \definecolor{qianbai}{RGB}{248, 251, 254}%
+  \definecolor{mibai}{RGB}{238, 243, 248}%
+  \definecolor{heise}{RGB}{16, 22, 30}%
+  \definecolor{definition}{RGB}{42, 176, 204}%
+  \definecolor{theorem}{RGB}{28, 86, 142}%
+  \definecolor{proposition}{RGB}{72, 114, 168}%
+  \definecolor{corollary}{RGB}{48, 194, 212}%
+  \definecolor{lemma}{RGB}{56, 78, 134}%
+  \definecolor{example}{RGB}{68, 156, 192}%
+}
+\@namedef{LoneTrailTheme@036}{\LoneTrailThemeDef@themezerothreesix}
+\@namedef{LoneTrailTheme@theme_036}{\LoneTrailThemeDef@themezerothreesix}
+\@namedef{LoneTrailTheme@36}{\LoneTrailThemeDef@themezerothreesix}
+\@namedef{LoneTrailTheme@theme_095}{\LoneTrailThemeDef@themezerothreesix}
+
+% ------------------------------------------------------------------------------
+% Theme: theme_037 | 聚变等离子·核子激元 (Plasma Polariton Exciton)
+% ------------------------------------------------------------------------------
+\newcommand{\LoneTrailThemeDef@themezerothreeseven}{%
+  \definecolor{qiancheng}{RGB}{158, 24, 216}%
+  \definecolor{lv}{RGB}{220, 164, 255}%
+  \definecolor{huang}{RGB}{168, 42, 236}%
+  \definecolor{hong}{RGB}{72, 14, 138}%
+  \definecolor{qianbai}{RGB}{250, 248, 254}%
+  \definecolor{mibai}{RGB}{242, 238, 248}%
+  \definecolor{heise}{RGB}{20, 14, 28}%
+  \definecolor{definition}{RGB}{168, 48, 236}%
+  \definecolor{theorem}{RGB}{116, 24, 184}%
+  \definecolor{proposition}{RGB}{82, 38, 196}%
+  \definecolor{corollary}{RGB}{194, 92, 248}%
+  \definecolor{lemma}{RGB}{64, 18, 148}%
+  \definecolor{example}{RGB}{142, 64, 224}%
+}
+\@namedef{LoneTrailTheme@037}{\LoneTrailThemeDef@themezerothreeseven}
+\@namedef{LoneTrailTheme@theme_037}{\LoneTrailThemeDef@themezerothreeseven}
+\@namedef{LoneTrailTheme@37}{\LoneTrailThemeDef@themezerothreeseven}
+\@namedef{LoneTrailTheme@theme_096}{\LoneTrailThemeDef@themezerothreeseven}
+
+% ------------------------------------------------------------------------------
+% Theme: theme_038 | 极渊回响·海沟晶魄 (Abyssal Trench Echo)
+% ------------------------------------------------------------------------------
+\newcommand{\LoneTrailThemeDef@themezerothreeeight}{%
+  \definecolor{qiancheng}{RGB}{44, 88, 205}%
+  \definecolor{lv}{RGB}{28, 222, 202}%
+  \definecolor{huang}{RGB}{54, 166, 238}%
+  \definecolor{hong}{RGB}{24, 86, 172}%
+  \definecolor{qianbai}{RGB}{247, 251, 254}%
+  \definecolor{mibai}{RGB}{235, 243, 248}%
+  \definecolor{heise}{RGB}{12, 18, 30}%
+  \definecolor{definition}{RGB}{0, 165, 188}%
+  \definecolor{theorem}{RGB}{22, 108, 224}%
+  \definecolor{proposition}{RGB}{42, 65, 168}%
+  \definecolor{corollary}{RGB}{16, 176, 152}%
+  \definecolor{lemma}{RGB}{120, 58, 185}%
+  \definecolor{example}{RGB}{32, 144, 218}%
+}
+\@namedef{LoneTrailTheme@038}{\LoneTrailThemeDef@themezerothreeeight}
+\@namedef{LoneTrailTheme@theme_038}{\LoneTrailThemeDef@themezerothreeeight}
+\@namedef{LoneTrailTheme@38}{\LoneTrailThemeDef@themezerothreeeight}
+\@namedef{LoneTrailTheme@theme_097}{\LoneTrailThemeDef@themezerothreeeight}
+
+% ------------------------------------------------------------------------------
+% Theme: theme_039 | 炼金硫磺·神秘贤者 (Alchemical Sulfur Sage)
+% ------------------------------------------------------------------------------
+\newcommand{\LoneTrailThemeDef@themezerothreenine}{%
+  \definecolor{qiancheng}{RGB}{218, 220, 48}%
+  \definecolor{lv}{RGB}{152, 186, 204}%
+  \definecolor{huang}{RGB}{238, 192, 32}%
+  \definecolor{hong}{RGB}{198, 48, 54}%
+  \definecolor{qianbai}{RGB}{250, 251, 252}%
+  \definecolor{mibai}{RGB}{244, 244, 238}%
+  \definecolor{heise}{RGB}{22, 22, 24}%
+  \definecolor{definition}{RGB}{218, 150, 18}%
+  \definecolor{theorem}{RGB}{194, 38, 46}%
+  \definecolor{proposition}{RGB}{44, 118, 138}%
+  \definecolor{corollary}{RGB}{38, 158, 108}%
+  \definecolor{lemma}{RGB}{142, 54, 156}%
+  \definecolor{example}{RGB}{48, 138, 188}%
+}
+\@namedef{LoneTrailTheme@039}{\LoneTrailThemeDef@themezerothreenine}
+\@namedef{LoneTrailTheme@theme_039}{\LoneTrailThemeDef@themezerothreenine}
+\@namedef{LoneTrailTheme@39}{\LoneTrailThemeDef@themezerothreenine}
+\@namedef{LoneTrailTheme@theme_098}{\LoneTrailThemeDef@themezerothreenine}
+
+% ------------------------------------------------------------------------------
+% Theme: theme_040 | 星云风暴·超维跃迁 (Nebula Tempest Warp)
+% ------------------------------------------------------------------------------
+\newcommand{\LoneTrailThemeDef@themezerofourzero}{%
+  \definecolor{qiancheng}{RGB}{252, 22, 172}%
+  \definecolor{lv}{RGB}{42, 162, 252}%
+  \definecolor{huang}{RGB}{176, 68, 238}%
+  \definecolor{hong}{RGB}{244, 38, 142}%
+  \definecolor{qianbai}{RGB}{252, 249, 253}%
+  \definecolor{mibai}{RGB}{245, 238, 247}%
+  \definecolor{heise}{RGB}{18, 14, 26}%
+  \definecolor{definition}{RGB}{228, 122, 28}%
+  \definecolor{theorem}{RGB}{224, 32, 88}%
+  \definecolor{proposition}{RGB}{112, 48, 196}%
+  \definecolor{corollary}{RGB}{26, 178, 162}%
+  \definecolor{lemma}{RGB}{212, 42, 148}%
+  \definecolor{example}{RGB}{28, 126, 224}%
+}
+\@namedef{LoneTrailTheme@040}{\LoneTrailThemeDef@themezerofourzero}
+\@namedef{LoneTrailTheme@theme_040}{\LoneTrailThemeDef@themezerofourzero}
+\@namedef{LoneTrailTheme@40}{\LoneTrailThemeDef@themezerofourzero}
+\@namedef{LoneTrailTheme@theme_099}{\LoneTrailThemeDef@themezerofourzero}
+
+% ------------------------------------------------------------------------------
+% Theme: theme_041 | 世纪方舟·泰拉破晓 (Century Ark Daybreak)
+% ------------------------------------------------------------------------------
+\newcommand{\LoneTrailThemeDef@themezerofourone}{%
+  \definecolor{qiancheng}{RGB}{218, 186, 120}%
+  \definecolor{lv}{RGB}{36, 188, 226}%
+  \definecolor{huang}{RGB}{246, 218, 92}%
+  \definecolor{hong}{RGB}{232, 92, 118}%
+  \definecolor{qianbai}{RGB}{251, 253, 255}%
+  \definecolor{mibai}{RGB}{242, 245, 250}%
+  \definecolor{heise}{RGB}{16, 22, 30}%
+  \definecolor{definition}{RGB}{212, 172, 88}%
+  \definecolor{theorem}{RGB}{214, 68, 98}%
+  \definecolor{proposition}{RGB}{68, 142, 218}%
+  \definecolor{corollary}{RGB}{38, 182, 196}%
+  \definecolor{lemma}{RGB}{236, 188, 72}%
+  \definecolor{example}{RGB}{32, 164, 224}%
+}
+\@namedef{LoneTrailTheme@041}{\LoneTrailThemeDef@themezerofourone}
+\@namedef{LoneTrailTheme@theme_041}{\LoneTrailThemeDef@themezerofourone}
+\@namedef{LoneTrailTheme@41}{\LoneTrailThemeDef@themezerofourone}
+\@namedef{LoneTrailTheme@theme_100}{\LoneTrailThemeDef@themezerofourone}
+
+% ------------------------------------------------------------------------------
+% Theme: theme_042 | 碳化黑曜·暗物质晶格 (Carbonized Obsidian Lattice)
+% ------------------------------------------------------------------------------
+\newcommand{\LoneTrailThemeDef@themezerofourtwo}{%
+  \definecolor{qiancheng}{RGB}{76, 18, 248}%
+  \definecolor{lv}{RGB}{32, 208, 228}%
+  \definecolor{huang}{RGB}{238, 192, 48}%
+  \definecolor{hong}{RGB}{218, 42, 138}%
+  \definecolor{qianbai}{RGB}{252, 250, 254}%
+  \definecolor{mibai}{RGB}{243, 239, 248}%
+  \definecolor{heise}{RGB}{16, 14, 22}%
+  \definecolor{definition}{RGB}{136, 42, 232}%
+  \definecolor{theorem}{RGB}{208, 32, 88}%
+  \definecolor{proposition}{RGB}{78, 24, 188}%
+  \definecolor{corollary}{RGB}{28, 178, 198}%
+  \definecolor{lemma}{RGB}{232, 168, 36}%
+  \definecolor{example}{RGB}{52, 138, 236}%
+}
+\@namedef{LoneTrailTheme@042}{\LoneTrailThemeDef@themezerofourtwo}
+\@namedef{LoneTrailTheme@theme_042}{\LoneTrailThemeDef@themezerofourtwo}
+\@namedef{LoneTrailTheme@42}{\LoneTrailThemeDef@themezerofourtwo}
+\@namedef{LoneTrailTheme@theme_101}{\LoneTrailThemeDef@themezerofourtwo}
+
+% ------------------------------------------------------------------------------
+% Theme: theme_043 | 黄金神殿·太阳权杖 (Golden Temple Scepter)
+% ------------------------------------------------------------------------------
+\newcommand{\LoneTrailThemeDef@themezerofourthree}{%
+  \definecolor{qiancheng}{RGB}{215, 130, 49}%
+  \definecolor{lv}{RGB}{246, 218, 92}%
+  \definecolor{huang}{RGB}{234, 152, 22}%
+  \definecolor{hong}{RGB}{184, 26, 42}%
+  \definecolor{qianbai}{RGB}{254, 252, 246}%
+  \definecolor{mibai}{RGB}{247, 241, 230}%
+  \definecolor{heise}{RGB}{22, 18, 14}%
+  \definecolor{definition}{RGB}{216, 142, 18}%
+  \definecolor{theorem}{RGB}{186, 26, 42}%
+  \definecolor{proposition}{RGB}{146, 42, 112}%
+  \definecolor{corollary}{RGB}{36, 158, 132}%
+  \definecolor{lemma}{RGB}{232, 172, 28}%
+  \definecolor{example}{RGB}{24, 116, 188}%
+}
+\@namedef{LoneTrailTheme@043}{\LoneTrailThemeDef@themezerofourthree}
+\@namedef{LoneTrailTheme@theme_043}{\LoneTrailThemeDef@themezerofourthree}
+\@namedef{LoneTrailTheme@43}{\LoneTrailThemeDef@themezerofourthree}
+\@namedef{LoneTrailTheme@en}{\LoneTrailThemeDef@themezerofourthree}
+\@namedef{LoneTrailTheme@theme_102}{\LoneTrailThemeDef@themezerofourthree}
+
+% ------------------------------------------------------------------------------
+% Theme: theme_044 | 极光冰湖·谢拉格镜影 (Glacial Mirror Lake)
+% ------------------------------------------------------------------------------
+\newcommand{\LoneTrailThemeDef@themezerofourfour}{%
+  \definecolor{qiancheng}{RGB}{46, 184, 174}%
+  \definecolor{lv}{RGB}{22, 142, 136}%
+  \definecolor{huang}{RGB}{142, 218, 208}%
+  \definecolor{hong}{RGB}{52, 116, 172}%
+  \definecolor{qianbai}{RGB}{248, 253, 252}%
+  \definecolor{mibai}{RGB}{236, 247, 245}%
+  \definecolor{heise}{RGB}{14, 24, 26}%
+  \definecolor{definition}{RGB}{20, 162, 150}%
+  \definecolor{theorem}{RGB}{52, 116, 172}%
+  \definecolor{proposition}{RGB}{96, 78, 158}%
+  \definecolor{corollary}{RGB}{54, 182, 150}%
+  \definecolor{lemma}{RGB}{138, 72, 148}%
+  \definecolor{example}{RGB}{36, 166, 206}%
+}
+\@namedef{LoneTrailTheme@044}{\LoneTrailThemeDef@themezerofourfour}
+\@namedef{LoneTrailTheme@theme_044}{\LoneTrailThemeDef@themezerofourfour}
+\@namedef{LoneTrailTheme@44}{\LoneTrailThemeDef@themezerofourfour}
+\@namedef{LoneTrailTheme@theme_103}{\LoneTrailThemeDef@themezerofourfour}
+
+% ------------------------------------------------------------------------------
+% Theme: theme_045 | 终末之火·凤凰余烬 (Endfire Phoenix Cinder)
+% ------------------------------------------------------------------------------
+\newcommand{\LoneTrailThemeDef@themezerofourfive}{%
+  \definecolor{qiancheng}{RGB}{253, 50, 48}%
+  \definecolor{lv}{RGB}{248, 186, 24}%
+  \definecolor{huang}{RGB}{242, 102, 18}%
+  \definecolor{hong}{RGB}{196, 20, 36}%
+  \definecolor{qianbai}{RGB}{254, 250, 246}%
+  \definecolor{mibai}{RGB}{248, 240, 232}%
+  \definecolor{heise}{RGB}{24, 16, 18}%
+  \definecolor{definition}{RGB}{236, 138, 16}%
+  \definecolor{theorem}{RGB}{214, 28, 38}%
+  \definecolor{proposition}{RGB}{176, 36, 92}%
+  \definecolor{corollary}{RGB}{218, 92, 22}%
+  \definecolor{lemma}{RGB}{148, 42, 132}%
+  \definecolor{example}{RGB}{226, 68, 32}%
+}
+\@namedef{LoneTrailTheme@045}{\LoneTrailThemeDef@themezerofourfive}
+\@namedef{LoneTrailTheme@theme_045}{\LoneTrailThemeDef@themezerofourfive}
+\@namedef{LoneTrailTheme@45}{\LoneTrailThemeDef@themezerofourfive}
+\@namedef{LoneTrailTheme@theme_104}{\LoneTrailThemeDef@themezerofourfive}
+
+% ------------------------------------------------------------------------------
+% Theme: theme_046 | 机械生命·生化芯片 (Bionic Cyber Chip)
+% ------------------------------------------------------------------------------
+\newcommand{\LoneTrailThemeDef@themezerofoursix}{%
+  \definecolor{qiancheng}{RGB}{12, 204, 118}%
+  \definecolor{lv}{RGB}{88, 232, 172}%
+  \definecolor{huang}{RGB}{22, 188, 104}%
+  \definecolor{hong}{RGB}{14, 102, 68}%
+  \definecolor{qianbai}{RGB}{248, 253, 250}%
+  \definecolor{mibai}{RGB}{238, 247, 242}%
+  \definecolor{heise}{RGB}{10, 20, 16}%
+  \definecolor{definition}{RGB}{14, 178, 106}%
+  \definecolor{theorem}{RGB}{212, 38, 76}%
+  \definecolor{proposition}{RGB}{18, 156, 184}%
+  \definecolor{corollary}{RGB}{72, 188, 54}%
+  \definecolor{lemma}{RGB}{152, 48, 182}%
+  \definecolor{example}{RGB}{16, 142, 218}%
+}
+\@namedef{LoneTrailTheme@046}{\LoneTrailThemeDef@themezerofoursix}
+\@namedef{LoneTrailTheme@theme_046}{\LoneTrailThemeDef@themezerofoursix}
+\@namedef{LoneTrailTheme@46}{\LoneTrailThemeDef@themezerofoursix}
+\@namedef{LoneTrailTheme@theme_105}{\LoneTrailThemeDef@themezerofoursix}
+
+% ------------------------------------------------------------------------------
+% Theme: theme_047 | 电离微光·云端跃迁 (Ionized Twilight Cloud Warp)
+% ------------------------------------------------------------------------------
+\newcommand{\LoneTrailThemeDef@themezerofourseven}{%
+  \definecolor{qiancheng}{RGB}{90, 154, 180}%
+  \definecolor{lv}{RGB}{140, 204, 218}%
+  \definecolor{huang}{RGB}{90, 154, 180}%
+  \definecolor{hong}{RGB}{32, 74, 96}%
+  \definecolor{qianbai}{RGB}{248, 252, 254}%
+  \definecolor{mibai}{RGB}{236, 244, 248}%
+  \definecolor{heise}{RGB}{14, 22, 28}%
+  \definecolor{definition}{RGB}{46, 148, 172}%
+  \definecolor{theorem}{RGB}{56, 84, 166}%
+  \definecolor{proposition}{RGB}{28, 114, 154}%
+  \definecolor{corollary}{RGB}{78, 178, 194}%
+  \definecolor{lemma}{RGB}{118, 76, 158}%
+  \definecolor{example}{RGB}{38, 138, 190}%
+}
+\@namedef{LoneTrailTheme@047}{\LoneTrailThemeDef@themezerofourseven}
+\@namedef{LoneTrailTheme@theme_047}{\LoneTrailThemeDef@themezerofourseven}
+\@namedef{LoneTrailTheme@47}{\LoneTrailThemeDef@themezerofourseven}
+\@namedef{LoneTrailTheme@theme_106}{\LoneTrailThemeDef@themezerofourseven}
+
+% ------------------------------------------------------------------------------
+% Theme: theme_048 | 狂风呼啸·荒原列车 (Storm Howl Wasteland Express)
+% ------------------------------------------------------------------------------
+\newcommand{\LoneTrailThemeDef@themezerofoureight}{%
+  \definecolor{qiancheng}{RGB}{198, 90, 84}%
+  \definecolor{lv}{RGB}{236, 164, 52}%
+  \definecolor{huang}{RGB}{198, 90, 84}%
+  \definecolor{hong}{RGB}{98, 36, 32}%
+  \definecolor{qianbai}{RGB}{253, 250, 244}%
+  \definecolor{mibai}{RGB}{246, 238, 228}%
+  \definecolor{heise}{RGB}{22, 16, 14}%
+  \definecolor{definition}{RGB}{192, 88, 80}%
+  \definecolor{theorem}{RGB}{208, 42, 38}%
+  \definecolor{proposition}{RGB}{138, 92, 58}%
+  \definecolor{corollary}{RGB}{226, 122, 42}%
+  \definecolor{lemma}{RGB}{142, 46, 78}%
+  \definecolor{example}{RGB}{172, 78, 46}%
+}
+\@namedef{LoneTrailTheme@048}{\LoneTrailThemeDef@themezerofoureight}
+\@namedef{LoneTrailTheme@theme_048}{\LoneTrailThemeDef@themezerofoureight}
+\@namedef{LoneTrailTheme@48}{\LoneTrailThemeDef@themezerofoureight}
+\@namedef{LoneTrailTheme@theme_107}{\LoneTrailThemeDef@themezerofoureight}
+
+% ------------------------------------------------------------------------------
+% Theme: theme_049 | 矩阵解析·量子编码 (Matrix Decoding Quantum Cipher)
+% ------------------------------------------------------------------------------
+\newcommand{\LoneTrailThemeDef@themezerofournine}{%
+  \definecolor{qiancheng}{RGB}{96, 244, 58}%
+  \definecolor{lv}{RGB}{142, 255, 96}%
+  \definecolor{huang}{RGB}{48, 216, 68}%
+  \definecolor{hong}{RGB}{12, 92, 42}%
+  \definecolor{qianbai}{RGB}{248, 254, 250}%
+  \definecolor{mibai}{RGB}{236, 248, 240}%
+  \definecolor{heise}{RGB}{10, 18, 14}%
+  \definecolor{definition}{RGB}{48, 212, 64}%
+  \definecolor{theorem}{RGB}{182, 42, 226}%
+  \definecolor{proposition}{RGB}{16, 184, 198}%
+  \definecolor{corollary}{RGB}{114, 232, 46}%
+  \definecolor{lemma}{RGB}{230, 40, 146}%
+  \definecolor{example}{RGB}{22, 154, 234}%
+}
+\@namedef{LoneTrailTheme@049}{\LoneTrailThemeDef@themezerofournine}
+\@namedef{LoneTrailTheme@theme_049}{\LoneTrailThemeDef@themezerofournine}
+\@namedef{LoneTrailTheme@49}{\LoneTrailThemeDef@themezerofournine}
+\@namedef{LoneTrailTheme@theme_108}{\LoneTrailThemeDef@themezerofournine}
+
+% ------------------------------------------------------------------------------
+% Theme: theme_050 | 幽暗密林·萨尔贡行者 (Dark Forest Sargon Wanderer)
+% ------------------------------------------------------------------------------
+\newcommand{\LoneTrailThemeDef@themezerofivezero}{%
+  \definecolor{qiancheng}{RGB}{28, 92, 48}%
+  \definecolor{lv}{RGB}{182, 166, 108}%
+  \definecolor{huang}{RGB}{48, 126, 78}%
+  \definecolor{hong}{RGB}{126, 84, 44}%
+  \definecolor{qianbai}{RGB}{249, 252, 248}%
+  \definecolor{mibai}{RGB}{238, 245, 236}%
+  \definecolor{heise}{RGB}{16, 24, 18}%
+  \definecolor{definition}{RGB}{192, 150, 42}%
+  \definecolor{theorem}{RGB}{24, 116, 76}%
+  \definecolor{proposition}{RGB}{116, 74, 48}%
+  \definecolor{corollary}{RGB}{50, 146, 90}%
+  \definecolor{lemma}{RGB}{116, 68, 126}%
+  \definecolor{example}{RGB}{38, 136, 154}%
+}
+\@namedef{LoneTrailTheme@050}{\LoneTrailThemeDef@themezerofivezero}
+\@namedef{LoneTrailTheme@theme_050}{\LoneTrailThemeDef@themezerofivezero}
+\@namedef{LoneTrailTheme@50}{\LoneTrailThemeDef@themezerofivezero}
+\@namedef{LoneTrailTheme@theme_109}{\LoneTrailThemeDef@themezerofivezero}
+
+% ------------------------------------------------------------------------------
+% Theme: theme_051 | 恒星冕环·日珥爆发 (Solar Flare Prominence)
+% ------------------------------------------------------------------------------
+\newcommand{\LoneTrailThemeDef@themezerofiveone}{%
+  \definecolor{qiancheng}{RGB}{184, 72, 46}%
+  \definecolor{lv}{RGB}{250, 232, 170}%
+  \definecolor{huang}{RGB}{230, 146, 26}%
+  \definecolor{hong}{RGB}{150, 22, 26}%
+  \definecolor{qianbai}{RGB}{254, 251, 247}%
+  \definecolor{mibai}{RGB}{248, 242, 234}%
+  \definecolor{heise}{RGB}{22, 16, 16}%
+  \definecolor{definition}{RGB}{224, 138, 22}%
+  \definecolor{theorem}{RGB}{196, 26, 32}%
+  \definecolor{proposition}{RGB}{138, 40, 116}%
+  \definecolor{corollary}{RGB}{232, 94, 26}%
+  \definecolor{lemma}{RGB}{166, 34, 86}%
+  \definecolor{example}{RGB}{26, 136, 170}%
+}
+\@namedef{LoneTrailTheme@051}{\LoneTrailThemeDef@themezerofiveone}
+\@namedef{LoneTrailTheme@theme_051}{\LoneTrailThemeDef@themezerofiveone}
+\@namedef{LoneTrailTheme@51}{\LoneTrailThemeDef@themezerofiveone}
+\@namedef{LoneTrailTheme@theme_110}{\LoneTrailThemeDef@themezerofiveone}
+
+% ------------------------------------------------------------------------------
+% Theme: theme_052 | 水晶矩阵·高维共振 (Crystal Matrix Hyper-Resonance)
+% ------------------------------------------------------------------------------
+\newcommand{\LoneTrailThemeDef@themezerofivetwo}{%
+  \definecolor{qiancheng}{RGB}{162, 100, 224}%
+  \definecolor{lv}{RGB}{34, 216, 232}%
+  \definecolor{huang}{RGB}{194, 164, 252}%
+  \definecolor{hong}{RGB}{82, 36, 162}%
+  \definecolor{qianbai}{RGB}{249, 250, 254}%
+  \definecolor{mibai}{RGB}{239, 241, 249}%
+  \definecolor{heise}{RGB}{16, 14, 26}%
+  \definecolor{definition}{RGB}{136, 62, 224}%
+  \definecolor{theorem}{RGB}{0, 166, 202}%
+  \definecolor{proposition}{RGB}{76, 30, 146}%
+  \definecolor{corollary}{RGB}{24, 174, 152}%
+  \definecolor{lemma}{RGB}{190, 52, 166}%
+  \definecolor{example}{RGB}{40, 116, 226}%
+}
+\@namedef{LoneTrailTheme@052}{\LoneTrailThemeDef@themezerofivetwo}
+\@namedef{LoneTrailTheme@theme_052}{\LoneTrailThemeDef@themezerofivetwo}
+\@namedef{LoneTrailTheme@52}{\LoneTrailThemeDef@themezerofivetwo}
+\@namedef{LoneTrailTheme@theme_111}{\LoneTrailThemeDef@themezerofivetwo}
+
+% ------------------------------------------------------------------------------
+% Theme: theme_053 | 绝境冰川·霜痕裂谷 (Glacial Crevasse Frost Scar)
+% ------------------------------------------------------------------------------
+\newcommand{\LoneTrailThemeDef@themezerofivethree}{%
+  \definecolor{qiancheng}{RGB}{64, 173, 230}%
+  \definecolor{lv}{RGB}{158, 236, 252}%
+  \definecolor{huang}{RGB}{124, 162, 184}%
+  \definecolor{hong}{RGB}{16, 48, 108}%
+  \definecolor{qianbai}{RGB}{248, 252, 254}%
+  \definecolor{mibai}{RGB}{236, 244, 248}%
+  \definecolor{heise}{RGB}{14, 22, 32}%
+  \definecolor{definition}{RGB}{18, 178, 214}%
+  \definecolor{theorem}{RGB}{16, 86, 162}%
+  \definecolor{proposition}{RGB}{76, 92, 168}%
+  \definecolor{corollary}{RGB}{38, 182, 164}%
+  \definecolor{lemma}{RGB}{112, 136, 178}%
+  \definecolor{example}{RGB}{42, 198, 232}%
+}
+\@namedef{LoneTrailTheme@053}{\LoneTrailThemeDef@themezerofivethree}
+\@namedef{LoneTrailTheme@theme_053}{\LoneTrailThemeDef@themezerofivethree}
+\@namedef{LoneTrailTheme@53}{\LoneTrailThemeDef@themezerofivethree}
+\@namedef{LoneTrailTheme@theme_112}{\LoneTrailThemeDef@themezerofivethree}
+
+% ------------------------------------------------------------------------------
+% Theme: theme_054 | 高能电浆·磁约束核聚变 (Tokamak Magnetic Confinement)
+% ------------------------------------------------------------------------------
+\newcommand{\LoneTrailThemeDef@themezerofivefour}{%
+  \definecolor{qiancheng}{RGB}{120, 18, 252}%
+  \definecolor{lv}{RGB}{248, 196, 44}%
+  \definecolor{huang}{RGB}{118, 56, 238}%
+  \definecolor{hong}{RGB}{62, 16, 128}%
+  \definecolor{qianbai}{RGB}{252, 250, 254}%
+  \definecolor{mibai}{RGB}{244, 238, 248}%
+  \definecolor{heise}{RGB}{20, 14, 28}%
+  \definecolor{definition}{RGB}{232, 168, 28}%
+  \definecolor{theorem}{RGB}{128, 32, 236}%
+  \definecolor{proposition}{RGB}{78, 48, 196}%
+  \definecolor{corollary}{RGB}{184, 82, 246}%
+  \definecolor{lemma}{RGB}{218, 126, 36}%
+  \definecolor{example}{RGB}{56, 112, 240}%
+}
+\@namedef{LoneTrailTheme@054}{\LoneTrailThemeDef@themezerofivefour}
+\@namedef{LoneTrailTheme@theme_054}{\LoneTrailThemeDef@themezerofivefour}
+\@namedef{LoneTrailTheme@54}{\LoneTrailThemeDef@themezerofivefour}
+\@namedef{LoneTrailTheme@theme_113}{\LoneTrailThemeDef@themezerofivefour}
+
+% ------------------------------------------------------------------------------
+% Theme: theme_055 | 星际尘埃·暗夜微光 (Interstellar Dust Nightfall)
+% ------------------------------------------------------------------------------
+\newcommand{\LoneTrailThemeDef@themezerofivefive}{%
+  \definecolor{qiancheng}{RGB}{240, 224, 154}%
+  \definecolor{lv}{RGB}{148, 156, 172}%
+  \definecolor{huang}{RGB}{238, 214, 136}%
+  \definecolor{hong}{RGB}{32, 36, 48}%
+  \definecolor{qianbai}{RGB}{252, 251, 248}%
+  \definecolor{mibai}{RGB}{244, 242, 236}%
+  \definecolor{heise}{RGB}{18, 20, 26}%
+  \definecolor{definition}{RGB}{212, 176, 84}%
+  \definecolor{theorem}{RGB}{116, 128, 154}%
+  \definecolor{proposition}{RGB}{136, 96, 168}%
+  \definecolor{corollary}{RGB}{78, 158, 142}%
+  \definecolor{lemma}{RGB}{186, 142, 108}%
+  \definecolor{example}{RGB}{92, 152, 196}%
+}
+\@namedef{LoneTrailTheme@055}{\LoneTrailThemeDef@themezerofivefive}
+\@namedef{LoneTrailTheme@theme_055}{\LoneTrailThemeDef@themezerofivefive}
+\@namedef{LoneTrailTheme@55}{\LoneTrailThemeDef@themezerofivefive}
+\@namedef{LoneTrailTheme@theme_114}{\LoneTrailThemeDef@themezerofivefive}
+
+% ------------------------------------------------------------------------------
+% Theme: theme_056 | 硅基异构·神经触突 (Silicon Hetero-Neural Synapse)
+% ------------------------------------------------------------------------------
+\newcommand{\LoneTrailThemeDef@themezerofivesix}{%
+  \definecolor{qiancheng}{RGB}{0, 234, 180}%
+  \definecolor{lv}{RGB}{120, 248, 228}%
+  \definecolor{huang}{RGB}{0, 234, 180}%
+  \definecolor{hong}{RGB}{14, 82, 98}%
+  \definecolor{qianbai}{RGB}{248, 253, 252}%
+  \definecolor{mibai}{RGB}{236, 246, 244}%
+  \definecolor{heise}{RGB}{14, 20, 24}%
+  \definecolor{definition}{RGB}{0, 192, 164}%
+  \definecolor{theorem}{RGB}{24, 112, 226}%
+  \definecolor{proposition}{RGB}{16, 96, 120}%
+  \definecolor{corollary}{RGB}{36, 198, 140}%
+  \definecolor{lemma}{RGB}{130, 56, 188}%
+  \definecolor{example}{RGB}{28, 156, 230}%
+}
+\@namedef{LoneTrailTheme@056}{\LoneTrailThemeDef@themezerofivesix}
+\@namedef{LoneTrailTheme@theme_056}{\LoneTrailThemeDef@themezerofivesix}
+\@namedef{LoneTrailTheme@56}{\LoneTrailThemeDef@themezerofivesix}
+\@namedef{LoneTrailTheme@theme_115}{\LoneTrailThemeDef@themezerofivesix}
+
+% ------------------------------------------------------------------------------
+% Theme: theme_057 | 苍穹裂隙·极光引力 (Firmament Rift Aurora Gravity)
+% ------------------------------------------------------------------------------
+\newcommand{\LoneTrailThemeDef@themezerofiveseven}{%
+  \definecolor{qiancheng}{RGB}{64, 98, 255}%
+  \definecolor{lv}{RGB}{148, 218, 255}%
+  \definecolor{huang}{RGB}{64, 98, 255}%
+  \definecolor{hong}{RGB}{20, 36, 118}%
+  \definecolor{qianbai}{RGB}{249, 251, 255}%
+  \definecolor{mibai}{RGB}{238, 243, 251}%
+  \definecolor{heise}{RGB}{12, 16, 26}%
+  \definecolor{definition}{RGB}{46, 114, 248}%
+  \definecolor{theorem}{RGB}{24, 76, 202}%
+  \definecolor{proposition}{RGB}{24, 46, 136}%
+  \definecolor{corollary}{RGB}{22, 186, 224}%
+  \definecolor{lemma}{RGB}{168, 56, 146}%
+  \definecolor{example}{RGB}{46, 148, 230}%
+}
+\@namedef{LoneTrailTheme@057}{\LoneTrailThemeDef@themezerofiveseven}
+\@namedef{LoneTrailTheme@theme_057}{\LoneTrailThemeDef@themezerofiveseven}
+\@namedef{LoneTrailTheme@57}{\LoneTrailThemeDef@themezerofiveseven}
+\@namedef{LoneTrailTheme@theme_116}{\LoneTrailThemeDef@themezerofiveseven}
+
+% ------------------------------------------------------------------------------
+% Theme: theme_058 | 废土游侠·辐射尘暴 (Wasteland Ranger Rad-Storm)
+% ------------------------------------------------------------------------------
+\newcommand{\LoneTrailThemeDef@themezerofiveeight}{%
+  \definecolor{qiancheng}{RGB}{158, 135, 37}%
+  \definecolor{lv}{RGB}{196, 183, 124}%
+  \definecolor{huang}{RGB}{158, 135, 37}%
+  \definecolor{hong}{RGB}{55, 47, 12}%
+  \definecolor{qianbai}{RGB}{253, 249, 244}%
+  \definecolor{mibai}{RGB}{245, 238, 230}%
+  \definecolor{heise}{RGB}{24, 18, 14}%
+  \definecolor{definition}{RGB}{192, 96, 28}%
+  \definecolor{theorem}{RGB}{212, 36, 42}%
+  \definecolor{proposition}{RGB}{142, 88, 54}%
+  \definecolor{corollary}{RGB}{226, 138, 48}%
+  \definecolor{lemma}{RGB}{146, 52, 78}%
+  \definecolor{example}{RGB}{174, 82, 42}%
+}
+\@namedef{LoneTrailTheme@058}{\LoneTrailThemeDef@themezerofiveeight}
+\@namedef{LoneTrailTheme@theme_058}{\LoneTrailThemeDef@themezerofiveeight}
+\@namedef{LoneTrailTheme@58}{\LoneTrailThemeDef@themezerofiveeight}
+\@namedef{LoneTrailTheme@theme_117}{\LoneTrailThemeDef@themezerofiveeight}
+
+% ------------------------------------------------------------------------------
+% Theme: theme_059 | 脉冲星轨·深空电波 (Pulsar Track Deep Radio)
+% ------------------------------------------------------------------------------
+\newcommand{\LoneTrailThemeDef@themezerofivenine}{%
+  \definecolor{qiancheng}{RGB}{124, 62, 168}%
+  \definecolor{lv}{RGB}{216, 224, 246}%
+  \definecolor{huang}{RGB}{162, 84, 226}%
+  \definecolor{hong}{RGB}{58, 22, 104}%
+  \definecolor{qianbai}{RGB}{250, 251, 254}%
+  \definecolor{mibai}{RGB}{241, 243, 250}%
+  \definecolor{heise}{RGB}{18, 16, 26}%
+  \definecolor{definition}{RGB}{146, 72, 214}%
+  \definecolor{theorem}{RGB}{186, 46, 158}%
+  \definecolor{proposition}{RGB}{76, 36, 148}%
+  \definecolor{corollary}{RGB}{34, 168, 198}%
+  \definecolor{lemma}{RGB}{204, 66, 128}%
+  \definecolor{example}{RGB}{48, 122, 224}%
+}
+\@namedef{LoneTrailTheme@059}{\LoneTrailThemeDef@themezerofivenine}
+\@namedef{LoneTrailTheme@theme_059}{\LoneTrailThemeDef@themezerofivenine}
+\@namedef{LoneTrailTheme@59}{\LoneTrailThemeDef@themezerofivenine}
+\@namedef{LoneTrailTheme@theme_118}{\LoneTrailThemeDef@themezerofivenine}
+
+% ------------------------------------------------------------------------------
+% Theme: theme_060 | 远古龙裔·烈焰黄金 (Ancient Draco Blazing Gold)
+% ------------------------------------------------------------------------------
+\newcommand{\LoneTrailThemeDef@themezerosixzero}{%
+  \definecolor{qiancheng}{RGB}{198, 105, 31}%
+  \definecolor{lv}{RGB}{252, 224, 126}%
+  \definecolor{huang}{RGB}{218, 136, 18}%
+  \definecolor{hong}{RGB}{126, 20, 32}%
+  \definecolor{qianbai}{RGB}{254, 252, 246}%
+  \definecolor{mibai}{RGB}{248, 243, 232}%
+  \definecolor{heise}{RGB}{24, 16, 14}%
+  \definecolor{definition}{RGB}{214, 132, 16}%
+  \definecolor{theorem}{RGB}{188, 28, 36}%
+  \definecolor{proposition}{RGB}{136, 46, 76}%
+  \definecolor{corollary}{RGB}{232, 94, 22}%
+  \definecolor{lemma}{RGB}{162, 52, 118}%
+  \definecolor{example}{RGB}{32, 136, 166}%
+}
+\@namedef{LoneTrailTheme@060}{\LoneTrailThemeDef@themezerosixzero}
+\@namedef{LoneTrailTheme@theme_060}{\LoneTrailThemeDef@themezerosixzero}
+\@namedef{LoneTrailTheme@60}{\LoneTrailThemeDef@themezerosixzero}
+\@namedef{LoneTrailTheme@theme_119}{\LoneTrailThemeDef@themezerosixzero}
+
+% ------------------------------------------------------------------------------
+% Theme: theme_061 | 零度结晶·超导量子 (Absolute Zero Superconducting Quantum)
+% ------------------------------------------------------------------------------
+\newcommand{\LoneTrailThemeDef@themezerosixone}{%
+  \definecolor{qiancheng}{RGB}{28, 204, 252}%
+  \definecolor{lv}{RGB}{212, 244, 252}%
+  \definecolor{huang}{RGB}{26, 162, 236}%
+  \definecolor{hong}{RGB}{18, 54, 122}%
+  \definecolor{qianbai}{RGB}{248, 252, 254}%
+  \definecolor{mibai}{RGB}{238, 246, 250}%
+  \definecolor{heise}{RGB}{14, 20, 26}%
+  \definecolor{definition}{RGB}{16, 156, 232}%
+  \definecolor{theorem}{RGB}{0, 172, 198}%
+  \definecolor{proposition}{RGB}{24, 72, 162}%
+  \definecolor{corollary}{RGB}{22, 186, 168}%
+  \definecolor{lemma}{RGB}{132, 62, 208}%
+  \definecolor{example}{RGB}{20, 122, 218}%
+}
+\@namedef{LoneTrailTheme@061}{\LoneTrailThemeDef@themezerosixone}
+\@namedef{LoneTrailTheme@theme_061}{\LoneTrailThemeDef@themezerosixone}
+\@namedef{LoneTrailTheme@61}{\LoneTrailThemeDef@themezerosixone}
+\@namedef{LoneTrailTheme@theme_120}{\LoneTrailThemeDef@themezerosixone}
+
+% ------------------------------------------------------------------------------
+% Theme: theme_062 | 泰拉终局·虚数空间 (Terra Endgame Imaginary Space)
+% ------------------------------------------------------------------------------
+\newcommand{\LoneTrailThemeDef@themezerosixtwo}{%
+  \definecolor{qiancheng}{RGB}{248, 212, 82}%
+  \definecolor{lv}{RGB}{252, 235, 172}%
+  \definecolor{huang}{RGB}{242, 198, 62}%
+  \definecolor{hong}{RGB}{102, 74, 18}%
+  \definecolor{qianbai}{RGB}{250, 249, 244}%
+  \definecolor{mibai}{RGB}{244, 241, 232}%
+  \definecolor{heise}{RGB}{14, 13, 16}%
+  \definecolor{definition}{RGB}{218, 172, 42}%
+  \definecolor{theorem}{RGB}{198, 48, 52}%
+  \definecolor{proposition}{RGB}{118, 54, 182}%
+  \definecolor{corollary}{RGB}{46, 156, 128}%
+  \definecolor{lemma}{RGB}{182, 108, 36}%
+  \definecolor{example}{RGB}{38, 138, 206}%
+}
+\@namedef{LoneTrailTheme@062}{\LoneTrailThemeDef@themezerosixtwo}
+\@namedef{LoneTrailTheme@theme_062}{\LoneTrailThemeDef@themezerosixtwo}
+\@namedef{LoneTrailTheme@62}{\LoneTrailThemeDef@themezerosixtwo}
+\@namedef{LoneTrailTheme@theme_121}{\LoneTrailThemeDef@themezerosixtwo}
+
+% ------------------------------------------------------------------------------
+% Theme: theme_063 | 哥伦比亚·先锋拓荒 (Columbia Pioneer Frontier)
+% ------------------------------------------------------------------------------
+\newcommand{\LoneTrailThemeDef@themezerosixthree}{%
+  \definecolor{qiancheng}{RGB}{158, 82, 66}%
+  \definecolor{lv}{RGB}{236, 188, 108}%
+  \definecolor{huang}{RGB}{194, 130, 52}%
+  \definecolor{hong}{RGB}{88, 46, 22}%
+  \definecolor{qianbai}{RGB}{248, 246, 240}%
+  \definecolor{mibai}{RGB}{240, 236, 228}%
+  \definecolor{heise}{RGB}{26, 20, 16}%
+  \definecolor{definition}{RGB}{198, 124, 48}%
+  \definecolor{theorem}{RGB}{186, 52, 38}%
+  \definecolor{proposition}{RGB}{42, 98, 168}%
+  \definecolor{corollary}{RGB}{58, 132, 78}%
+  \definecolor{lemma}{RGB}{142, 78, 36}%
+  \definecolor{example}{RGB}{36, 142, 156}%
+}
+\@namedef{LoneTrailTheme@063}{\LoneTrailThemeDef@themezerosixthree}
+\@namedef{LoneTrailTheme@theme_063}{\LoneTrailThemeDef@themezerosixthree}
+\@namedef{LoneTrailTheme@63}{\LoneTrailThemeDef@themezerosixthree}
+\@namedef{LoneTrailTheme@theme_122}{\LoneTrailThemeDef@themezerosixthree}
+
+% ------------------------------------------------------------------------------
+% Theme: theme_064 | 维多利亚·蔷薇誓约 (Victoria Rose Oath)
+% ------------------------------------------------------------------------------
+\newcommand{\LoneTrailThemeDef@themezerosixfour}{%
+  \definecolor{qiancheng}{RGB}{202, 56, 108}%
+  \definecolor{lv}{RGB}{238, 224, 230}%
+  \definecolor{huang}{RGB}{198, 52, 104}%
+  \definecolor{hong}{RGB}{106, 18, 48}%
+  \definecolor{qianbai}{RGB}{249, 250, 253}%
+  \definecolor{mibai}{RGB}{243, 244, 248}%
+  \definecolor{heise}{RGB}{24, 18, 22}%
+  \definecolor{definition}{RGB}{188, 48, 96}%
+  \definecolor{theorem}{RGB}{192, 142, 46}%
+  \definecolor{proposition}{RGB}{56, 84, 178}%
+  \definecolor{corollary}{RGB}{48, 142, 98}%
+  \definecolor{lemma}{RGB}{136, 32, 68}%
+  \definecolor{example}{RGB}{42, 134, 176}%
+}
+\@namedef{LoneTrailTheme@064}{\LoneTrailThemeDef@themezerosixfour}
+\@namedef{LoneTrailTheme@theme_064}{\LoneTrailThemeDef@themezerosixfour}
+\@namedef{LoneTrailTheme@64}{\LoneTrailThemeDef@themezerosixfour}
+\@namedef{LoneTrailTheme@theme_123}{\LoneTrailThemeDef@themezerosixfour}
+
+% ------------------------------------------------------------------------------
+% Theme: theme_065 | 终焉视界·黑洞引力 (Event Horizon Blackhole Gravity)
+% ------------------------------------------------------------------------------
+\newcommand{\LoneTrailThemeDef@themezerosixfive}{%
+  \definecolor{qiancheng}{RGB}{168, 64, 218}%
+  \definecolor{lv}{RGB}{202, 140, 232}%
+  \definecolor{huang}{RGB}{168, 64, 218}%
+  \definecolor{hong}{RGB}{58, 22, 76}%
+  \definecolor{qianbai}{RGB}{252, 250, 254}%
+  \definecolor{mibai}{RGB}{244, 240, 248}%
+  \definecolor{heise}{RGB}{16, 12, 22}%
+  \definecolor{definition}{RGB}{154, 52, 204}%
+  \definecolor{theorem}{RGB}{216, 38, 96}%
+  \definecolor{proposition}{RGB}{88, 36, 156}%
+  \definecolor{corollary}{RGB}{36, 182, 198}%
+  \definecolor{lemma}{RGB}{228, 154, 42}%
+  \definecolor{example}{RGB}{42, 128, 224}%
+}
+\@namedef{LoneTrailTheme@065}{\LoneTrailThemeDef@themezerosixfive}
+\@namedef{LoneTrailTheme@theme_065}{\LoneTrailThemeDef@themezerosixfive}
+\@namedef{LoneTrailTheme@65}{\LoneTrailThemeDef@themezerosixfive}
+\@namedef{LoneTrailTheme@theme_124}{\LoneTrailThemeDef@themezerosixfive}
+
+% ------------------------------------------------------------------------------
+% Theme: theme_066 | 深海圣堂·伊比利亚 (Deep Church Iberian Sanctuary)
+% ------------------------------------------------------------------------------
+\newcommand{\LoneTrailThemeDef@themezerosixsix}{%
+  \definecolor{qiancheng}{RGB}{172, 138, 83}%
+  \definecolor{lv}{RGB}{205, 184, 151}%
+  \definecolor{huang}{RGB}{172, 138, 83}%
+  \definecolor{hong}{RGB}{60, 48, 29}%
+  \definecolor{qianbai}{RGB}{253, 252, 246}%
+  \definecolor{mibai}{RGB}{246, 243, 232}%
+  \definecolor{heise}{RGB}{18, 20, 26}%
+  \definecolor{definition}{RGB}{198, 152, 38}%
+  \definecolor{theorem}{RGB}{186, 32, 54}%
+  \definecolor{proposition}{RGB}{28, 112, 164}%
+  \definecolor{corollary}{RGB}{42, 168, 142}%
+  \definecolor{lemma}{RGB}{142, 58, 136}%
+  \definecolor{example}{RGB}{32, 138, 192}%
+}
+\@namedef{LoneTrailTheme@066}{\LoneTrailThemeDef@themezerosixsix}
+\@namedef{LoneTrailTheme@theme_066}{\LoneTrailThemeDef@themezerosixsix}
+\@namedef{LoneTrailTheme@66}{\LoneTrailThemeDef@themezerosixsix}
+\@namedef{LoneTrailTheme@theme_125}{\LoneTrailThemeDef@themezerosixsix}
+
+% ------------------------------------------------------------------------------
+% Theme: theme_067 | 晶圆光刻·纳米微流 (Wafer Lithography Nanofluid)
+% ------------------------------------------------------------------------------
+\newcommand{\LoneTrailThemeDef@themezerosixseven}{%
+  \definecolor{qiancheng}{RGB}{98, 10, 176}%
+  \definecolor{lv}{RGB}{160, 108, 207}%
+  \definecolor{huang}{RGB}{98, 10, 176}%
+  \definecolor{hong}{RGB}{34, 10, 61}%
+  \definecolor{qianbai}{RGB}{252, 250, 254}%
+  \definecolor{mibai}{RGB}{242, 238, 248}%
+  \definecolor{heise}{RGB}{14, 16, 24}%
+  \definecolor{definition}{RGB}{128, 36, 198}%
+  \definecolor{theorem}{RGB}{208, 28, 76}%
+  \definecolor{proposition}{RGB}{24, 136, 182}%
+  \definecolor{corollary}{RGB}{48, 196, 168}%
+  \definecolor{lemma}{RGB}{232, 164, 38}%
+  \definecolor{example}{RGB}{28, 148, 226}%
+}
+\@namedef{LoneTrailTheme@067}{\LoneTrailThemeDef@themezerosixseven}
+\@namedef{LoneTrailTheme@theme_067}{\LoneTrailThemeDef@themezerosixseven}
+\@namedef{LoneTrailTheme@67}{\LoneTrailThemeDef@themezerosixseven}
+\@namedef{LoneTrailTheme@theme_126}{\LoneTrailThemeDef@themezerosixseven}
+
+% ------------------------------------------------------------------------------
+% Theme: theme_068 | 恒星裂谷·炽斑耀变 (Solar Rift Blazing Blazar)
+% ------------------------------------------------------------------------------
+\newcommand{\LoneTrailThemeDef@themezerosixeight}{%
+  \definecolor{qiancheng}{RGB}{220, 82, 28}%
+  \definecolor{lv}{RGB}{252, 214, 98}%
+  \definecolor{huang}{RGB}{238, 132, 34}%
+  \definecolor{hong}{RGB}{154, 24, 28}%
+  \definecolor{qianbai}{RGB}{254, 250, 246}%
+  \definecolor{mibai}{RGB}{248, 241, 232}%
+  \definecolor{heise}{RGB}{24, 16, 14}%
+  \definecolor{definition}{RGB}{230, 144, 28}%
+  \definecolor{theorem}{RGB}{212, 32, 36}%
+  \definecolor{proposition}{RGB}{146, 36, 112}%
+  \definecolor{corollary}{RGB}{240, 94, 32}%
+  \definecolor{lemma}{RGB}{178, 46, 82}%
+  \definecolor{example}{RGB}{32, 138, 188}%
+}
+\@namedef{LoneTrailTheme@068}{\LoneTrailThemeDef@themezerosixeight}
+\@namedef{LoneTrailTheme@theme_068}{\LoneTrailThemeDef@themezerosixeight}
+\@namedef{LoneTrailTheme@68}{\LoneTrailThemeDef@themezerosixeight}
+\@namedef{LoneTrailTheme@theme_127}{\LoneTrailThemeDef@themezerosixeight}
+
+% ------------------------------------------------------------------------------
+% Theme: theme_069 | 极夜之翼·静默巡航 (Polar Night Wing Silent Cruise)
+% ------------------------------------------------------------------------------
+\newcommand{\LoneTrailThemeDef@themezerosixnine}{%
+  \definecolor{qiancheng}{RGB}{70, 116, 204}%
+  \definecolor{lv}{RGB}{132, 208, 242}%
+  \definecolor{huang}{RGB}{44, 112, 178}%
+  \definecolor{hong}{RGB}{22, 32, 48}%
+  \definecolor{qianbai}{RGB}{246, 249, 253}%
+  \definecolor{mibai}{RGB}{236, 241, 247}%
+  \definecolor{heise}{RGB}{12, 16, 24}%
+  \definecolor{definition}{RGB}{42, 126, 218}%
+  \definecolor{theorem}{RGB}{26, 88, 172}%
+  \definecolor{proposition}{RGB}{78, 48, 142}%
+  \definecolor{corollary}{RGB}{36, 164, 188}%
+  \definecolor{lemma}{RGB}{136, 52, 168}%
+  \definecolor{example}{RGB}{28, 142, 148}%
+}
+\@namedef{LoneTrailTheme@069}{\LoneTrailThemeDef@themezerosixnine}
+\@namedef{LoneTrailTheme@theme_069}{\LoneTrailThemeDef@themezerosixnine}
+\@namedef{LoneTrailTheme@69}{\LoneTrailThemeDef@themezerosixnine}
+\@namedef{LoneTrailTheme@theme_128}{\LoneTrailThemeDef@themezerosixnine}
+
+% ------------------------------------------------------------------------------
+% Theme: theme_070 | 虚空晶魄·超弦共振 (Void Crystal Superstring Resonance)
+% ------------------------------------------------------------------------------
+\newcommand{\LoneTrailThemeDef@themezerosevenzero}{%
+  \definecolor{qiancheng}{RGB}{62, 192, 98}%
+  \definecolor{lv}{RGB}{98, 236, 162}%
+  \definecolor{huang}{RGB}{28, 186, 204}%
+  \definecolor{hong}{RGB}{52, 32, 114}%
+  \definecolor{qianbai}{RGB}{248, 252, 249}%
+  \definecolor{mibai}{RGB}{238, 246, 240}%
+  \definecolor{heise}{RGB}{14, 20, 18}%
+  \definecolor{definition}{RGB}{42, 182, 114}%
+  \definecolor{theorem}{RGB}{18, 156, 182}%
+  \definecolor{proposition}{RGB}{82, 38, 152}%
+  \definecolor{corollary}{RGB}{72, 202, 148}%
+  \definecolor{lemma}{RGB}{172, 46, 154}%
+  \definecolor{example}{RGB}{34, 128, 212}%
+}
+\@namedef{LoneTrailTheme@070}{\LoneTrailThemeDef@themezerosevenzero}
+\@namedef{LoneTrailTheme@theme_070}{\LoneTrailThemeDef@themezerosevenzero}
+\@namedef{LoneTrailTheme@70}{\LoneTrailThemeDef@themezerosevenzero}
+\@namedef{LoneTrailTheme@theme_129}{\LoneTrailThemeDef@themezerosevenzero}
+
+% ------------------------------------------------------------------------------
+% Theme: theme_071 | 极寒冻土·乌萨斯长夜 (Ursus Polar Tundra Long Night)
+% ------------------------------------------------------------------------------
+\newcommand{\LoneTrailThemeDef@themezerosevenone}{%
+  \definecolor{qiancheng}{RGB}{22, 70, 76}%
+  \definecolor{lv}{RGB}{138, 202, 196}%
+  \definecolor{huang}{RGB}{44, 120, 108}%
+  \definecolor{hong}{RGB}{18, 38, 52}%
+  \definecolor{qianbai}{RGB}{248, 251, 252}%
+  \definecolor{mibai}{RGB}{236, 244, 245}%
+  \definecolor{heise}{RGB}{14, 20, 26}%
+  \definecolor{definition}{RGB}{32, 126, 114}%
+  \definecolor{theorem}{RGB}{26, 86, 132}%
+  \definecolor{proposition}{RGB}{98, 62, 124}%
+  \definecolor{corollary}{RGB}{42, 142, 104}%
+  \definecolor{lemma}{RGB}{136, 68, 92}%
+  \definecolor{example}{RGB}{38, 150, 182}%
+}
+\@namedef{LoneTrailTheme@071}{\LoneTrailThemeDef@themezerosevenone}
+\@namedef{LoneTrailTheme@theme_071}{\LoneTrailThemeDef@themezerosevenone}
+\@namedef{LoneTrailTheme@71}{\LoneTrailThemeDef@themezerosevenone}
+\@namedef{LoneTrailTheme@theme_130}{\LoneTrailThemeDef@themezerosevenone}
+
+% ------------------------------------------------------------------------------
+% Theme: theme_072 | 太阳神鸟·阿纳缇炽翼 (Anaty Solar Bird Blazing Wings)
+% ------------------------------------------------------------------------------
+\newcommand{\LoneTrailThemeDef@themezeroseventwo}{%
+  \definecolor{qiancheng}{RGB}{206, 192, 58}%
+  \definecolor{lv}{RGB}{225, 217, 136}%
+  \definecolor{huang}{RGB}{206, 192, 58}%
+  \definecolor{hong}{RGB}{72, 67, 20}%
+  \definecolor{qianbai}{RGB}{254, 252, 246}%
+  \definecolor{mibai}{RGB}{248, 242, 230}%
+  \definecolor{heise}{RGB}{24, 16, 12}%
+  \definecolor{definition}{RGB}{232, 154, 24}%
+  \definecolor{theorem}{RGB}{218, 36, 32}%
+  \definecolor{proposition}{RGB}{164, 48, 98}%
+  \definecolor{corollary}{RGB}{240, 112, 28}%
+  \definecolor{lemma}{RGB}{178, 64, 52}%
+  \definecolor{example}{RGB}{226, 88, 24}%
+}
+\@namedef{LoneTrailTheme@072}{\LoneTrailThemeDef@themezeroseventwo}
+\@namedef{LoneTrailTheme@theme_072}{\LoneTrailThemeDef@themezeroseventwo}
+\@namedef{LoneTrailTheme@72}{\LoneTrailThemeDef@themezeroseventwo}
+\@namedef{LoneTrailTheme@theme_131}{\LoneTrailThemeDef@themezeroseventwo}
+
+% ------------------------------------------------------------------------------
+% Theme: theme_073 | 聚变等离子·超导磁阱 (Plasma Fusion Superconducting Trap)
+% ------------------------------------------------------------------------------
+\newcommand{\LoneTrailThemeDef@themezeroseventhree}{%
+  \definecolor{qiancheng}{RGB}{53, 198, 208}%
+  \definecolor{lv}{RGB}{133, 220, 226}%
+  \definecolor{huang}{RGB}{53, 198, 208}%
+  \definecolor{hong}{RGB}{18, 69, 72}%
+  \definecolor{qianbai}{RGB}{248, 252, 255}%
+  \definecolor{mibai}{RGB}{236, 245, 250}%
+  \definecolor{heise}{RGB}{12, 18, 28}%
+  \definecolor{definition}{RGB}{28, 152, 228}%
+  \definecolor{theorem}{RGB}{214, 42, 92}%
+  \definecolor{proposition}{RGB}{88, 54, 182}%
+  \definecolor{corollary}{RGB}{32, 192, 174}%
+  \definecolor{lemma}{RGB}{142, 68, 204}%
+  \definecolor{example}{RGB}{18, 128, 214}%
+}
+\@namedef{LoneTrailTheme@073}{\LoneTrailThemeDef@themezeroseventhree}
+\@namedef{LoneTrailTheme@theme_073}{\LoneTrailThemeDef@themezeroseventhree}
+\@namedef{LoneTrailTheme@73}{\LoneTrailThemeDef@themezeroseventhree}
+\@namedef{LoneTrailTheme@theme_132}{\LoneTrailThemeDef@themezeroseventhree}
+
+% ------------------------------------------------------------------------------
+% Theme: theme_074 | 空间折叠·翘曲泡 (Warp Bubble Space Fold)
+% ------------------------------------------------------------------------------
+\newcommand{\LoneTrailThemeDef@themezerosevenfour}{%
+  \definecolor{qiancheng}{RGB}{10, 245, 211}%
+  \definecolor{lv}{RGB}{108, 249, 228}%
+  \definecolor{huang}{RGB}{10, 245, 211}%
+  \definecolor{hong}{RGB}{10, 85, 73}%
+  \definecolor{qianbai}{RGB}{248, 253, 252}%
+  \definecolor{mibai}{RGB}{236, 247, 245}%
+  \definecolor{heise}{RGB}{10, 20, 24}%
+  \definecolor{definition}{RGB}{18, 188, 168}%
+  \definecolor{theorem}{RGB}{182, 36, 114}%
+  \definecolor{proposition}{RGB}{32, 114, 188}%
+  \definecolor{corollary}{RGB}{68, 212, 142}%
+  \definecolor{lemma}{RGB}{124, 58, 178}%
+  \definecolor{example}{RGB}{24, 146, 218}%
+}
+\@namedef{LoneTrailTheme@074}{\LoneTrailThemeDef@themezerosevenfour}
+\@namedef{LoneTrailTheme@theme_074}{\LoneTrailThemeDef@themezerosevenfour}
+\@namedef{LoneTrailTheme@74}{\LoneTrailThemeDef@themezerosevenfour}
+\@namedef{LoneTrailTheme@theme_133}{\LoneTrailThemeDef@themezerosevenfour}
+
+% ------------------------------------------------------------------------------
+% Theme: theme_075 | 战术目镜·夜视增强 (Tactical Visor Night Vision)
+% ------------------------------------------------------------------------------
+\newcommand{\LoneTrailThemeDef@themezerosevenfive}{%
+  \definecolor{qiancheng}{RGB}{168, 238, 36}%
+  \definecolor{lv}{RGB}{202, 244, 123}%
+  \definecolor{huang}{RGB}{168, 238, 36}%
+  \definecolor{hong}{RGB}{58, 83, 12}%
+  \definecolor{qianbai}{RGB}{250, 254, 248}%
+  \definecolor{mibai}{RGB}{240, 248, 236}%
+  \definecolor{heise}{RGB}{12, 18, 10}%
+  \definecolor{definition}{RGB}{146, 214, 28}%
+  \definecolor{theorem}{RGB}{218, 42, 68}%
+  \definecolor{proposition}{RGB}{24, 154, 188}%
+  \definecolor{corollary}{RGB}{188, 242, 54}%
+  \definecolor{lemma}{RGB}{174, 54, 182}%
+  \definecolor{example}{RGB}{28, 142, 216}%
+}
+\@namedef{LoneTrailTheme@075}{\LoneTrailThemeDef@themezerosevenfive}
+\@namedef{LoneTrailTheme@theme_075}{\LoneTrailThemeDef@themezerosevenfive}
+\@namedef{LoneTrailTheme@75}{\LoneTrailThemeDef@themezerosevenfive}
+\@namedef{LoneTrailTheme@theme_134}{\LoneTrailThemeDef@themezerosevenfive}
+
+% ------------------------------------------------------------------------------
+% Theme: theme_076 | 帝国禁卫·重铠军团 (Imperial Guard Heavy Armor)
+% ------------------------------------------------------------------------------
+\newcommand{\LoneTrailThemeDef@themezerosevensix}{%
+  \definecolor{qiancheng}{RGB}{146, 42, 94}%
+  \definecolor{lv}{RGB}{189, 127, 158}%
+  \definecolor{huang}{RGB}{146, 42, 94}%
+  \definecolor{hong}{RGB}{51, 14, 32}%
+  \definecolor{qianbai}{RGB}{254, 250, 250}%
+  \definecolor{mibai}{RGB}{248, 238, 240}%
+  \definecolor{heise}{RGB}{22, 14, 16}%
+  \definecolor{definition}{RGB}{172, 28, 48}%
+  \definecolor{theorem}{RGB}{214, 32, 38}%
+  \definecolor{proposition}{RGB}{128, 42, 96}%
+  \definecolor{corollary}{RGB}{218, 98, 42}%
+  \definecolor{lemma}{RGB}{138, 38, 124}%
+  \definecolor{example}{RGB}{168, 64, 48}%
+}
+\@namedef{LoneTrailTheme@076}{\LoneTrailThemeDef@themezerosevensix}
+\@namedef{LoneTrailTheme@theme_076}{\LoneTrailThemeDef@themezerosevensix}
+\@namedef{LoneTrailTheme@76}{\LoneTrailThemeDef@themezerosevensix}
+\@namedef{LoneTrailTheme@theme_135}{\LoneTrailThemeDef@themezerosevensix}
+
+% ------------------------------------------------------------------------------
+% Theme: theme_077 | 聚变重工·磁通约束 (Fusion Heavy Industry Magnetic Flux)
+% ------------------------------------------------------------------------------
+\newcommand{\LoneTrailThemeDef@themezerosevenseven}{%
+  \definecolor{qiancheng}{RGB}{198, 203, 101}%
+  \definecolor{lv}{RGB}{220, 223, 162}%
+  \definecolor{huang}{RGB}{198, 203, 101}%
+  \definecolor{hong}{RGB}{69, 71, 35}%
+  \definecolor{qianbai}{RGB}{254, 252, 246}%
+  \definecolor{mibai}{RGB}{247, 243, 232}%
+  \definecolor{heise}{RGB}{20, 18, 16}%
+  \definecolor{definition}{RGB}{218, 176, 56}%
+  \definecolor{theorem}{RGB}{208, 42, 54}%
+  \definecolor{proposition}{RGB}{58, 124, 184}%
+  \definecolor{corollary}{RGB}{64, 182, 148}%
+  \definecolor{lemma}{RGB}{152, 68, 148}%
+  \definecolor{example}{RGB}{42, 148, 212}%
+}
+\@namedef{LoneTrailTheme@077}{\LoneTrailThemeDef@themezerosevenseven}
+\@namedef{LoneTrailTheme@theme_077}{\LoneTrailThemeDef@themezerosevenseven}
+\@namedef{LoneTrailTheme@77}{\LoneTrailThemeDef@themezerosevenseven}
+\@namedef{LoneTrailTheme@theme_136}{\LoneTrailThemeDef@themezerosevenseven}
+
+% ------------------------------------------------------------------------------
+% Theme: theme_078 | 仿生机械·合成拟态 (Bionic Android Synthetic Mimicry)
+% ------------------------------------------------------------------------------
+\newcommand{\LoneTrailThemeDef@themezeroseveneight}{%
+  \definecolor{qiancheng}{RGB}{142, 78, 236}%
+  \definecolor{lv}{RGB}{187, 148, 243}%
+  \definecolor{huang}{RGB}{142, 78, 236}%
+  \definecolor{hong}{RGB}{49, 27, 82}%
+  \definecolor{qianbai}{RGB}{252, 250, 254}%
+  \definecolor{mibai}{RGB}{243, 238, 248}%
+  \definecolor{heise}{RGB}{16, 14, 22}%
+  \definecolor{definition}{RGB}{168, 64, 218}%
+  \definecolor{theorem}{RGB}{224, 38, 92}%
+  \definecolor{proposition}{RGB}{68, 114, 204}%
+  \definecolor{corollary}{RGB}{36, 188, 182}%
+  \definecolor{lemma}{RGB}{232, 168, 42}%
+  \definecolor{example}{RGB}{48, 142, 228}%
+}
+\@namedef{LoneTrailTheme@078}{\LoneTrailThemeDef@themezeroseveneight}
+\@namedef{LoneTrailTheme@theme_078}{\LoneTrailThemeDef@themezeroseveneight}
+\@namedef{LoneTrailTheme@78}{\LoneTrailThemeDef@themezeroseveneight}
+\@namedef{LoneTrailTheme@theme_137}{\LoneTrailThemeDef@themezeroseveneight}
+
+% ------------------------------------------------------------------------------
+% Theme: theme_079 | 极地星舰·超导引擎 (Polar Starship Superconducting Engine)
+% ------------------------------------------------------------------------------
+\newcommand{\LoneTrailThemeDef@themezerosevennine}{%
+  \definecolor{qiancheng}{RGB}{10, 244, 243}%
+  \definecolor{lv}{RGB}{108, 248, 247}%
+  \definecolor{huang}{RGB}{10, 244, 243}%
+  \definecolor{hong}{RGB}{10, 85, 85}%
+  \definecolor{qianbai}{RGB}{248, 253, 255}%
+  \definecolor{mibai}{RGB}{236, 246, 252}%
+  \definecolor{heise}{RGB}{10, 18, 28}%
+  \definecolor{definition}{RGB}{28, 186, 224}%
+  \definecolor{theorem}{RGB}{212, 42, 86}%
+  \definecolor{proposition}{RGB}{64, 78, 184}%
+  \definecolor{corollary}{RGB}{42, 196, 168}%
+  \definecolor{lemma}{RGB}{128, 64, 192}%
+  \definecolor{example}{RGB}{24, 138, 218}%
+}
+\@namedef{LoneTrailTheme@079}{\LoneTrailThemeDef@themezerosevennine}
+\@namedef{LoneTrailTheme@theme_079}{\LoneTrailThemeDef@themezerosevennine}
+\@namedef{LoneTrailTheme@79}{\LoneTrailThemeDef@themezerosevennine}
+\@namedef{LoneTrailTheme@theme_138}{\LoneTrailThemeDef@themezerosevennine}
+
+% ------------------------------------------------------------------------------
+% Theme: theme_080 | 泰拉破晓·晨昏分界 (Terra Twilight Terminator Line)
+% ------------------------------------------------------------------------------
+\newcommand{\LoneTrailThemeDef@themezeroeightzero}{%
+  \definecolor{qiancheng}{RGB}{178, 138, 117}%
+  \definecolor{lv}{RGB}{208, 184, 172}%
+  \definecolor{huang}{RGB}{178, 138, 117}%
+  \definecolor{hong}{RGB}{62, 48, 40}%
+  \definecolor{qianbai}{RGB}{253, 252, 248}%
+  \definecolor{mibai}{RGB}{245, 242, 234}%
+  \definecolor{heise}{RGB}{18, 18, 22}%
+  \definecolor{definition}{RGB}{204, 162, 78}%
+  \definecolor{theorem}{RGB}{198, 48, 64}%
+  \definecolor{proposition}{RGB}{52, 118, 176}%
+  \definecolor{corollary}{RGB}{62, 174, 142}%
+  \definecolor{lemma}{RGB}{146, 72, 142}%
+  \definecolor{example}{RGB}{38, 142, 206}%
+}
+\@namedef{LoneTrailTheme@080}{\LoneTrailThemeDef@themezeroeightzero}
+\@namedef{LoneTrailTheme@theme_080}{\LoneTrailThemeDef@themezeroeightzero}
+\@namedef{LoneTrailTheme@80}{\LoneTrailThemeDef@themezeroeightzero}
+\@namedef{LoneTrailTheme@theme_139}{\LoneTrailThemeDef@themezeroeightzero}
+
+% ------------------------------------------------------------------------------
+% Theme: theme_081 | 脉冲激光·靶向聚能 (Pulsed Laser Directed Energy)
+% ------------------------------------------------------------------------------
+\newcommand{\LoneTrailThemeDef@themezeroeightone}{%
+  \definecolor{qiancheng}{RGB}{58, 229, 192}%
+  \definecolor{lv}{RGB}{136, 239, 217}%
+  \definecolor{huang}{RGB}{58, 229, 192}%
+  \definecolor{hong}{RGB}{20, 80, 67}%
+  \definecolor{qianbai}{RGB}{248, 253, 252}%
+  \definecolor{mibai}{RGB}{236, 246, 245}%
+  \definecolor{heise}{RGB}{10, 18, 22}%
+  \definecolor{definition}{RGB}{14, 196, 184}%
+  \definecolor{theorem}{RGB}{218, 38, 82}%
+  \definecolor{proposition}{RGB}{36, 98, 178}%
+  \definecolor{corollary}{RGB}{64, 218, 154}%
+  \definecolor{lemma}{RGB}{148, 54, 186}%
+  \definecolor{example}{RGB}{24, 152, 226}%
+}
+\@namedef{LoneTrailTheme@081}{\LoneTrailThemeDef@themezeroeightone}
+\@namedef{LoneTrailTheme@theme_081}{\LoneTrailThemeDef@themezeroeightone}
+\@namedef{LoneTrailTheme@81}{\LoneTrailThemeDef@themezeroeightone}
+\@namedef{LoneTrailTheme@theme_140}{\LoneTrailThemeDef@themezeroeightone}
+
+% ------------------------------------------------------------------------------
+% Theme: theme_082 | 钢铁苍穹·飞艇编队 (Iron Sky Airship Fleet)
+% ------------------------------------------------------------------------------
+\newcommand{\LoneTrailThemeDef@themezeroeighttwo}{%
+  \definecolor{qiancheng}{RGB}{142, 168, 192}%
+  \definecolor{lv}{RGB}{187, 202, 217}%
+  \definecolor{huang}{RGB}{142, 168, 192}%
+  \definecolor{hong}{RGB}{49, 58, 67}%
+  \definecolor{qianbai}{RGB}{250, 252, 254}%
+  \definecolor{mibai}{RGB}{238, 242, 246}%
+  \definecolor{heise}{RGB}{20, 22, 26}%
+  \definecolor{definition}{RGB}{124, 152, 178}%
+  \definecolor{theorem}{RGB}{188, 48, 56}%
+  \definecolor{proposition}{RGB}{72, 94, 152}%
+  \definecolor{corollary}{RGB}{48, 168, 156}%
+  \definecolor{lemma}{RGB}{124, 68, 142}%
+  \definecolor{example}{RGB}{42, 138, 196}%
+}
+\@namedef{LoneTrailTheme@082}{\LoneTrailThemeDef@themezeroeighttwo}
+\@namedef{LoneTrailTheme@theme_082}{\LoneTrailThemeDef@themezeroeighttwo}
+\@namedef{LoneTrailTheme@82}{\LoneTrailThemeDef@themezeroeighttwo}
+\@namedef{LoneTrailTheme@theme_141}{\LoneTrailThemeDef@themezeroeighttwo}
+
+% ------------------------------------------------------------------------------
+% Theme: theme_083 | 绝对视界·虚无奇点 (Singularity Event Horizon Void)
+% ------------------------------------------------------------------------------
+\newcommand{\LoneTrailThemeDef@themezeroeightthree}{%
+  \definecolor{qiancheng}{RGB}{174, 68, 92}%
+  \definecolor{lv}{RGB}{206, 142, 157}%
+  \definecolor{huang}{RGB}{174, 68, 92}%
+  \definecolor{hong}{RGB}{60, 23, 32}%
+  \definecolor{qianbai}{RGB}{254, 250, 252}%
+  \definecolor{mibai}{RGB}{247, 238, 242}%
+  \definecolor{heise}{RGB}{20, 12, 16}%
+  \definecolor{definition}{RGB}{198, 42, 64}%
+  \definecolor{theorem}{RGB}{226, 32, 42}%
+  \definecolor{proposition}{RGB}{118, 38, 128}%
+  \definecolor{corollary}{RGB}{224, 108, 46}%
+  \definecolor{lemma}{RGB}{148, 42, 98}%
+  \definecolor{example}{RGB}{178, 62, 54}%
+}
+\@namedef{LoneTrailTheme@083}{\LoneTrailThemeDef@themezeroeightthree}
+\@namedef{LoneTrailTheme@theme_083}{\LoneTrailThemeDef@themezeroeightthree}
+\@namedef{LoneTrailTheme@83}{\LoneTrailThemeDef@themezeroeightthree}
+\@namedef{LoneTrailTheme@theme_142}{\LoneTrailThemeDef@themezeroeightthree}
+
+% ------------------------------------------------------------------------------
+% Theme: theme_084 | 碧海珊瑚·深蓝礁脉 (Deep Blue Coral Atoll Reef)
+% ------------------------------------------------------------------------------
+\newcommand{\LoneTrailThemeDef@themezeroeightfour}{%
+  \definecolor{qiancheng}{RGB}{208, 124, 83}%
+  \definecolor{lv}{RGB}{226, 176, 151}%
+  \definecolor{huang}{RGB}{208, 124, 83}%
+  \definecolor{hong}{RGB}{72, 43, 29}%
+  \definecolor{qianbai}{RGB}{254, 251, 246}%
+  \definecolor{mibai}{RGB}{248, 241, 232}%
+  \definecolor{heise}{RGB}{16, 20, 26}%
+  \definecolor{definition}{RGB}{232, 112, 38}%
+  \definecolor{theorem}{RGB}{214, 38, 42}%
+  \definecolor{proposition}{RGB}{28, 118, 168}%
+  \definecolor{corollary}{RGB}{36, 178, 152}%
+  \definecolor{lemma}{RGB}{168, 58, 134}%
+  \definecolor{example}{RGB}{24, 138, 204}%
+}
+\@namedef{LoneTrailTheme@084}{\LoneTrailThemeDef@themezeroeightfour}
+\@namedef{LoneTrailTheme@theme_084}{\LoneTrailThemeDef@themezeroeightfour}
+\@namedef{LoneTrailTheme@84}{\LoneTrailThemeDef@themezeroeightfour}
+\@namedef{LoneTrailTheme@theme_143}{\LoneTrailThemeDef@themezeroeightfour}
+
+% ------------------------------------------------------------------------------
+% Theme: theme_085 | 超维超弦·十一维振动 (11-Dimension Superstring Vibration)
+% ------------------------------------------------------------------------------
+\newcommand{\LoneTrailThemeDef@themezeroeightfive}{%
+  \definecolor{qiancheng}{RGB}{202, 224, 77}%
+  \definecolor{lv}{RGB}{223, 236, 148}%
+  \definecolor{huang}{RGB}{202, 224, 77}%
+  \definecolor{hong}{RGB}{70, 78, 26}%
+  \definecolor{qianbai}{RGB}{254, 253, 246}%
+  \definecolor{mibai}{RGB}{248, 245, 232}%
+  \definecolor{heise}{RGB}{18, 16, 24}%
+  \definecolor{definition}{RGB}{224, 194, 64}%
+  \definecolor{theorem}{RGB}{208, 42, 88}%
+  \definecolor{proposition}{RGB}{88, 48, 174}%
+  \definecolor{corollary}{RGB}{48, 188, 162}%
+  \definecolor{lemma}{RGB}{154, 62, 178}%
+  \definecolor{example}{RGB}{38, 142, 218}%
+}
+\@namedef{LoneTrailTheme@085}{\LoneTrailThemeDef@themezeroeightfive}
+\@namedef{LoneTrailTheme@theme_085}{\LoneTrailThemeDef@themezeroeightfive}
+\@namedef{LoneTrailTheme@85}{\LoneTrailThemeDef@themezeroeightfive}
+\@namedef{LoneTrailTheme@theme_144}{\LoneTrailThemeDef@themezeroeightfive}
+
+% ------------------------------------------------------------------------------
+% Theme: theme_086 | 晶体共生·地核深脉 (Crystal Symbiosis Core Deep Vein)
+% ------------------------------------------------------------------------------
+\newcommand{\LoneTrailThemeDef@themezeroeightsix}{%
+  \definecolor{qiancheng}{RGB}{188, 167, 76}%
+  \definecolor{lv}{RGB}{214, 202, 147}%
+  \definecolor{huang}{RGB}{188, 167, 76}%
+  \definecolor{hong}{RGB}{65, 58, 26}%
+  \definecolor{qianbai}{RGB}{254, 251, 246}%
+  \definecolor{mibai}{RGB}{247, 240, 230}%
+  \definecolor{heise}{RGB}{22, 16, 14}%
+  \definecolor{definition}{RGB}{212, 128, 28}%
+  \definecolor{theorem}{RGB}{208, 36, 38}%
+  \definecolor{proposition}{RGB}{138, 48, 112}%
+  \definecolor{corollary}{RGB}{226, 98, 32}%
+  \definecolor{lemma}{RGB}{168, 52, 74}%
+  \definecolor{example}{RGB}{186, 78, 34}%
+}
+\@namedef{LoneTrailTheme@086}{\LoneTrailThemeDef@themezeroeightsix}
+\@namedef{LoneTrailTheme@theme_086}{\LoneTrailThemeDef@themezeroeightsix}
+\@namedef{LoneTrailTheme@86}{\LoneTrailThemeDef@themezeroeightsix}
+\@namedef{LoneTrailTheme@theme_145}{\LoneTrailThemeDef@themezeroeightsix}
+
+% ------------------------------------------------------------------------------
+% Theme: theme_087 | 高能粒子·反物质阱 (Antimatter Trap High Particle)
+% ------------------------------------------------------------------------------
+\newcommand{\LoneTrailThemeDef@themezeroeightseven}{%
+  \definecolor{qiancheng}{RGB}{196, 43, 168}%
+  \definecolor{lv}{RGB}{219, 127, 202}%
+  \definecolor{huang}{RGB}{196, 43, 168}%
+  \definecolor{hong}{RGB}{68, 15, 58}%
+  \definecolor{qianbai}{RGB}{254, 250, 253}%
+  \definecolor{mibai}{RGB}{248, 238, 245}%
+  \definecolor{heise}{RGB}{22, 12, 20}%
+  \definecolor{definition}{RGB}{218, 54, 152}%
+  \definecolor{theorem}{RGB}{228, 32, 74}%
+  \definecolor{proposition}{RGB}{108, 36, 178}%
+  \definecolor{corollary}{RGB}{36, 188, 196}%
+  \definecolor{lemma}{RGB}{234, 162, 38}%
+  \definecolor{example}{RGB}{42, 128, 226}%
+}
+\@namedef{LoneTrailTheme@087}{\LoneTrailThemeDef@themezeroeightseven}
+\@namedef{LoneTrailTheme@theme_087}{\LoneTrailThemeDef@themezeroeightseven}
+\@namedef{LoneTrailTheme@87}{\LoneTrailThemeDef@themezeroeightseven}
+\@namedef{LoneTrailTheme@theme_146}{\LoneTrailThemeDef@themezeroeightseven}
+
+% ------------------------------------------------------------------------------
+% Theme: theme_088 | 终局天穹·星门跃迁 (Endgame Firmament Stargate Warp)
+% ------------------------------------------------------------------------------
+\newcommand{\LoneTrailThemeDef@themezeroeighteight}{%
+  \definecolor{qiancheng}{RGB}{114, 83, 212}%
+  \definecolor{lv}{RGB}{170, 151, 229}%
+  \definecolor{huang}{RGB}{114, 83, 212}%
+  \definecolor{hong}{RGB}{39, 29, 74}%
+  \definecolor{qianbai}{RGB}{252, 250, 254}%
+  \definecolor{mibai}{RGB}{243, 238, 248}%
+  \definecolor{heise}{RGB}{14, 10, 22}%
+  \definecolor{definition}{RGB}{142, 38, 224}%
+  \definecolor{theorem}{RGB}{224, 32, 88}%
+  \definecolor{proposition}{RGB}{72, 42, 178}%
+  \definecolor{corollary}{RGB}{36, 188, 192}%
+  \definecolor{lemma}{RGB}{236, 174, 42}%
+  \definecolor{example}{RGB}{42, 134, 228}%
+}
+\@namedef{LoneTrailTheme@088}{\LoneTrailThemeDef@themezeroeighteight}
+\@namedef{LoneTrailTheme@theme_088}{\LoneTrailThemeDef@themezeroeighteight}
+\@namedef{LoneTrailTheme@88}{\LoneTrailThemeDef@themezeroeighteight}
+\@namedef{LoneTrailTheme@theme_150}{\LoneTrailThemeDef@themezeroeighteight}
+
+% ------------------------------------------------------------------------------
+% Theme: theme_089 | 叙拉古·黑曜暗影绯 (Siracusa Noir Carmine)
+% ------------------------------------------------------------------------------
+\newcommand{\LoneTrailThemeDef@themezeroeightnine}{%
+  \definecolor{qiancheng}{RGB}{136, 19, 55}%
+  \definecolor{lv}{RGB}{71, 85, 105}%
+  \definecolor{huang}{RGB}{161, 98, 7}%
+  \definecolor{hong}{RGB}{136, 19, 55}%
+  \definecolor{qianbai}{RGB}{250, 248, 245}%
+  \definecolor{mibai}{RGB}{243, 244, 246}%
+  \definecolor{heise}{RGB}{17, 24, 39}%
+  \definecolor{definition}{RGB}{161, 98, 7}%
+  \definecolor{theorem}{RGB}{159, 18, 57}%
+  \definecolor{proposition}{RGB}{71, 85, 105}%
+  \definecolor{corollary}{RGB}{20, 83, 45}%
+  \definecolor{lemma}{RGB}{88, 28, 135}%
+  \definecolor{example}{RGB}{30, 64, 175}%
+}
+\@namedef{LoneTrailTheme@089}{\LoneTrailThemeDef@themezeroeightnine}
+\@namedef{LoneTrailTheme@theme_089}{\LoneTrailThemeDef@themezeroeightnine}
+\@namedef{LoneTrailTheme@89}{\LoneTrailThemeDef@themezeroeightnine}
+
+% ------------------------------------------------------------------------------
+% Theme: theme_090 | 黑曜矩阵·深空钛墨 (Obsidian Matrix Titanium Ink)
+% ------------------------------------------------------------------------------
+\newcommand{\LoneTrailThemeDef@themezeroninezero}{%
+  \definecolor{qiancheng}{RGB}{30, 41, 59}%
+  \definecolor{lv}{RGB}{71, 85, 105}%
+  \definecolor{huang}{RGB}{180, 83, 9}%
+  \definecolor{hong}{RGB}{159, 18, 57}%
+  \definecolor{qianbai}{RGB}{248, 250, 252}%
+  \definecolor{mibai}{RGB}{241, 245, 249}%
+  \definecolor{heise}{RGB}{9, 13, 22}%
+  \definecolor{definition}{RGB}{180, 83, 9}%
+  \definecolor{theorem}{RGB}{159, 18, 57}%
+  \definecolor{proposition}{RGB}{37, 99, 235}%
+  \definecolor{corollary}{RGB}{21, 128, 61}%
+  \definecolor{lemma}{RGB}{100, 116, 139}%
+  \definecolor{example}{RGB}{2, 132, 199}%
+}
+\@namedef{LoneTrailTheme@090}{\LoneTrailThemeDef@themezeroninezero}
+\@namedef{LoneTrailTheme@theme_090}{\LoneTrailThemeDef@themezeroninezero}
+\@namedef{LoneTrailTheme@90}{\LoneTrailThemeDef@themezeroninezero}
+
+% ------------------------------------------------------------------------------
+% Theme: theme_091 | 帝国近卫·维多利亚墨翡 (Victoria Royal Emerald)
+% ------------------------------------------------------------------------------
+\newcommand{\LoneTrailThemeDef@themezeronineone}{%
+  \definecolor{qiancheng}{RGB}{20, 83, 45}%
+  \definecolor{lv}{RGB}{5, 150, 105}%
+  \definecolor{huang}{RGB}{161, 98, 7}%
+  \definecolor{hong}{RGB}{136, 19, 55}%
+  \definecolor{qianbai}{RGB}{250, 248, 245}%
+  \definecolor{mibai}{RGB}{243, 244, 246}%
+  \definecolor{heise}{RGB}{17, 24, 39}%
+  \definecolor{definition}{RGB}{161, 98, 7}%
+  \definecolor{theorem}{RGB}{136, 19, 55}%
+  \definecolor{proposition}{RGB}{30, 58, 138}%
+  \definecolor{corollary}{RGB}{13, 148, 136}%
+  \definecolor{lemma}{RGB}{88, 28, 135}%
+  \definecolor{example}{RGB}{3, 105, 161}%
+}
+\@namedef{LoneTrailTheme@091}{\LoneTrailThemeDef@themezeronineone}
+\@namedef{LoneTrailTheme@theme_091}{\LoneTrailThemeDef@themezeronineone}
+\@namedef{LoneTrailTheme@91}{\LoneTrailThemeDef@themezeronineone}
+
+% ------------------------------------------------------------------------------
+% Theme: theme_092 | 深渊幽夜·阿戈尔海潮深靛 (Abyssal Twilight Indigo)
+% ------------------------------------------------------------------------------
+\newcommand{\LoneTrailThemeDef@themezeroninetwo}{%
+  \definecolor{qiancheng}{RGB}{23, 37, 84}%
+  \definecolor{lv}{RGB}{4, 120, 87}%
+  \definecolor{huang}{RGB}{180, 83, 9}%
+  \definecolor{hong}{RGB}{190, 18, 60}%
+  \definecolor{qianbai}{RGB}{248, 250, 252}%
+  \definecolor{mibai}{RGB}{238, 242, 246}%
+  \definecolor{heise}{RGB}{3, 7, 18}%
+  \definecolor{definition}{RGB}{180, 83, 9}%
+  \definecolor{theorem}{RGB}{190, 18, 60}%
+  \definecolor{proposition}{RGB}{76, 29, 149}%
+  \definecolor{corollary}{RGB}{4, 120, 87}%
+  \definecolor{lemma}{RGB}{14, 116, 144}%
+  \definecolor{example}{RGB}{29, 78, 216}%
+}
+\@namedef{LoneTrailTheme@092}{\LoneTrailThemeDef@themezeroninetwo}
+\@namedef{LoneTrailTheme@theme_092}{\LoneTrailThemeDef@themezeroninetwo}
+\@namedef{LoneTrailTheme@92}{\LoneTrailThemeDef@themezeroninetwo}
+
+% ------------------------------------------------------------------------------
+% Theme: theme_093 | 哥伦比亚·特勤先驱曜石 (Columbia Pioneer Obsidian)
+% ------------------------------------------------------------------------------
+\newcommand{\LoneTrailThemeDef@themezeroninethree}{%
+  \definecolor{qiancheng}{RGB}{51, 65, 85}%
+  \definecolor{lv}{RGB}{100, 116, 139}%
+  \definecolor{huang}{RGB}{217, 119, 6}%
+  \definecolor{hong}{RGB}{220, 38, 38}%
+  \definecolor{qianbai}{RGB}{248, 250, 252}%
+  \definecolor{mibai}{RGB}{241, 245, 249}%
+  \definecolor{heise}{RGB}{15, 23, 42}%
+  \definecolor{definition}{RGB}{217, 119, 6}%
+  \definecolor{theorem}{RGB}{220, 38, 38}%
+  \definecolor{proposition}{RGB}{37, 99, 235}%
+  \definecolor{corollary}{RGB}{22, 163, 74}%
+  \definecolor{lemma}{RGB}{100, 116, 139}%
+  \definecolor{example}{RGB}{14, 165, 233}%
+}
+\@namedef{LoneTrailTheme@093}{\LoneTrailThemeDef@themezeroninethree}
+\@namedef{LoneTrailTheme@theme_093}{\LoneTrailThemeDef@themezeroninethree}
+\@namedef{LoneTrailTheme@93}{\LoneTrailThemeDef@themezeroninethree}
+
+% ------------------------------------------------------------------------------
+% Theme: theme_094 | 卡西米尔·耀阳玄金圣胄 (Kazimierz Radiant Aureolin & Basalt)
+% ------------------------------------------------------------------------------
+\newcommand{\LoneTrailThemeDef@themezeroninefour}{%
+  \definecolor{qiancheng}{RGB}{133, 77, 14}%
+  \definecolor{lv}{RGB}{87, 83, 78}%
+  \definecolor{huang}{RGB}{202, 138, 4}%
+  \definecolor{hong}{RGB}{153, 27, 27}%
+  \definecolor{qianbai}{RGB}{250, 248, 245}%
+  \definecolor{mibai}{RGB}{245, 245, 244}%
+  \definecolor{heise}{RGB}{28, 25, 23}%
+  \definecolor{definition}{RGB}{202, 138, 4}%
+  \definecolor{theorem}{RGB}{153, 27, 27}%
+  \definecolor{proposition}{RGB}{180, 83, 9}%
+  \definecolor{corollary}{RGB}{21, 128, 61}%
+  \definecolor{lemma}{RGB}{113, 63, 18}%
+  \definecolor{example}{RGB}{3, 105, 161}%
+}
+\@namedef{LoneTrailTheme@094}{\LoneTrailThemeDef@themezeroninefour}
+\@namedef{LoneTrailTheme@theme_094}{\LoneTrailThemeDef@themezeroninefour}
+\@namedef{LoneTrailTheme@94}{\LoneTrailThemeDef@themezeroninefour}
+
+% ------------------------------------------------------------------------------
+% Theme: theme_095 | 乌萨斯·冬宫冻土霜松 (Ursus Taiga Frost Pine)
+% ------------------------------------------------------------------------------
+\newcommand{\LoneTrailThemeDef@themezeroninefive}{%
+  \definecolor{qiancheng}{RGB}{22, 78, 99}%
+  \definecolor{lv}{RGB}{21, 94, 117}%
+  \definecolor{huang}{RGB}{180, 83, 9}%
+  \definecolor{hong}{RGB}{159, 18, 57}%
+  \definecolor{qianbai}{RGB}{248, 250, 252}%
+  \definecolor{mibai}{RGB}{240, 249, 255}%
+  \definecolor{heise}{RGB}{8, 47, 73}%
+  \definecolor{definition}{RGB}{180, 83, 9}%
+  \definecolor{theorem}{RGB}{159, 18, 57}%
+  \definecolor{proposition}{RGB}{14, 116, 144}%
+  \definecolor{corollary}{RGB}{13, 148, 136}%
+  \definecolor{lemma}{RGB}{79, 70, 229}%
+  \definecolor{example}{RGB}{2, 132, 199}%
+}
+\@namedef{LoneTrailTheme@095}{\LoneTrailThemeDef@themezeroninefive}
+\@namedef{LoneTrailTheme@theme_095}{\LoneTrailThemeDef@themezeroninefive}
+\@namedef{LoneTrailTheme@95}{\LoneTrailThemeDef@themezeroninefive}
+
+% ------------------------------------------------------------------------------
+% Theme: theme_096 | 莱茵生态·重力井深褐 (Rhine Lab Ecology Dark Umber)
+% ------------------------------------------------------------------------------
+\newcommand{\LoneTrailThemeDef@themezeroninesix}{%
+  \definecolor{qiancheng}{RGB}{120, 53, 15}%
+  \definecolor{lv}{RGB}{113, 113, 122}%
+  \definecolor{huang}{RGB}{217, 119, 6}%
+  \definecolor{hong}{RGB}{185, 28, 28}%
+  \definecolor{qianbai}{RGB}{250, 247, 242}%
+  \definecolor{mibai}{RGB}{244, 244, 245}%
+  \definecolor{heise}{RGB}{24, 24, 27}%
+  \definecolor{definition}{RGB}{217, 119, 6}%
+  \definecolor{theorem}{RGB}{185, 28, 28}%
+  \definecolor{proposition}{RGB}{67, 56, 202}%
+  \definecolor{corollary}{RGB}{4, 120, 87}%
+  \definecolor{lemma}{RGB}{161, 98, 7}%
+  \definecolor{example}{RGB}{2, 132, 199}%
+}
+\@namedef{LoneTrailTheme@096}{\LoneTrailThemeDef@themezeroninesix}
+\@namedef{LoneTrailTheme@theme_096}{\LoneTrailThemeDef@themezeroninesix}
+\@namedef{LoneTrailTheme@96}{\LoneTrailThemeDef@themezeroninesix}
+
+% ------------------------------------------------------------------------------
+% Theme: theme_097 | 罗德岛·制药原石冷靛 (Rhodes Island Originium Cold Cobalt)
+% ------------------------------------------------------------------------------
+\newcommand{\LoneTrailThemeDef@themezeronineseven}{%
+  \definecolor{qiancheng}{RGB}{30, 58, 138}%
+  \definecolor{lv}{RGB}{71, 85, 105}%
+  \definecolor{huang}{RGB}{234, 179, 8}%
+  \definecolor{hong}{RGB}{225, 29, 72}%
+  \definecolor{qianbai}{RGB}{248, 250, 252}%
+  \definecolor{mibai}{RGB}{241, 245, 249}%
+  \definecolor{heise}{RGB}{15, 23, 42}%
+  \definecolor{definition}{RGB}{234, 179, 8}%
+  \definecolor{theorem}{RGB}{225, 29, 72}%
+  \definecolor{proposition}{RGB}{79, 70, 229}%
+  \definecolor{corollary}{RGB}{5, 150, 105}%
+  \definecolor{lemma}{RGB}{88, 28, 135}%
+  \definecolor{example}{RGB}{37, 99, 235}%
+}
+\@namedef{LoneTrailTheme@097}{\LoneTrailThemeDef@themezeronineseven}
+\@namedef{LoneTrailTheme@theme_097}{\LoneTrailThemeDef@themezeronineseven}
+\@namedef{LoneTrailTheme@97}{\LoneTrailThemeDef@themezeronineseven}
+\@namedef{LoneTrailTheme@Cobalt}{\LoneTrailThemeDef@themezeronineseven}
+
+% ------------------------------------------------------------------------------
+% Theme: theme_098 | 炎国·司岁台青黛玄玉 (Yan Sui-Bureau Cyan Jade & Ink)
+% ------------------------------------------------------------------------------
+\newcommand{\LoneTrailThemeDef@themezeronineeight}{%
+  \definecolor{qiancheng}{RGB}{6, 78, 59}%
+  \definecolor{lv}{RGB}{63, 63, 70}%
+  \definecolor{huang}{RGB}{180, 83, 9}%
+  \definecolor{hong}{RGB}{159, 18, 57}%
+  \definecolor{qianbai}{RGB}{250, 248, 245}%
+  \definecolor{mibai}{RGB}{244, 244, 245}%
+  \definecolor{heise}{RGB}{24, 24, 27}%
+  \definecolor{definition}{RGB}{180, 83, 9}%
+  \definecolor{theorem}{RGB}{159, 18, 57}%
+  \definecolor{proposition}{RGB}{30, 58, 138}%
+  \definecolor{corollary}{RGB}{13, 148, 136}%
+  \definecolor{lemma}{RGB}{88, 28, 135}%
+  \definecolor{example}{RGB}{5, 150, 105}%
+}
+\@namedef{LoneTrailTheme@098}{\LoneTrailThemeDef@themezeronineeight}
+\@namedef{LoneTrailTheme@theme_098}{\LoneTrailThemeDef@themezeronineeight}
+\@namedef{LoneTrailTheme@98}{\LoneTrailThemeDef@themezeronineeight}
+
+% ------------------------------------------------------------------------------
+% Theme: theme_099 | 萨卡兹·卡兹戴尔熔铁蚀褐 (Sarkaz Kazdel Smelted Iron & Rust)
+% ------------------------------------------------------------------------------
+\newcommand{\LoneTrailThemeDef@themezeroninenine}{%
+  \definecolor{qiancheng}{RGB}{124, 45, 18}%
+  \definecolor{lv}{RGB}{82, 82, 91}%
+  \definecolor{huang}{RGB}{234, 88, 12}%
+  \definecolor{hong}{RGB}{153, 27, 27}%
+  \definecolor{qianbai}{RGB}{250, 247, 245}%
+  \definecolor{mibai}{RGB}{244, 244, 245}%
+  \definecolor{heise}{RGB}{24, 24, 27}%
+  \definecolor{definition}{RGB}{234, 88, 12}%
+  \definecolor{theorem}{RGB}{153, 27, 27}%
+  \definecolor{proposition}{RGB}{180, 83, 9}%
+  \definecolor{corollary}{RGB}{22, 101, 52}%
+  \definecolor{lemma}{RGB}{124, 45, 18}%
+  \definecolor{example}{RGB}{30, 64, 175}%
+}
+\@namedef{LoneTrailTheme@099}{\LoneTrailThemeDef@themezeroninenine}
+\@namedef{LoneTrailTheme@theme_099}{\LoneTrailThemeDef@themezeroninenine}
+\@namedef{LoneTrailTheme@99}{\LoneTrailThemeDef@themezeroninenine}
+
+% ------------------------------------------------------------------------------
+% Theme: theme_100 | 拉特兰·圣城铳骑白金暮紫 (Laterano Sanctum Platinum & Twilight Violet)
+% ------------------------------------------------------------------------------
+\newcommand{\LoneTrailThemeDef@themeonezerozero}{%
+  \definecolor{qiancheng}{RGB}{88, 28, 135}%
+  \definecolor{lv}{RGB}{100, 116, 139}%
+  \definecolor{huang}{RGB}{202, 138, 4}%
+  \definecolor{hong}{RGB}{190, 18, 60}%
+  \definecolor{qianbai}{RGB}{250, 245, 255}%
+  \definecolor{mibai}{RGB}{243, 232, 255}%
+  \definecolor{heise}{RGB}{15, 23, 42}%
+  \definecolor{definition}{RGB}{202, 138, 4}%
+  \definecolor{theorem}{RGB}{190, 18, 60}%
+  \definecolor{proposition}{RGB}{109, 40, 217}%
+  \definecolor{corollary}{RGB}{13, 148, 136}%
+  \definecolor{lemma}{RGB}{88, 28, 135}%
+  \definecolor{example}{RGB}{37, 99, 235}%
+}
+\@namedef{LoneTrailTheme@100}{\LoneTrailThemeDef@themeonezerozero}
+\@namedef{LoneTrailTheme@theme_100}{\LoneTrailThemeDef@themeonezerozero}
+
+% ------------------------------------------------------------------------------
+% Theme: theme_101 | 谢拉格·喀兰雪峰幽霭 (Karlan Snowcap Gloaming Mist)
+% ------------------------------------------------------------------------------
+\newcommand{\LoneTrailThemeDef@themeonezeroone}{%
+  \definecolor{qiancheng}{RGB}{49, 46, 129}%
+  \definecolor{lv}{RGB}{71, 85, 105}%
+  \definecolor{huang}{RGB}{217, 119, 6}%
+  \definecolor{hong}{RGB}{190, 24, 93}%
+  \definecolor{qianbai}{RGB}{248, 250, 252}%
+  \definecolor{mibai}{RGB}{241, 245, 249}%
+  \definecolor{heise}{RGB}{15, 23, 42}%
+  \definecolor{definition}{RGB}{217, 119, 6}%
+  \definecolor{theorem}{RGB}{190, 24, 93}%
+  \definecolor{proposition}{RGB}{67, 56, 202}%
+  \definecolor{corollary}{RGB}{13, 148, 136}%
+  \definecolor{lemma}{RGB}{88, 28, 135}%
+  \definecolor{example}{RGB}{3, 105, 161}%
+}
+\@namedef{LoneTrailTheme@101}{\LoneTrailThemeDef@themeonezeroone}
+\@namedef{LoneTrailTheme@theme_101}{\LoneTrailThemeDef@themeonezeroone}
+
+% ------------------------------------------------------------------------------
+% Theme: theme_102 | 莱茵结构·特异点高能等离子 (Rhine Structural Singularity Plasma)
+% ------------------------------------------------------------------------------
+\newcommand{\LoneTrailThemeDef@themeonezerotwo}{%
+  \definecolor{qiancheng}{RGB}{15, 23, 42}%
+  \definecolor{lv}{RGB}{51, 65, 85}%
+  \definecolor{huang}{RGB}{2, 132, 199}%
+  \definecolor{hong}{RGB}{225, 29, 72}%
+  \definecolor{qianbai}{RGB}{248, 250, 252}%
+  \definecolor{mibai}{RGB}{241, 245, 249}%
+  \definecolor{heise}{RGB}{2, 6, 23}%
+  \definecolor{definition}{RGB}{2, 132, 199}%
+  \definecolor{theorem}{RGB}{225, 29, 72}%
+  \definecolor{proposition}{RGB}{37, 99, 235}%
+  \definecolor{corollary}{RGB}{16, 185, 129}%
+  \definecolor{lemma}{RGB}{100, 116, 139}%
+  \definecolor{example}{RGB}{14, 165, 233}%
+}
+\@namedef{LoneTrailTheme@102}{\LoneTrailThemeDef@themeonezerotwo}
+\@namedef{LoneTrailTheme@theme_102}{\LoneTrailThemeDef@themeonezerotwo}
+
+% ------------------------------------------------------------------------------
+% Theme: theme_103 | 莱茵防卫·铁意重装冷铅 (Rhine Defense Ironwill Heavy Lead)
+% ------------------------------------------------------------------------------
+\newcommand{\LoneTrailThemeDef@themeonezerothree}{%
+  \definecolor{qiancheng}{RGB}{55, 65, 81}%
+  \definecolor{lv}{RGB}{75, 85, 99}%
+  \definecolor{huang}{RGB}{245, 158, 11}%
+  \definecolor{hong}{RGB}{185, 28, 28}%
+  \definecolor{qianbai}{RGB}{249, 250, 251}%
+  \definecolor{mibai}{RGB}{243, 244, 246}%
+  \definecolor{heise}{RGB}{17, 24, 39}%
+  \definecolor{definition}{RGB}{245, 158, 11}%
+  \definecolor{theorem}{RGB}{185, 28, 28}%
+  \definecolor{proposition}{RGB}{37, 99, 235}%
+  \definecolor{corollary}{RGB}{16, 185, 129}%
+  \definecolor{lemma}{RGB}{107, 114, 128}%
+  \definecolor{example}{RGB}{14, 165, 233}%
+}
+\@namedef{LoneTrailTheme@103}{\LoneTrailThemeDef@themeonezerothree}
+\@namedef{LoneTrailTheme@theme_103}{\LoneTrailThemeDef@themeonezerothree}
+
+% ------------------------------------------------------------------------------
+% Theme: theme_104 | 萨尔贡·黄金绿洲古沙 (Sargon Golden Oasis & Ancient Dune)
+% ------------------------------------------------------------------------------
+\newcommand{\LoneTrailThemeDef@themeonezerofour}{%
+  \definecolor{qiancheng}{RGB}{146, 64, 14}%
+  \definecolor{lv}{RGB}{6, 95, 70}%
+  \definecolor{huang}{RGB}{217, 119, 6}%
+  \definecolor{hong}{RGB}{153, 27, 27}%
+  \definecolor{qianbai}{RGB}{250, 248, 245}%
+  \definecolor{mibai}{RGB}{245, 245, 244}%
+  \definecolor{heise}{RGB}{28, 25, 23}%
+  \definecolor{definition}{RGB}{217, 119, 6}%
+  \definecolor{theorem}{RGB}{153, 27, 27}%
+  \definecolor{proposition}{RGB}{180, 83, 9}%
+  \definecolor{corollary}{RGB}{6, 95, 70}%
+  \definecolor{lemma}{RGB}{120, 53, 15}%
+  \definecolor{example}{RGB}{3, 105, 161}%
+}
+\@namedef{LoneTrailTheme@104}{\LoneTrailThemeDef@themeonezerofour}
+\@namedef{LoneTrailTheme@theme_104}{\LoneTrailThemeDef@themeonezerofour}
+\@namedef{LoneTrailTheme@en}{\LoneTrailThemeDef@themeonezerofour}
+
+% ------------------------------------------------------------------------------
+% Theme: theme_105 | 伊比利亚·审判深灯幽海 (Iberia Inquisitorial Lantern & Abyssal Reef)
+% ------------------------------------------------------------------------------
+\newcommand{\LoneTrailThemeDef@themeonezerofive}{%
+  \definecolor{qiancheng}{RGB}{24, 24, 27}%
+  \definecolor{lv}{RGB}{63, 63, 70}%
+  \definecolor{huang}{RGB}{251, 191, 36}%
+  \definecolor{hong}{RGB}{225, 29, 72}%
+  \definecolor{qianbai}{RGB}{248, 250, 252}%
+  \definecolor{mibai}{RGB}{241, 245, 249}%
+  \definecolor{heise}{RGB}{9, 9, 11}%
+  \definecolor{definition}{RGB}{251, 191, 36}%
+  \definecolor{theorem}{RGB}{225, 29, 72}%
+  \definecolor{proposition}{RGB}{59, 130, 246}%
+  \definecolor{corollary}{RGB}{16, 185, 129}%
+  \definecolor{lemma}{RGB}{113, 113, 122}%
+  \definecolor{example}{RGB}{14, 165, 233}%
+}
+\@namedef{LoneTrailTheme@105}{\LoneTrailThemeDef@themeonezerofive}
+\@namedef{LoneTrailTheme@theme_105}{\LoneTrailThemeDef@themeonezerofive}
+
+% ------------------------------------------------------------------------------
+% Theme: theme_106 | 雷姆必拓·矿山掘进古铜 (Rim Billiton Mining Core Antique Bronze)
+% ------------------------------------------------------------------------------
+\newcommand{\LoneTrailThemeDef@themeonezerosix}{%
+  \definecolor{qiancheng}{RGB}{133, 77, 14}%
+  \definecolor{lv}{RGB}{87, 83, 78}%
+  \definecolor{huang}{RGB}{234, 88, 12}%
+  \definecolor{hong}{RGB}{185, 28, 28}%
+  \definecolor{qianbai}{RGB}{250, 247, 245}%
+  \definecolor{mibai}{RGB}{245, 245, 244}%
+  \definecolor{heise}{RGB}{28, 25, 23}%
+  \definecolor{definition}{RGB}{234, 88, 12}%
+  \definecolor{theorem}{RGB}{185, 28, 28}%
+  \definecolor{proposition}{RGB}{180, 83, 9}%
+  \definecolor{corollary}{RGB}{22, 101, 52}%
+  \definecolor{lemma}{RGB}{120, 53, 15}%
+  \definecolor{example}{RGB}{37, 99, 235}%
+}
+\@namedef{LoneTrailTheme@106}{\LoneTrailThemeDef@themeonezerosix}
+\@namedef{LoneTrailTheme@theme_106}{\LoneTrailThemeDef@themeonezerosix}
+
+% ------------------------------------------------------------------------------
+% Theme: theme_107 | 莱茵科研·超流体量子青 (Rhine Scientific Superfluid Quantum Cyan)
+% ------------------------------------------------------------------------------
+\newcommand{\LoneTrailThemeDef@themeonezeroseven}{%
+  \definecolor{qiancheng}{RGB}{14, 116, 144}%
+  \definecolor{lv}{RGB}{21, 94, 117}%
+  \definecolor{huang}{RGB}{6, 182, 212}%
+  \definecolor{hong}{RGB}{244, 63, 94}%
+  \definecolor{qianbai}{RGB}{240, 253, 250}%
+  \definecolor{mibai}{RGB}{204, 251, 241}%
+  \definecolor{heise}{RGB}{19, 78, 74}%
+  \definecolor{definition}{RGB}{6, 182, 212}%
+  \definecolor{theorem}{RGB}{244, 63, 94}%
+  \definecolor{proposition}{RGB}{14, 116, 144}%
+  \definecolor{corollary}{RGB}{13, 148, 136}%
+  \definecolor{lemma}{RGB}{99, 102, 241}%
+  \definecolor{example}{RGB}{2, 132, 199}%
+}
+\@namedef{LoneTrailTheme@107}{\LoneTrailThemeDef@themeonezeroseven}
+\@namedef{LoneTrailTheme@theme_107}{\LoneTrailThemeDef@themeonezeroseven}
+
+% ------------------------------------------------------------------------------
+% Theme: theme_108 | 维多利亚·蒸汽伦蒂尼姆烟岚 (Victoria Steam Londinium Smog)
+% ------------------------------------------------------------------------------
+\newcommand{\LoneTrailThemeDef@themeonezeroeight}{%
+  \definecolor{qiancheng}{RGB}{51, 65, 85}%
+  \definecolor{lv}{RGB}{100, 116, 139}%
+  \definecolor{huang}{RGB}{180, 83, 9}%
+  \definecolor{hong}{RGB}{153, 27, 27}%
+  \definecolor{qianbai}{RGB}{248, 250, 252}%
+  \definecolor{mibai}{RGB}{241, 245, 249}%
+  \definecolor{heise}{RGB}{15, 23, 42}%
+  \definecolor{definition}{RGB}{180, 83, 9}%
+  \definecolor{theorem}{RGB}{153, 27, 27}%
+  \definecolor{proposition}{RGB}{30, 58, 138}%
+  \definecolor{corollary}{RGB}{21, 128, 61}%
+  \definecolor{lemma}{RGB}{100, 116, 139}%
+  \definecolor{example}{RGB}{3, 105, 161}%
+}
+\@namedef{LoneTrailTheme@108}{\LoneTrailThemeDef@themeonezeroeight}
+\@namedef{LoneTrailTheme@theme_108}{\LoneTrailThemeDef@themeonezeroeight}
+
+% ------------------------------------------------------------------------------
+% Theme: theme_109 | 东国·八重隐夜墨紫 (Higashi Shadow Night Bamboo & Deep Purple)
+% ------------------------------------------------------------------------------
+\newcommand{\LoneTrailThemeDef@themeonezeronine}{%
+  \definecolor{qiancheng}{RGB}{59, 7, 100}%
+  \definecolor{lv}{RGB}{74, 4, 78}%
+  \definecolor{huang}{RGB}{234, 179, 8}%
+  \definecolor{hong}{RGB}{225, 29, 72}%
+  \definecolor{qianbai}{RGB}{250, 245, 255}%
+  \definecolor{mibai}{RGB}{243, 232, 255}%
+  \definecolor{heise}{RGB}{24, 15, 36}%
+  \definecolor{definition}{RGB}{234, 179, 8}%
+  \definecolor{theorem}{RGB}{225, 29, 72}%
+  \definecolor{proposition}{RGB}{109, 40, 217}%
+  \definecolor{corollary}{RGB}{13, 148, 136}%
+  \definecolor{lemma}{RGB}{147, 51, 234}%
+  \definecolor{example}{RGB}{37, 99, 235}%
+}
+\@namedef{LoneTrailTheme@109}{\LoneTrailThemeDef@themeonezeronine}
+\@namedef{LoneTrailTheme@theme_109}{\LoneTrailThemeDef@themeonezeronine}
+
+% ------------------------------------------------------------------------------
+% Theme: theme_110 | 叙拉古·家族暗誓冷棕 (Siracusa Familial Oath Dark Mocha)
+% ------------------------------------------------------------------------------
+\newcommand{\LoneTrailThemeDef@themeoneonezero}{%
+  \definecolor{qiancheng}{RGB}{69, 26, 3}%
+  \definecolor{lv}{RGB}{87, 83, 78}%
+  \definecolor{huang}{RGB}{217, 119, 6}%
+  \definecolor{hong}{RGB}{153, 27, 27}%
+  \definecolor{qianbai}{RGB}{250, 248, 245}%
+  \definecolor{mibai}{RGB}{245, 245, 244}%
+  \definecolor{heise}{RGB}{28, 25, 23}%
+  \definecolor{definition}{RGB}{217, 119, 6}%
+  \definecolor{theorem}{RGB}{153, 27, 27}%
+  \definecolor{proposition}{RGB}{120, 53, 15}%
+  \definecolor{corollary}{RGB}{22, 101, 52}%
+  \definecolor{lemma}{RGB}{69, 26, 3}%
+  \definecolor{example}{RGB}{30, 64, 175}%
+}
+\@namedef{LoneTrailTheme@110}{\LoneTrailThemeDef@themeoneonezero}
+\@namedef{LoneTrailTheme@theme_110}{\LoneTrailThemeDef@themeoneonezero}
+
+% ------------------------------------------------------------------------------
+% Theme: theme_111 | 玻利瓦尔·行进荒原墨赭 (Bolivar Marching Wasteland Umber)
+% ------------------------------------------------------------------------------
+\newcommand{\LoneTrailThemeDef@themeoneoneone}{%
+  \definecolor{qiancheng}{RGB}{113, 63, 18}%
+  \definecolor{lv}{RGB}{82, 82, 91}%
+  \definecolor{huang}{RGB}{202, 138, 4}%
+  \definecolor{hong}{RGB}{185, 28, 28}%
+  \definecolor{qianbai}{RGB}{250, 247, 245}%
+  \definecolor{mibai}{RGB}{244, 244, 245}%
+  \definecolor{heise}{RGB}{24, 24, 27}%
+  \definecolor{definition}{RGB}{202, 138, 4}%
+  \definecolor{theorem}{RGB}{185, 28, 28}%
+  \definecolor{proposition}{RGB}{146, 64, 14}%
+  \definecolor{corollary}{RGB}{21, 128, 61}%
+  \definecolor{lemma}{RGB}{113, 63, 18}%
+  \definecolor{example}{RGB}{37, 99, 235}%
+}
+\@namedef{LoneTrailTheme@111}{\LoneTrailThemeDef@themeoneoneone}
+\@namedef{LoneTrailTheme@theme_111}{\LoneTrailThemeDef@themeoneoneone}
+
+% ------------------------------------------------------------------------------
+% Theme: theme_112 | 莱茵总控·真理苍穹极光 (Rhine Prime Aurora Firmament)
+% ------------------------------------------------------------------------------
+\newcommand{\LoneTrailThemeDef@themeoneonetwo}{%
+  \definecolor{qiancheng}{RGB}{3, 105, 161}%
+  \definecolor{lv}{RGB}{15, 118, 110}%
+  \definecolor{huang}{RGB}{56, 189, 248}%
+  \definecolor{hong}{RGB}{244, 63, 94}%
+  \definecolor{qianbai}{RGB}{240, 249, 255}%
+  \definecolor{mibai}{RGB}{224, 242, 254}%
+  \definecolor{heise}{RGB}{12, 74, 110}%
+  \definecolor{definition}{RGB}{56, 189, 248}%
+  \definecolor{theorem}{RGB}{244, 63, 94}%
+  \definecolor{proposition}{RGB}{3, 105, 161}%
+  \definecolor{corollary}{RGB}{15, 118, 110}%
+  \definecolor{lemma}{RGB}{99, 102, 241}%
+  \definecolor{example}{RGB}{2, 132, 199}%
+}
+\@namedef{LoneTrailTheme@112}{\LoneTrailThemeDef@themeoneonetwo}
+\@namedef{LoneTrailTheme@theme_112}{\LoneTrailThemeDef@themeoneonetwo}
+
+% ------------------------------------------------------------------------------
+% Theme: theme_113 | 卡西米尔·银枪天马极光金 (Kazimierz Pegasus Aurora & Gilded Feather)
+% ------------------------------------------------------------------------------
+\newcommand{\LoneTrailThemeDef@themeoneonethree}{%
+  \definecolor{qiancheng}{RGB}{30, 58, 95}%
+  \definecolor{lv}{RGB}{100, 116, 139}%
+  \definecolor{huang}{RGB}{245, 158, 11}%
+  \definecolor{hong}{RGB}{190, 18, 60}%
+  \definecolor{qianbai}{RGB}{248, 250, 252}%
+  \definecolor{mibai}{RGB}{241, 245, 249}%
+  \definecolor{heise}{RGB}{15, 23, 42}%
+  \definecolor{definition}{RGB}{245, 158, 11}%
+  \definecolor{theorem}{RGB}{190, 18, 60}%
+  \definecolor{proposition}{RGB}{37, 99, 235}%
+  \definecolor{corollary}{RGB}{16, 185, 129}%
+  \definecolor{lemma}{RGB}{100, 116, 139}%
+  \definecolor{example}{RGB}{14, 165, 233}%
+}
+\@namedef{LoneTrailTheme@113}{\LoneTrailThemeDef@themeoneonethree}
+\@namedef{LoneTrailTheme@theme_113}{\LoneTrailThemeDef@themeoneonethree}
+
+% ------------------------------------------------------------------------------
+% Theme: theme_114 | 维多利亚·白金汉皇家赫曦红 (Victoria Buckingham Royal Carmine & Sovereign Gold)
+% ------------------------------------------------------------------------------
+\newcommand{\LoneTrailThemeDef@themeoneonefour}{%
+  \definecolor{qiancheng}{RGB}{136, 19, 55}%
+  \definecolor{lv}{RGB}{71, 85, 105}%
+  \definecolor{huang}{RGB}{217, 119, 6}%
+  \definecolor{hong}{RGB}{225, 29, 72}%
+  \definecolor{qianbai}{RGB}{250, 245, 245}%
+  \definecolor{mibai}{RGB}{254, 226, 226}%
+  \definecolor{heise}{RGB}{28, 25, 23}%
+  \definecolor{definition}{RGB}{217, 119, 6}%
+  \definecolor{theorem}{RGB}{225, 29, 72}%
+  \definecolor{proposition}{RGB}{159, 18, 57}%
+  \definecolor{corollary}{RGB}{13, 148, 136}%
+  \definecolor{lemma}{RGB}{136, 19, 55}%
+  \definecolor{example}{RGB}{180, 83, 9}%
+}
+\@namedef{LoneTrailTheme@114}{\LoneTrailThemeDef@themeoneonefour}
+\@namedef{LoneTrailTheme@theme_114}{\LoneTrailThemeDef@themeoneonefour}
+
+% ------------------------------------------------------------------------------
+% Theme: theme_115 | 炎国·龙门浮华夜宴金翠 (Lungmen Metropolis Gilded Emerald & Neon Night)
+% ------------------------------------------------------------------------------
+\newcommand{\LoneTrailThemeDef@themeoneonefive}{%
+  \definecolor{qiancheng}{RGB}{6, 78, 59}%
+  \definecolor{lv}{RGB}{15, 118, 110}%
+  \definecolor{huang}{RGB}{234, 179, 8}%
+  \definecolor{hong}{RGB}{225, 29, 72}%
+  \definecolor{qianbai}{RGB}{246, 250, 247}%
+  \definecolor{mibai}{RGB}{220, 252, 231}%
+  \definecolor{heise}{RGB}{2, 44, 34}%
+  \definecolor{definition}{RGB}{234, 179, 8}%
+  \definecolor{theorem}{RGB}{225, 29, 72}%
+  \definecolor{proposition}{RGB}{5, 150, 105}%
+  \definecolor{corollary}{RGB}{13, 148, 136}%
+  \definecolor{lemma}{RGB}{30, 41, 59}%
+  \definecolor{example}{RGB}{2, 132, 199}%
+}
+\@namedef{LoneTrailTheme@115}{\LoneTrailThemeDef@themeoneonefive}
+\@namedef{LoneTrailTheme@theme_115}{\LoneTrailThemeDef@themeoneonefive}
+
+% ------------------------------------------------------------------------------
+% Theme: theme_116 | 阿戈尔·亚特兰蒂斯深洋琉璃 (Aegir Atlantis Oceanic Lapis & Bioluminescence)
+% ------------------------------------------------------------------------------
+\newcommand{\LoneTrailThemeDef@themeoneonesix}{%
+  \definecolor{qiancheng}{RGB}{23, 37, 84}%
+  \definecolor{lv}{RGB}{3, 105, 161}%
+  \definecolor{huang}{RGB}{56, 189, 248}%
+  \definecolor{hong}{RGB}{244, 63, 94}%
+  \definecolor{qianbai}{RGB}{240, 249, 255}%
+  \definecolor{mibai}{RGB}{224, 242, 254}%
+  \definecolor{heise}{RGB}{8, 47, 73}%
+  \definecolor{definition}{RGB}{56, 189, 248}%
+  \definecolor{theorem}{RGB}{244, 63, 94}%
+  \definecolor{proposition}{RGB}{29, 78, 216}%
+  \definecolor{corollary}{RGB}{14, 165, 233}%
+  \definecolor{lemma}{RGB}{71, 85, 105}%
+  \definecolor{example}{RGB}{6, 182, 212}%
+}
+\@namedef{LoneTrailTheme@116}{\LoneTrailThemeDef@themeoneonesix}
+\@namedef{LoneTrailTheme@theme_116}{\LoneTrailThemeDef@themeoneonesix}
+
+% ------------------------------------------------------------------------------
+% Theme: theme_117 | 叙拉古·西西里歌剧魅影紫 (Siracusa Sicilian Opera Velvet Violet & Champagne)
+% ------------------------------------------------------------------------------
+\newcommand{\LoneTrailThemeDef@themeoneoneseven}{%
+  \definecolor{qiancheng}{RGB}{74, 4, 78}%
+  \definecolor{lv}{RGB}{112, 26, 117}%
+  \definecolor{huang}{RGB}{245, 158, 11}%
+  \definecolor{hong}{RGB}{190, 18, 60}%
+  \definecolor{qianbai}{RGB}{250, 245, 255}%
+  \definecolor{mibai}{RGB}{243, 232, 255}%
+  \definecolor{heise}{RGB}{46, 16, 101}%
+  \definecolor{definition}{RGB}{245, 158, 11}%
+  \definecolor{theorem}{RGB}{190, 18, 60}%
+  \definecolor{proposition}{RGB}{126, 34, 206}%
+  \definecolor{corollary}{RGB}{13, 148, 136}%
+  \definecolor{lemma}{RGB}{74, 4, 78}%
+  \definecolor{example}{RGB}{217, 119, 6}%
+}
+\@namedef{LoneTrailTheme@117}{\LoneTrailThemeDef@themeoneoneseven}
+\@namedef{LoneTrailTheme@theme_117}{\LoneTrailThemeDef@themeoneoneseven}
+
+% ------------------------------------------------------------------------------
+% Theme: theme_118 | 萨尔贡·帕夏宫殿孔雀宝石绿 (Sargon Pasha Palace Peacock Malachite & Sun Gold)
+% ------------------------------------------------------------------------------
+\newcommand{\LoneTrailThemeDef@themeoneoneeight}{%
+  \definecolor{qiancheng}{RGB}{19, 78, 74}%
+  \definecolor{lv}{RGB}{63, 63, 70}%
+  \definecolor{huang}{RGB}{202, 138, 4}%
+  \definecolor{hong}{RGB}{153, 27, 27}%
+  \definecolor{qianbai}{RGB}{240, 253, 250}%
+  \definecolor{mibai}{RGB}{204, 251, 241}%
+  \definecolor{heise}{RGB}{4, 47, 46}%
+  \definecolor{definition}{RGB}{202, 138, 4}%
+  \definecolor{theorem}{RGB}{153, 27, 27}%
+  \definecolor{proposition}{RGB}{13, 148, 136}%
+  \definecolor{corollary}{RGB}{15, 118, 110}%
+  \definecolor{lemma}{RGB}{113, 113, 122}%
+  \definecolor{example}{RGB}{2, 132, 199}%
+}
+\@namedef{LoneTrailTheme@118}{\LoneTrailThemeDef@themeoneoneeight}
+\@namedef{LoneTrailTheme@theme_118}{\LoneTrailThemeDef@themeoneoneeight}
+
+% ------------------------------------------------------------------------------
+% Theme: theme_119 | 莱茵特勤·黑天鹅星舰奢黑金 (Rhine Special Ops Black Swan Obsidian & Gilded Edge)
+% ------------------------------------------------------------------------------
+\newcommand{\LoneTrailThemeDef@themeoneonenine}{%
+  \definecolor{qiancheng}{RGB}{24, 24, 27}%
+  \definecolor{lv}{RGB}{82, 82, 91}%
+  \definecolor{huang}{RGB}{251, 191, 36}%
+  \definecolor{hong}{RGB}{220, 38, 38}%
+  \definecolor{qianbai}{RGB}{250, 250, 250}%
+  \definecolor{mibai}{RGB}{244, 244, 245}%
+  \definecolor{heise}{RGB}{9, 9, 11}%
+  \definecolor{definition}{RGB}{251, 191, 36}%
+  \definecolor{theorem}{RGB}{220, 38, 38}%
+  \definecolor{proposition}{RGB}{75, 85, 99}%
+  \definecolor{corollary}{RGB}{16, 185, 129}%
+  \definecolor{lemma}{RGB}{113, 113, 122}%
+  \definecolor{example}{RGB}{59, 130, 246}%
+}
+\@namedef{LoneTrailTheme@119}{\LoneTrailThemeDef@themeoneonenine}
+\@namedef{LoneTrailTheme@theme_119}{\LoneTrailThemeDef@themeoneonenine}
+
+% ------------------------------------------------------------------------------
+% Theme: theme_120 | 哥伦比亚·金曼硅谷霓虹晨曦 (Columbia Silicon Sunrise Copper & Prismatic Cyan)
+% ------------------------------------------------------------------------------
+\newcommand{\LoneTrailThemeDef@themeonetwozero}{%
+  \definecolor{qiancheng}{RGB}{154, 52, 18}%
+  \definecolor{lv}{RGB}{14, 116, 144}%
+  \definecolor{huang}{RGB}{249, 115, 22}%
+  \definecolor{hong}{RGB}{192, 38, 211}%
+  \definecolor{qianbai}{RGB}{250, 246, 242}%
+  \definecolor{mibai}{RGB}{255, 237, 213}%
+  \definecolor{heise}{RGB}{67, 20, 7}%
+  \definecolor{definition}{RGB}{249, 115, 22}%
+  \definecolor{theorem}{RGB}{192, 38, 211}%
+  \definecolor{proposition}{RGB}{14, 116, 144}%
+  \definecolor{corollary}{RGB}{13, 148, 136}%
+  \definecolor{lemma}{RGB}{120, 53, 15}%
+  \definecolor{example}{RGB}{2, 132, 199}%
+}
+\@namedef{LoneTrailTheme@120}{\LoneTrailThemeDef@themeonetwozero}
+\@namedef{LoneTrailTheme@theme_120}{\LoneTrailThemeDef@themeonetwozero}
+
+% ------------------------------------------------------------------------------
+% Theme: theme_121 | 卡兹戴尔·深渊源石玫瑰金 (Kazdel Originium Rose Gold & Void Obsidian)
+% ------------------------------------------------------------------------------
+\newcommand{\LoneTrailThemeDef@themeonetwoone}{%
+  \definecolor{qiancheng}{RGB}{59, 7, 100}%
+  \definecolor{lv}{RGB}{107, 33, 168}%
+  \definecolor{huang}{RGB}{251, 113, 133}%
+  \definecolor{hong}{RGB}{190, 24, 93}%
+  \definecolor{qianbai}{RGB}{250, 245, 255}%
+  \definecolor{mibai}{RGB}{243, 232, 255}%
+  \definecolor{heise}{RGB}{30, 27, 75}%
+  \definecolor{definition}{RGB}{251, 113, 133}%
+  \definecolor{theorem}{RGB}{190, 24, 93}%
+  \definecolor{proposition}{RGB}{126, 34, 206}%
+  \definecolor{corollary}{RGB}{13, 148, 136}%
+  \definecolor{lemma}{RGB}{75, 85, 99}%
+  \definecolor{example}{RGB}{244, 63, 94}%
+}
+\@namedef{LoneTrailTheme@121}{\LoneTrailThemeDef@themeonetwoone}
+\@namedef{LoneTrailTheme@theme_121}{\LoneTrailThemeDef@themeonetwoone}
+
+% ------------------------------------------------------------------------------
+% Theme: theme_122 | 萨米·极昼雪原冰川琉璃 (Sami Aurora Glacial Beryl & Astral Sky)
+% ------------------------------------------------------------------------------
+\newcommand{\LoneTrailThemeDef@themeonetwotwo}{%
+  \definecolor{qiancheng}{RGB}{15, 118, 110}%
+  \definecolor{lv}{RGB}{3, 105, 161}%
+  \definecolor{huang}{RGB}{45, 212, 191}%
+  \definecolor{hong}{RGB}{244, 63, 94}%
+  \definecolor{qianbai}{RGB}{240, 253, 250}%
+  \definecolor{mibai}{RGB}{204, 251, 241}%
+  \definecolor{heise}{RGB}{17, 94, 89}%
+  \definecolor{definition}{RGB}{45, 212, 191}%
+  \definecolor{theorem}{RGB}{244, 63, 94}%
+  \definecolor{proposition}{RGB}{3, 105, 161}%
+  \definecolor{corollary}{RGB}{15, 118, 110}%
+  \definecolor{lemma}{RGB}{99, 102, 241}%
+  \definecolor{example}{RGB}{14, 165, 233}%
+}
+\@namedef{LoneTrailTheme@122}{\LoneTrailThemeDef@themeonetwotwo}
+\@namedef{LoneTrailTheme@theme_122}{\LoneTrailThemeDef@themeonetwotwo}
+
+% ------------------------------------------------------------------------------
+% Theme: theme_123 | 维多利亚·高文骑士琥珀赤金 (Victoria Gawain Knight Amber & Solar Gold)
+% ------------------------------------------------------------------------------
+\newcommand{\LoneTrailThemeDef@themeonetwothree}{%
+  \definecolor{qiancheng}{RGB}{124, 45, 18}%
+  \definecolor{lv}{RGB}{120, 113, 108}%
+  \definecolor{huang}{RGB}{245, 158, 11}%
+  \definecolor{hong}{RGB}{185, 28, 28}%
+  \definecolor{qianbai}{RGB}{250, 248, 245}%
+  \definecolor{mibai}{RGB}{245, 245, 244}%
+  \definecolor{heise}{RGB}{28, 25, 23}%
+  \definecolor{definition}{RGB}{245, 158, 11}%
+  \definecolor{theorem}{RGB}{185, 28, 28}%
+  \definecolor{proposition}{RGB}{146, 64, 14}%
+  \definecolor{corollary}{RGB}{21, 128, 61}%
+  \definecolor{lemma}{RGB}{124, 45, 18}%
+  \definecolor{example}{RGB}{37, 99, 235}%
+}
+\@namedef{LoneTrailTheme@123}{\LoneTrailThemeDef@themeonetwothree}
+\@namedef{LoneTrailTheme@theme_123}{\LoneTrailThemeDef@themeonetwothree}
+
+% ------------------------------------------------------------------------------
+% Theme: theme_124 | 莱茵生态·翠峦浮空岛温室 (Rhine Bio-Dome Floating Canopy Emerald)
+% ------------------------------------------------------------------------------
+\newcommand{\LoneTrailThemeDef@themeonetwofour}{%
+  \definecolor{qiancheng}{RGB}{6, 78, 59}%
+  \definecolor{lv}{RGB}{21, 128, 61}%
+  \definecolor{huang}{RGB}{132, 204, 22}%
+  \definecolor{hong}{RGB}{190, 18, 60}%
+  \definecolor{qianbai}{RGB}{240, 253, 244}%
+  \definecolor{mibai}{RGB}{220, 252, 231}%
+  \definecolor{heise}{RGB}{2, 44, 34}%
+  \definecolor{definition}{RGB}{132, 204, 22}%
+  \definecolor{theorem}{RGB}{190, 18, 60}%
+  \definecolor{proposition}{RGB}{5, 150, 105}%
+  \definecolor{corollary}{RGB}{13, 148, 136}%
+  \definecolor{lemma}{RGB}{30, 41, 59}%
+  \definecolor{example}{RGB}{14, 165, 233}%
+}
+\@namedef{LoneTrailTheme@124}{\LoneTrailThemeDef@themeonetwofour}
+\@namedef{LoneTrailTheme@theme_124}{\LoneTrailThemeDef@themeonetwofour}
+
+% ------------------------------------------------------------------------------
+% Theme: theme_125 | 叙拉古·帕勒莫黑皮诺醇酿 (Siracusa Palermo Pinot Noir Velvet & Gold)
+% ------------------------------------------------------------------------------
+\newcommand{\LoneTrailThemeDef@themeonetwofive}{%
+  \definecolor{qiancheng}{RGB}{112, 26, 117}%
+  \definecolor{lv}{RGB}{88, 28, 135}%
+  \definecolor{huang}{RGB}{251, 191, 36}%
+  \definecolor{hong}{RGB}{225, 29, 72}%
+  \definecolor{qianbai}{RGB}{250, 245, 255}%
+  \definecolor{mibai}{RGB}{243, 232, 255}%
+  \definecolor{heise}{RGB}{46, 16, 101}%
+  \definecolor{definition}{RGB}{251, 191, 36}%
+  \definecolor{theorem}{RGB}{225, 29, 72}%
+  \definecolor{proposition}{RGB}{126, 34, 206}%
+  \definecolor{corollary}{RGB}{13, 148, 136}%
+  \definecolor{lemma}{RGB}{112, 26, 117}%
+  \definecolor{example}{RGB}{217, 119, 6}%
+}
+\@namedef{LoneTrailTheme@125}{\LoneTrailThemeDef@themeonetwofive}
+\@namedef{LoneTrailTheme@theme_125}{\LoneTrailThemeDef@themeonetwofive}
+
+% ------------------------------------------------------------------------------
+% Theme: theme_126 | 炎国·岁暮寒江钓雪青花 (Yan Cold River Frost Celadon & Indigo)
+% ------------------------------------------------------------------------------
+\newcommand{\LoneTrailThemeDef@themeonetwosix}{%
+  \definecolor{qiancheng}{RGB}{30, 41, 59}%
+  \definecolor{lv}{RGB}{15, 118, 110}%
+  \definecolor{huang}{RGB}{6, 182, 212}%
+  \definecolor{hong}{RGB}{190, 18, 60}%
+  \definecolor{qianbai}{RGB}{248, 250, 252}%
+  \definecolor{mibai}{RGB}{241, 245, 249}%
+  \definecolor{heise}{RGB}{15, 23, 42}%
+  \definecolor{definition}{RGB}{6, 182, 212}%
+  \definecolor{theorem}{RGB}{190, 18, 60}%
+  \definecolor{proposition}{RGB}{15, 118, 110}%
+  \definecolor{corollary}{RGB}{13, 148, 136}%
+  \definecolor{lemma}{RGB}{71, 85, 105}%
+  \definecolor{example}{RGB}{2, 132, 199}%
+}
+\@namedef{LoneTrailTheme@126}{\LoneTrailThemeDef@themeonetwosix}
+\@namedef{LoneTrailTheme@theme_126}{\LoneTrailThemeDef@themeonetwosix}
+\@namedef{LoneTrailTheme@River}{\LoneTrailThemeDef@themeonetwosix}
+
+% ------------------------------------------------------------------------------
+% Theme: theme_127 | 哥伦比亚·哈德逊爵士午夜蓝金 (Columbia Hudson Midnight Jazz & Brass)
+% ------------------------------------------------------------------------------
+\newcommand{\LoneTrailThemeDef@themeonetwoseven}{%
+  \definecolor{qiancheng}{RGB}{30, 58, 138}%
+  \definecolor{lv}{RGB}{71, 85, 105}%
+  \definecolor{huang}{RGB}{217, 119, 6}%
+  \definecolor{hong}{RGB}{220, 38, 38}%
+  \definecolor{qianbai}{RGB}{248, 250, 252}%
+  \definecolor{mibai}{RGB}{241, 245, 249}%
+  \definecolor{heise}{RGB}{15, 23, 42}%
+  \definecolor{definition}{RGB}{217, 119, 6}%
+  \definecolor{theorem}{RGB}{220, 38, 38}%
+  \definecolor{proposition}{RGB}{37, 99, 235}%
+  \definecolor{corollary}{RGB}{16, 185, 129}%
+  \definecolor{lemma}{RGB}{71, 85, 105}%
+  \definecolor{example}{RGB}{14, 165, 233}%
+}
+\@namedef{LoneTrailTheme@127}{\LoneTrailThemeDef@themeonetwoseven}
+\@namedef{LoneTrailTheme@theme_127}{\LoneTrailThemeDef@themeonetwoseven}
+
+% ------------------------------------------------------------------------------
+% Theme: theme_128 | 卡西米尔·大骑士领香槟白金 (Kazimierz Grand Knight Champagne & Platinum)
+% ------------------------------------------------------------------------------
+\newcommand{\LoneTrailThemeDef@themeonetwoeight}{%
+  \definecolor{qiancheng}{RGB}{120, 53, 15}%
+  \definecolor{lv}{RGB}{168, 162, 158}%
+  \definecolor{huang}{RGB}{245, 158, 11}%
+  \definecolor{hong}{RGB}{153, 27, 27}%
+  \definecolor{qianbai}{RGB}{250, 248, 245}%
+  \definecolor{mibai}{RGB}{245, 245, 244}%
+  \definecolor{heise}{RGB}{41, 37, 36}%
+  \definecolor{definition}{RGB}{245, 158, 11}%
+  \definecolor{theorem}{RGB}{153, 27, 27}%
+  \definecolor{proposition}{RGB}{180, 83, 9}%
+  \definecolor{corollary}{RGB}{22, 101, 52}%
+  \definecolor{lemma}{RGB}{120, 53, 15}%
+  \definecolor{example}{RGB}{37, 99, 235}%
+}
+\@namedef{LoneTrailTheme@128}{\LoneTrailThemeDef@themeonetwoeight}
+\@namedef{LoneTrailTheme@theme_128}{\LoneTrailThemeDef@themeonetwoeight}
+
+% ------------------------------------------------------------------------------
+% Theme: theme_129 | 阿戈尔·塞壬深歌秘海珊瑚 (Aegir Siren Song Coral Reef & Abyssal Sapphire)
+% ------------------------------------------------------------------------------
+\newcommand{\LoneTrailThemeDef@themeonetwonine}{%
+  \definecolor{qiancheng}{RGB}{12, 74, 110}%
+  \definecolor{lv}{RGB}{2, 132, 199}%
+  \definecolor{huang}{RGB}{251, 113, 133}%
+  \definecolor{hong}{RGB}{244, 63, 94}%
+  \definecolor{qianbai}{RGB}{240, 249, 255}%
+  \definecolor{mibai}{RGB}{224, 242, 254}%
+  \definecolor{heise}{RGB}{8, 47, 73}%
+  \definecolor{definition}{RGB}{251, 113, 133}%
+  \definecolor{theorem}{RGB}{244, 63, 94}%
+  \definecolor{proposition}{RGB}{3, 105, 161}%
+  \definecolor{corollary}{RGB}{14, 165, 233}%
+  \definecolor{lemma}{RGB}{71, 85, 105}%
+  \definecolor{example}{RGB}{56, 189, 248}%
+}
+\@namedef{LoneTrailTheme@129}{\LoneTrailThemeDef@themeonetwonine}
+\@namedef{LoneTrailTheme@theme_129}{\LoneTrailThemeDef@themeonetwonine}
+
+% ------------------------------------------------------------------------------
+% Theme: theme_130 | 乌萨斯·罗曼诺夫沙皇双头金鹰 (Ursus Romanov Imperial Byzantine Gold & Navy)
+% ------------------------------------------------------------------------------
+\newcommand{\LoneTrailThemeDef@themeonethreezero}{%
+  \definecolor{qiancheng}{RGB}{15, 23, 42}%
+  \definecolor{lv}{RGB}{51, 65, 85}%
+  \definecolor{huang}{RGB}{234, 179, 8}%
+  \definecolor{hong}{RGB}{185, 28, 28}%
+  \definecolor{qianbai}{RGB}{248, 250, 252}%
+  \definecolor{mibai}{RGB}{241, 245, 249}%
+  \definecolor{heise}{RGB}{2, 6, 23}%
+  \definecolor{definition}{RGB}{234, 179, 8}%
+  \definecolor{theorem}{RGB}{185, 28, 28}%
+  \definecolor{proposition}{RGB}{30, 58, 138}%
+  \definecolor{corollary}{RGB}{16, 185, 129}%
+  \definecolor{lemma}{RGB}{51, 65, 85}%
+  \definecolor{example}{RGB}{217, 119, 6}%
+}
+\@namedef{LoneTrailTheme@130}{\LoneTrailThemeDef@themeonethreezero}
+\@namedef{LoneTrailTheme@theme_130}{\LoneTrailThemeDef@themeonethreezero}
+
+% ------------------------------------------------------------------------------
+% Theme: theme_131 | 萨尔贡·黄金金字塔落日熔金 (Sargon Pyramid Solar Sunset & Lapis)
+% ------------------------------------------------------------------------------
+\newcommand{\LoneTrailThemeDef@themeonethreeone}{%
+  \definecolor{qiancheng}{RGB}{154, 52, 18}%
+  \definecolor{lv}{RGB}{30, 58, 138}%
+  \definecolor{huang}{RGB}{245, 158, 11}%
+  \definecolor{hong}{RGB}{185, 28, 28}%
+  \definecolor{qianbai}{RGB}{250, 248, 245}%
+  \definecolor{mibai}{RGB}{245, 245, 244}%
+  \definecolor{heise}{RGB}{41, 37, 36}%
+  \definecolor{definition}{RGB}{245, 158, 11}%
+  \definecolor{theorem}{RGB}{185, 28, 28}%
+  \definecolor{proposition}{RGB}{180, 83, 9}%
+  \definecolor{corollary}{RGB}{13, 148, 136}%
+  \definecolor{lemma}{RGB}{154, 52, 18}%
+  \definecolor{example}{RGB}{37, 99, 235}%
+}
+\@namedef{LoneTrailTheme@131}{\LoneTrailThemeDef@themeonethreeone}
+\@namedef{LoneTrailTheme@theme_131}{\LoneTrailThemeDef@themeonethreeone}
+
+% ------------------------------------------------------------------------------
+% Theme: theme_132 | 莱茵应用·超导环磁聚变紫 (Rhine Applied Physics Torus Fusion Violet)
+% ------------------------------------------------------------------------------
+\newcommand{\LoneTrailThemeDef@themeonethreetwo}{%
+  \definecolor{qiancheng}{RGB}{59, 7, 100}%
+  \definecolor{lv}{RGB}{74, 4, 78}%
+  \definecolor{huang}{RGB}{168, 85, 247}%
+  \definecolor{hong}{RGB}{244, 63, 94}%
+  \definecolor{qianbai}{RGB}{250, 245, 255}%
+  \definecolor{mibai}{RGB}{243, 232, 255}%
+  \definecolor{heise}{RGB}{30, 27, 75}%
+  \definecolor{definition}{RGB}{168, 85, 247}%
+  \definecolor{theorem}{RGB}{244, 63, 94}%
+  \definecolor{proposition}{RGB}{126, 34, 206}%
+  \definecolor{corollary}{RGB}{13, 148, 136}%
+  \definecolor{lemma}{RGB}{75, 85, 99}%
+  \definecolor{example}{RGB}{217, 70, 239}%
+}
+\@namedef{LoneTrailTheme@132}{\LoneTrailThemeDef@themeonethreetwo}
+\@namedef{LoneTrailTheme@theme_132}{\LoneTrailThemeDef@themeonethreetwo}
+
+% ------------------------------------------------------------------------------
+% Theme: theme_133 | 维多利亚·格拉斯哥蒸汽青铜绿 (Victoria Glasgow Steam Verdigris & Copper)
+% ------------------------------------------------------------------------------
+\newcommand{\LoneTrailThemeDef@themeonethreethree}{%
+  \definecolor{qiancheng}{RGB}{17, 94, 89}%
+  \definecolor{lv}{RGB}{63, 63, 70}%
+  \definecolor{huang}{RGB}{234, 88, 12}%
+  \definecolor{hong}{RGB}{153, 27, 27}%
+  \definecolor{qianbai}{RGB}{240, 253, 250}%
+  \definecolor{mibai}{RGB}{204, 251, 241}%
+  \definecolor{heise}{RGB}{19, 78, 74}%
+  \definecolor{definition}{RGB}{234, 88, 12}%
+  \definecolor{theorem}{RGB}{153, 27, 27}%
+  \definecolor{proposition}{RGB}{15, 118, 110}%
+  \definecolor{corollary}{RGB}{21, 128, 61}%
+  \definecolor{lemma}{RGB}{63, 63, 70}%
+  \definecolor{example}{RGB}{2, 132, 199}%
+}
+\@namedef{LoneTrailTheme@133}{\LoneTrailThemeDef@themeonethreethree}
+\@namedef{LoneTrailTheme@theme_133}{\LoneTrailThemeDef@themeonethreethree}
+
+% ------------------------------------------------------------------------------
+% Theme: theme_134 | 炎国·大理点苍水墨晴岚 (Yan Cangshan Mountain Jade & Misty Ink)
+% ------------------------------------------------------------------------------
+\newcommand{\LoneTrailThemeDef@themeonethreefour}{%
+  \definecolor{qiancheng}{RGB}{19, 78, 74}%
+  \definecolor{lv}{RGB}{71, 85, 105}%
+  \definecolor{huang}{RGB}{202, 138, 4}%
+  \definecolor{hong}{RGB}{225, 29, 72}%
+  \definecolor{qianbai}{RGB}{246, 250, 247}%
+  \definecolor{mibai}{RGB}{220, 252, 231}%
+  \definecolor{heise}{RGB}{2, 44, 34}%
+  \definecolor{definition}{RGB}{202, 138, 4}%
+  \definecolor{theorem}{RGB}{225, 29, 72}%
+  \definecolor{proposition}{RGB}{13, 148, 136}%
+  \definecolor{corollary}{RGB}{15, 118, 110}%
+  \definecolor{lemma}{RGB}{71, 85, 105}%
+  \definecolor{example}{RGB}{3, 105, 161}%
+}
+\@namedef{LoneTrailTheme@134}{\LoneTrailThemeDef@themeonethreefour}
+\@namedef{LoneTrailTheme@theme_134}{\LoneTrailThemeDef@themeonethreefour}
+
+% ------------------------------------------------------------------------------
+% Theme: theme_135 | 拉特兰·教皇宗座大教堂红宝石 (Laterano Papal Basilica Ruby & Marble)
+% ------------------------------------------------------------------------------
+\newcommand{\LoneTrailThemeDef@themeonethreefive}{%
+  \definecolor{qiancheng}{RGB}{159, 18, 57}%
+  \definecolor{lv}{RGB}{100, 116, 139}%
+  \definecolor{huang}{RGB}{245, 158, 11}%
+  \definecolor{hong}{RGB}{190, 18, 60}%
+  \definecolor{qianbai}{RGB}{250, 245, 245}%
+  \definecolor{mibai}{RGB}{254, 226, 226}%
+  \definecolor{heise}{RGB}{28, 25, 23}%
+  \definecolor{definition}{RGB}{245, 158, 11}%
+  \definecolor{theorem}{RGB}{190, 18, 60}%
+  \definecolor{proposition}{RGB}{159, 18, 57}%
+  \definecolor{corollary}{RGB}{13, 148, 136}%
+  \definecolor{lemma}{RGB}{100, 116, 139}%
+  \definecolor{example}{RGB}{217, 119, 6}%
+}
+\@namedef{LoneTrailTheme@135}{\LoneTrailThemeDef@themeonethreefive}
+\@namedef{LoneTrailTheme@theme_135}{\LoneTrailThemeDef@themeonethreefive}
+
+% ------------------------------------------------------------------------------
+% Theme: theme_136 | 哥伦比亚·特勤先锋石墨烯青 (Columbia Graphene Matrix & Electric Teal)
+% ------------------------------------------------------------------------------
+\newcommand{\LoneTrailThemeDef@themeonethreesix}{%
+  \definecolor{qiancheng}{RGB}{15, 23, 42}%
+  \definecolor{lv}{RGB}{51, 65, 85}%
+  \definecolor{huang}{RGB}{6, 182, 212}%
+  \definecolor{hong}{RGB}{244, 63, 94}%
+  \definecolor{qianbai}{RGB}{248, 250, 252}%
+  \definecolor{mibai}{RGB}{241, 245, 249}%
+  \definecolor{heise}{RGB}{2, 6, 23}%
+  \definecolor{definition}{RGB}{6, 182, 212}%
+  \definecolor{theorem}{RGB}{244, 63, 94}%
+  \definecolor{proposition}{RGB}{14, 116, 144}%
+  \definecolor{corollary}{RGB}{16, 185, 129}%
+  \definecolor{lemma}{RGB}{51, 65, 85}%
+  \definecolor{example}{RGB}{59, 130, 246}%
+}
+\@namedef{LoneTrailTheme@136}{\LoneTrailThemeDef@themeonethreesix}
+\@namedef{LoneTrailTheme@theme_136}{\LoneTrailThemeDef@themeonethreesix}
+
+% ------------------------------------------------------------------------------
+% Theme: theme_137 | 叙拉古·巴勒莫古堡黑醋栗金 (Siracusa Castle Blackcurrant & Antique Gold)
+% ------------------------------------------------------------------------------
+\newcommand{\LoneTrailThemeDef@themeonethreeseven}{%
+  \definecolor{qiancheng}{RGB}{88, 28, 135}%
+  \definecolor{lv}{RGB}{120, 113, 108}%
+  \definecolor{huang}{RGB}{217, 119, 6}%
+  \definecolor{hong}{RGB}{190, 18, 60}%
+  \definecolor{qianbai}{RGB}{250, 245, 255}%
+  \definecolor{mibai}{RGB}{243, 232, 255}%
+  \definecolor{heise}{RGB}{46, 16, 101}%
+  \definecolor{definition}{RGB}{217, 119, 6}%
+  \definecolor{theorem}{RGB}{190, 18, 60}%
+  \definecolor{proposition}{RGB}{126, 34, 206}%
+  \definecolor{corollary}{RGB}{13, 148, 136}%
+  \definecolor{lemma}{RGB}{88, 28, 135}%
+  \definecolor{example}{RGB}{245, 158, 11}%
+}
+\@namedef{LoneTrailTheme@137}{\LoneTrailThemeDef@themeonethreeseven}
+\@namedef{LoneTrailTheme@theme_137}{\LoneTrailThemeDef@themeonethreeseven}
+
+% ------------------------------------------------------------------------------
+% Theme: theme_138 | 萨卡兹·提卡博尔王庭血髓珀 (Sarkaz Court Blood-Marrow Amber & Obsidian)
+% ------------------------------------------------------------------------------
+\newcommand{\LoneTrailThemeDef@themeonethreeeight}{%
+  \definecolor{qiancheng}{RGB}{69, 10, 10}%
+  \definecolor{lv}{RGB}{63, 63, 70}%
+  \definecolor{huang}{RGB}{245, 158, 11}%
+  \definecolor{hong}{RGB}{220, 38, 38}%
+  \definecolor{qianbai}{RGB}{250, 245, 245}%
+  \definecolor{mibai}{RGB}{254, 226, 226}%
+  \definecolor{heise}{RGB}{28, 25, 23}%
+  \definecolor{definition}{RGB}{245, 158, 11}%
+  \definecolor{theorem}{RGB}{220, 38, 38}%
+  \definecolor{proposition}{RGB}{153, 27, 27}%
+  \definecolor{corollary}{RGB}{13, 148, 136}%
+  \definecolor{lemma}{RGB}{69, 10, 10}%
+  \definecolor{example}{RGB}{217, 119, 6}%
+}
+\@namedef{LoneTrailTheme@138}{\LoneTrailThemeDef@themeonethreeeight}
+\@namedef{LoneTrailTheme@theme_138}{\LoneTrailThemeDef@themeonethreeeight}
+
+% ------------------------------------------------------------------------------
+% Theme: theme_139 | 雷姆必拓·水晶矿脉紫萤绿 (Rim Billiton Fluorite Violet & Malachite)
+% ------------------------------------------------------------------------------
+\newcommand{\LoneTrailThemeDef@themeonethreenine}{%
+  \definecolor{qiancheng}{RGB}{59, 7, 100}%
+  \definecolor{lv}{RGB}{6, 95, 70}%
+  \definecolor{huang}{RGB}{16, 185, 129}%
+  \definecolor{hong}{RGB}{225, 29, 72}%
+  \definecolor{qianbai}{RGB}{240, 253, 244}%
+  \definecolor{mibai}{RGB}{220, 252, 231}%
+  \definecolor{heise}{RGB}{30, 27, 75}%
+  \definecolor{definition}{RGB}{16, 185, 129}%
+  \definecolor{theorem}{RGB}{225, 29, 72}%
+  \definecolor{proposition}{RGB}{109, 40, 217}%
+  \definecolor{corollary}{RGB}{5, 150, 105}%
+  \definecolor{lemma}{RGB}{59, 7, 100}%
+  \definecolor{example}{RGB}{6, 182, 212}%
+}
+\@namedef{LoneTrailTheme@139}{\LoneTrailThemeDef@themeonethreenine}
+\@namedef{LoneTrailTheme@theme_139}{\LoneTrailThemeDef@themeonethreenine}
+
+% ------------------------------------------------------------------------------
+% Theme: theme_140 | 莱茵总控·空间站天际线日冕金 (Rhine Orbital Solar Corona Gold & Sky Blue)
+% ------------------------------------------------------------------------------
+\newcommand{\LoneTrailThemeDef@themeonefourzero}{%
+  \definecolor{qiancheng}{RGB}{3, 105, 161}%
+  \definecolor{lv}{RGB}{2, 132, 199}%
+  \definecolor{huang}{RGB}{245, 158, 11}%
+  \definecolor{hong}{RGB}{244, 63, 94}%
+  \definecolor{qianbai}{RGB}{240, 249, 255}%
+  \definecolor{mibai}{RGB}{224, 242, 254}%
+  \definecolor{heise}{RGB}{8, 47, 73}%
+  \definecolor{definition}{RGB}{245, 158, 11}%
+  \definecolor{theorem}{RGB}{244, 63, 94}%
+  \definecolor{proposition}{RGB}{3, 105, 161}%
+  \definecolor{corollary}{RGB}{14, 165, 233}%
+  \definecolor{lemma}{RGB}{71, 85, 105}%
+  \definecolor{example}{RGB}{56, 189, 248}%
+}
+\@namedef{LoneTrailTheme@140}{\LoneTrailThemeDef@themeonefourzero}
+\@namedef{LoneTrailTheme@theme_140}{\LoneTrailThemeDef@themeonefourzero}
+
+% ------------------------------------------------------------------------------
+% Theme: theme_141 | 伊比利亚·黄金海岸深海黑珍珠 (Iberia Costa Dorada Black Pearl & Golden Dunes)
+% ------------------------------------------------------------------------------
+\newcommand{\LoneTrailThemeDef@themeonefourone}{%
+  \definecolor{qiancheng}{RGB}{24, 24, 27}%
+  \definecolor{lv}{RGB}{113, 113, 122}%
+  \definecolor{huang}{RGB}{251, 191, 36}%
+  \definecolor{hong}{RGB}{225, 29, 72}%
+  \definecolor{qianbai}{RGB}{250, 248, 245}%
+  \definecolor{mibai}{RGB}{245, 245, 244}%
+  \definecolor{heise}{RGB}{9, 9, 11}%
+  \definecolor{definition}{RGB}{251, 191, 36}%
+  \definecolor{theorem}{RGB}{225, 29, 72}%
+  \definecolor{proposition}{RGB}{59, 130, 246}%
+  \definecolor{corollary}{RGB}{16, 185, 129}%
+  \definecolor{lemma}{RGB}{113, 113, 122}%
+  \definecolor{example}{RGB}{217, 119, 6}%
+}
+\@namedef{LoneTrailTheme@141}{\LoneTrailThemeDef@themeonefourone}
+\@namedef{LoneTrailTheme@theme_141}{\LoneTrailThemeDef@themeonefourone}
+\@namedef{LoneTrailTheme@en}{\LoneTrailThemeDef@themeonefourone}
+
+% ------------------------------------------------------------------------------
+% Theme: theme_142 | 炎国·江南织造云锦孔雀羽 (Yan Jiangnan Brocade Peacock Feather & Vermilion)
+% ------------------------------------------------------------------------------
+\newcommand{\LoneTrailThemeDef@themeonefourtwo}{%
+  \definecolor{qiancheng}{RGB}{15, 118, 110}%
+  \definecolor{lv}{RGB}{21, 94, 117}%
+  \definecolor{huang}{RGB}{217, 119, 6}%
+  \definecolor{hong}{RGB}{185, 28, 28}%
+  \definecolor{qianbai}{RGB}{246, 250, 247}%
+  \definecolor{mibai}{RGB}{220, 252, 231}%
+  \definecolor{heise}{RGB}{4, 47, 46}%
+  \definecolor{definition}{RGB}{217, 119, 6}%
+  \definecolor{theorem}{RGB}{185, 28, 28}%
+  \definecolor{proposition}{RGB}{13, 148, 136}%
+  \definecolor{corollary}{RGB}{15, 118, 110}%
+  \definecolor{lemma}{RGB}{71, 85, 105}%
+  \definecolor{example}{RGB}{2, 132, 199}%
+}
+\@namedef{LoneTrailTheme@142}{\LoneTrailThemeDef@themeonefourtwo}
+\@namedef{LoneTrailTheme@theme_142}{\LoneTrailThemeDef@themeonefourtwo}
+
+% ------------------------------------------------------------------------------
+% Theme: theme_template | 配色规范范本 (Custom Theme Template & Guide)
+% ------------------------------------------------------------------------------
+\newcommand{\LoneTrailThemeDef@themetemplate}{%
+  \definecolor{qiancheng}{RGB}{227, 101, 53}%
+  \definecolor{lv}{RGB}{131, 187, 170}%
+  \definecolor{huang}{RGB}{227, 164, 60}%
+  \definecolor{hong}{RGB}{149, 44, 38}%
+  \definecolor{qianbai}{RGB}{248, 243, 231}%
+  \definecolor{mibai}{RGB}{244, 237, 218}%
+  \definecolor{heise}{RGB}{0, 0, 0}%
+  \definecolor{definition}{RGB}{245, 164, 0}%
+  \definecolor{theorem}{RGB}{222, 4, 20}%
+  \definecolor{proposition}{RGB}{177, 0, 129}%
+  \definecolor{corollary}{RGB}{133, 194, 72}%
+  \definecolor{lemma}{RGB}{233, 93, 157}%
+  \definecolor{example}{RGB}{0, 153, 216}%
+}
+\@namedef{LoneTrailTheme@template}{\LoneTrailThemeDef@themetemplate}
+\@namedef{LoneTrailTheme@theme_template}{\LoneTrailThemeDef@themetemplate}
+
+\makeatother

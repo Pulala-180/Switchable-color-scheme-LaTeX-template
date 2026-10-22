@@ -1,0 +1,44 @@
+%=============================================================================
+% Arknights Lone Trail LaTeX Template - Pure Vector TikZ Asset
+% Asset: corollary_2.tex (Replacing 素材库/正文/corollary_2.png)
+% Original Dimensions: 171 x 274 bp (Aspect ratio 171 : 274)
+% Visual Features:
+%   - Vertical black rectangular background (heise)
+%   - Top-right 6 stepped solid green circles (corollary):
+%       Row 1 (top): 3 dots
+%       Row 2 (middle): 2 dots
+%       Row 3 (bottom): 1 dot
+% Dynamic Color Support: corollary, heise
+% Compatibility: Standalone compilation via xelatex & direct \input{} in docs
+%=============================================================================
+\ifcsname pgfpoint\endcsname
+\else
+  \documentclass[border=0pt]{standalone}
+  \usepackage{tikz}
+  \usepackage{xcolor}
+  \providecolor{corollary}{RGB}{133, 194, 72}
+  \providecolor{heise}{RGB}{0, 0, 0}
+  \def\imstandalone{1}
+  \begin{document}%
+\fi
+\providecolor{corollary}{RGB}{133, 194, 72}%
+\providecolor{heise}{RGB}{0, 0, 0}%
+\begin{tikzpicture}[x=1bp, y=1bp, inner sep=0pt, outer sep=0pt]%
+  % Bounding box strictly matching 171 x 274 bp
+  \useasboundingbox (0, 0) rectangle (171, 274);%
+  %
+  % Vertical black rectangular background
+  \fill[heise] (0, 0) rectangle (171, 274);%
+  %
+  % 6 stepped green solid circles at top-right (pitch: 29.30bp, radius: 10.38bp)
+  % Row 1 (top): 3 dots
+  \fill[corollary] (82.67, 244.70) circle [radius=10.38];%
+  \fill[corollary] (111.97, 244.70) circle [radius=10.38];%
+  \fill[corollary] (141.27, 244.70) circle [radius=10.38];%
+  % Row 2 (middle): 2 dots
+  \fill[corollary] (111.97, 215.40) circle [radius=10.38];%
+  \fill[corollary] (141.27, 215.40) circle [radius=10.38];%
+  % Row 3 (bottom): 1 dot
+  \fill[corollary] (141.27, 186.10) circle [radius=10.38];%
+\end{tikzpicture}%
+\ifdefined\imstandalone\def\finishdoc{\end{document}}\else\let\finishdoc\relax\fi\finishdoc%

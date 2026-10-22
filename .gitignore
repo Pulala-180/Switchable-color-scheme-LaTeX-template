@@ -1,0 +1,37 @@
+# 忽略 LaTeX 编译中间产物
+*.aux
+*.log
+*.out
+*.toc
+*.lof
+*.lot
+*.fls
+*.fdb_latexmk
+*.synctex.gz
+*.synctex(busy)
+*.xdv
+missfont.log
+
+# 编译结果的 PDF（保留素材 PDF，见下方 ! 例外）
+/main.pdf
+/letters/*.pdf
+
+# 素材渲染临时目录（保留占位）
+/assets/pdf/_tmp/*
+!/assets/pdf/_tmp/.gitkeep
+
+# Python 缓存
+__pycache__/
+*.py[cod]
+
+# 操作系统 / 编辑器
+Thumbs.db
+desktop.ini
+.DS_Store
+.vscode/
+.idea/
+
+# 本地覆盖（如果你有自己的配色/字体覆盖）
+local/
+*.local.tex
+

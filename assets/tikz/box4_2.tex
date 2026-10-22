@@ -1,0 +1,25 @@
+% ==============================================================================
+% Arknights Lone Trail Template - Box 4 Right Asset (box4_2)
+% Pure Vector TikZ Implementation (Infinite zoom without distortion)
+% Original PNG Dimensions: 151x284 px (Aspect ratio ~ 0.5317)
+% ==============================================================================
+
+% Dynamic Color Support: Use \providecolor so callers can pre-define / customize colors
+\providecolor{mibai}{RGB}{244, 237, 218}
+\providecolor{qiancheng}{RGB}{227, 101, 53}
+\providecolor{box4bg}{named}{mibai}
+\providecolor{box4hook}{named}{qiancheng}
+
+\begin{tikzpicture}[x=1bp, y=1bp, inner sep=0pt, outer sep=0pt]
+  % 1. 严格对应原图比例与尺寸的边界盒 (151 x 284)
+  \path[use as bounding box] (0, 0) rectangle (151, 284);
+
+  % 2. 米白底色 (mibai / box4bg)
+  \fill[box4bg] (0, 0) rectangle (151, 284);
+
+  % 3. 底部靠右处橙色折角挂钩（L形反向结构, qiancheng / box4hook）
+  % 横向底座: x in [43.5, 107.5] (宽度 64 bp), y in [22, 47] (高度 25 bp)
+  % 垂直立柱: x in [83.5, 107.5] (宽度 24 bp), y in [47, 129] (高度 82 bp)
+  % 底端间距: 22 bp, 顶端留白: 155 bp, 左右居中对齐 (边距 43.5 bp)
+  \fill[box4hook] (43.5, 22) -- (107.5, 22) -- (107.5, 129) -- (83.5, 129) -- (83.5, 47) -- (43.5, 47) -- cycle;
+\end{tikzpicture}%

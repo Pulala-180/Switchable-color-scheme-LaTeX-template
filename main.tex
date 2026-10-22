@@ -1,0 +1,63 @@
+% !TeX program = xelatex
+% ==============================================================================
+%  可切换配色 · 明日方舟·孤星 LaTeX 笔记模板
+%  目录：styles/ 版式 | chapters/ 正文 | assets/ 素材 | palettes/ 配色
+% ==============================================================================
+\documentclass[11pt,a4paper,UTF8]{ctexart}
+
+% ---------------- 版式与配色 ----------------
+\input{styles/settings.tex}      % 宏包、字体、标题、页眉页脚
+\input{palettes/themes.tex}      % 主题配色总控（套数见文件内 % Theme: 行）
+\SelectTheme{135}                % ← 换肤只改这个数字，范围随 themes.tex 变化
+\input{styles/boxes.tex}         % 标题盒、数学盒子、自定义命令
+\input{styles/cover.tex}        % 封面版式（\DisplayCover）
+
+% ---------------- 目录排版间距测试（修改数值直接生效） ----------------
+\newcommand{\TOCSecSepSpace}{4.0pt}    % [间距1] 大标题与下方彩色短横线间距
+\newcommand{\TOCSubInnerSpace}{13.0pt} % [间距2] 小标题内部折行间距（文字跨行内部行距）
+\newcommand{\TOCSubItemSpace}{8.5pt}   % [间距3] 小标题条目之间的间距
+\input{styles/contents.tex}      % 目录版式（\DisplayTOC）
+
+
+% ---------------- 封面信息（只改这里） ----------------
+\newcommand{\LoneTitleI}{Measure Theory}
+\newcommand{\LoneTitleII}{测度论}
+\newcommand{\LoneAuthor}{@Mikukawaii2}
+
+% 课程信息（显示在封面中下方）
+\newcommand{\LoneCourseI}{课程名称}
+\newcommand{\LoneCourseII}{Measure Theory}
+
+% 学生姓名与学号（显示在封面信息表）
+\newcommand{\LoneStudentName}{pulala}
+\newcommand{\LoneStudentID}{0123456789}
+
+% 日期（显示在封面信息表最后一行）
+\newcommand{\LoneDate}{\today}
+
+% 参考文献（封面左下角，最多三条）
+\newcommand{\LoneRefA}{1.Jech."Set Theory".3rd ed,Springer,2003}
+\newcommand{\LoneRefB}{2.Kechris."Classical Descriptive Set Theory".Springer,1995}
+\newcommand{\LoneRefC}{3.Engelking."General Topology".Heldermann Veriag,1989}
+\newcommand{\LoneAcknowledgements}{\#.Rhine Lab Pioneer Project}
+
+% ==============================================================================
+\begin{document}
+
+% ---------------- 1. 封面（注释掉下一行即不显示封面） ----------------
+\pagestyle{empty}
+\DisplayCover
+
+% ---------------- 2. 目录（注释掉下一行即不显示目录） ----------------
+\DisplayTOC
+
+% ---------------- 3. 正文 ----------------
+\pagenumbering{arabic}
+\setcounter{page}{1}
+\pagestyle{empty}
+
+\DrawLoneTrailBackground
+
+\input{chapters/chapter1.tex}
+
+\end{document}

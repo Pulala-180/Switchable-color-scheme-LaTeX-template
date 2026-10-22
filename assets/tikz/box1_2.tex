@@ -1,0 +1,27 @@
+%=============================================================================
+% Arknights Lone Trail LaTeX Template - Pure Vector TikZ Asset
+% Asset: box1_2.tex (Replacing 素材库/正文/box1_2.png)
+% Original Dimensions: 114 x 284 bp
+% Visual Features: Off-white background (mibai) with upper solid square (qiancheng)
+% Coordinate Alignment: Exactly matching original PNG (Square: 40x40 at x=46..86, y=220..260)
+% Dynamic Color Support: Uses mibai, qiancheng with fallback \providecolor
+% Compatibility: Standalone compilation via xelatex & direct \input{} in docs
+%=============================================================================
+\ifcsname pgfpoint\endcsname
+\else
+  \documentclass[border=0pt]{standalone}
+  \usepackage{tikz}
+  \usepackage{xcolor}
+  \providecolor{mibai}{RGB}{244, 237, 218}
+  \providecolor{qiancheng}{RGB}{227, 101, 53}
+  \def\imstandalone{1}
+  \begin{document}%
+\fi
+\providecolor{mibai}{RGB}{244, 237, 218}%
+\providecolor{qiancheng}{RGB}{227, 101, 53}%
+\begin{tikzpicture}[x=1bp, y=1bp, inner sep=0pt, outer sep=0pt]
+  \useasboundingbox (0, 0) rectangle (114, 284);
+  \fill[mibai] (0, 0) rectangle (114, 284);
+  \fill[qiancheng] (46, 220) rectangle (86, 260);
+\end{tikzpicture}%
+\ifdefined\imstandalone\def\finishdoc{\end{document}}\else\let\finishdoc\relax\fi\finishdoc%
